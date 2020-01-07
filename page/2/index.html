@@ -1,101 +1,840 @@
-<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="不能喻之于怀"><meta name="keywords" content=""><meta name="author" content="一白"><meta name="copyright" content="一白"><title>雪夜闻钟</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  }
-} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">一白</div><div class="author-info__description text-center">不能喻之于怀</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">35</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><nav class="no-bg" id="nav"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="site-info"><div id="site-title">雪夜闻钟</div><div id="site-sub-title"></div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2017/04/25/%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4/">一般理论(2).拓扑空间</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-25</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">拓扑空间可以看成是度量空间的一般化，拓扑是一种建立在非空集合$X$上的结构，没有什么神秘的。
-一、拓扑空间基础
-定义1(拓扑)：称非空集合$X$具备拓扑结构，如果指定了一个$X$的子集族$\tau$，其中的元素称为开集，且满足以下性质
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
 
-$\varnothing\in\tau$，$X\in\tau$;
-对$\forall A_{\alpha}\in\tau$，$\alpha\in I$，有$\cup_{\alpha\in I}A_{\alpha}\in\tau$;
-对$\forall A_{k}\in\tau$，$k=1,2,\cdots,n$，有$\cap_{k=1}^nA_{k}\in\tau$.
+  
+  <title>雪夜闻钟</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="不能喻之于怀">
+<meta property="og:type" content="website">
+<meta property="og:title" content="雪夜闻钟">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="雪夜闻钟">
+<meta property="og:description" content="不能喻之于怀">
+<meta property="article:author" content="一白">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="雪夜闻钟" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-这样的$X$称为拓扑空间，用序偶$(X,\tau)$表示。
-命题1：度量空间$(X,d)$一定是拓扑空间。
-proof：只要指定$\tau=\varnothing\cup\ X\cup Y$，其中$Y$是$X$中所有开集构成的集合。
-PS：并不能认为所有拓扑空间都可以度量化！具体的例子我们稍后给出。
-定义2(拓扑空间中的开集与闭集)：拓扑空间$(X,\tau)$中$\tau$的元素称为 ...</div><a class="more" href="/2017/04/25/%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/04/23/%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/">一般理论(1).度量空间</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-23</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">这个系列是服务于多元微分学的。我们欲考虑$\Bbb R^n$上极限的概念，必须要刻划“距离足够近”这一表达，那么怎么在高维空间给出“距离”的表述？这就促使度量、拓扑等概念的产生，他们都是一般化的理论。
+<meta name="generator" content="Hexo 4.2.0"></head>
 
-一、度量空间和度量函数、依度量收敛
-定义1(度量空间)：度量空间$(X,d)$是一个装备了度量函数$d$的集合$X$,其中$d:X×X\to[0,+\infty)$满足：
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">雪夜闻钟</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-拓扑空间" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/25/%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4/" class="article-date">
+  <time datetime="2017-04-25T15:06:00.000Z" itemprop="datePublished">2017-04-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Math/">Math</a>
+  </div>
 
-$\forall x\in X$,$d(x,x)=0$;
-$\forall x,y\in X$,$x\neq y$,$d(x,y)&gt;0$;
-$\forall x,y\in X$,$d(x,y)=d(y,x)$;
-$\forall x,y,z\in X$,$d(x,z)\le d(x,y)+d(y,z)$.
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/25/%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4/">一般理论(2).拓扑空间</a>
+    </h1>
+  
 
-定义2(导出的度量空间)：$(X,d)$是度量空间，$Y\subset X$,$d’:Y×Y\to[0,+\infty)$,称$(Y,d’)$是$X$上由$Y$导出的子空间。
-eg1(Euclid空间$\Bbb R^n$)：Euclid空间是度量空间$(\Bbb R^n,d)$,其中$\Bbb R^n={ ...</div><a class="more" href="/2017/04/23/%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/04/22/%E8%AE%A8%E8%AE%BA%E7%8F%AD%E8%AE%B2%E4%B9%89(10)/">讨论班第十周讲义</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-22</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">前一阵搞讨论班，没时间更新。自即日起，用讨论班的讲义代替原来的整理。讨论班的题目不难，主要是锻炼他们的证明过程，不过讲义我还是会写的有一些难度。
-这次讨论导数。
-一、导数
-1.证明：$f$在$x_0$处可导$\Rightarrow f\in C^0{x_0}$.
-2.证明：某点的切线具有局部逼近最优性。最优性理解：在$x_0$的某邻域内，恒有$$|f(x)-l(x)|&lt;|f(x)-L(x)|,$$那么$y=l(x)$就是最优的。
-3.证明：若$f$在$x_0$处可导，则存在$\omega(x)$，使得$\Delta y=f’(x_0)\Delta x+\omega(x)\Delta x$其中，$$\lim_{x\to x_0}\omega(x)=\omega(x_0)=0.$$
-4.证明一元反函数求导定理。
-5.证明一元函数的复合求导法则。
-6.设$\deg f=n$,记其相异根为$x_1,\cdots,x_k$,其中$x_i$的重数为$n_i$,$n_1+\cdots+n_k=n$,求$f’(x)$.
-二、高阶导数及其他求导法则
-1.证明Leibniz公式。
-2.证明参数求导法 ...</div><a class="more" href="/2017/04/22/%E8%AE%A8%E8%AE%BA%E7%8F%AD%E8%AE%B2%E4%B9%89(10)/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/03/17/%E8%BF%91%E6%9C%9F%E5%BE%85%E8%AF%BB%E4%B9%A6%E7%9B%AE%E5%8F%8A%E5%85%B6%E4%BB%96/">待读书目及其他</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-03-17</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Other/">Other</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E6%97%A5%E5%B8%B8/">日常</a></span><div class="content">只是写一些书目备忘，其他功效一概不具。这里的近期指的是现在到大二开学前，其中英文原版书籍不强迫自己看，毕竟我的英语差得很。
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>拓扑空间可以看成是度量空间的一般化，拓扑是一种建立在非空集合$X$上的结构，没有什么神秘的。</p>
+<p>一、拓扑空间基础</p>
+<p><strong>定义1(拓扑)</strong>：称非空集合$X$具备拓扑结构，如果指定了一个$X$的子集族$\tau$，其中的元素称为开集，且满足以下性质</p>
+<ul>
+<li>$\varnothing\in\tau$，$X\in\tau$;</li>
+<li>对$\forall A_{\alpha}\in\tau$，$\alpha\in I$，有$\cup_{\alpha\in I}A_{\alpha}\in\tau$;</li>
+<li>对$\forall A_{k}\in\tau$，$k=1,2,\cdots,n$，有$\cap_{k=1}^nA_{k}\in\tau$.</li>
+</ul>
+<p>这样的$X$称为拓扑空间，用序偶$(X,\tau)$表示。</p>
+<p><strong>命题1</strong>：度量空间$(X,d)$一定是拓扑空间。</p>
+<p>proof：只要指定$\tau=\varnothing\cup\ X\cup Y$，其中$Y$是$X$中所有开集构成的集合。</p>
+<p>PS：并不能认为所有拓扑空间都可以度量化！具体的例子我们稍后给出。</p>
+<p><strong>定义2(拓扑空间中的开集与闭集)</strong>：拓扑空间$(X,\tau)$中$\tau$的元素称为开集，$\tau$中元素在$X$中的余集称为闭集。<br>我们想找到一个$X$的拓扑，总不能一个个罗列出$\tau$中的元素。于是和代数中线性无关组的思想类似，我们希望找到一种由$\tau$决定的结构$\mathcal B$，使得$\tau$中的开集都能用$\mathcal B$中某些元素来表示。</p>
+<p><strong>定义3(拓扑空间的基)</strong>：称$\mathcal B$为拓扑$\tau$的一个基(开基、拓扑基)，如果$\tau$中的每个开集都能表示为$\mathcal B$中某些元素的并。</p>
+<p><strong>定义4(权)</strong>：称拓扑空间的基的最小势为该拓扑空间的权。</p>
+<p>我们一般研究具有可数拓扑基的空间，比如</p>
+<p><strong>eg1</strong>：在$\Bbb R^n$中取一个基$\mathcal B={B(a,r)|a\in\Bbb Q^n,r\in\Bbb Q_+}$，容易验证这是正确的。还容易验证不可能存在$\Bbb R^n$的有限拓扑基，所以$\Bbb R^n$具有可数权。</p>
+<p><strong>定义5(邻域)</strong>：称包含$x\in X$的开集为$(X,\tau)$中该点的邻域。</p>
+<p><strong>eg2(连续函数芽)</strong>：称连续函数$f,g\in C(\Bbb R,\Bbb R)$在$a\in\Bbb R$等价，如果存在$U(a)$：$f(x)=g(x)$，$\forall x\in U(a)$。称在$a$处等价的连续函数类为由$a$点生成的连续函数芽，若$f$是生成的芽函数之一，则记函数芽为$f_a$。<br>下面考虑芽$f_a$的邻域。<br>定义$f_a$的邻域为$U(a)$中任意$x$所生成的连续函数芽集${f_x}$为$f_a$的邻域。这样把所有的${f_x}$并起来组成拓扑基，连续函数芽集就成了拓扑空间。</p>
+<p><strong>定义6(Hausdorff)</strong>：称$(X,\tau)$为Hausdorff空间，如果$X$中任两个不同的点具有不相交的邻域。</p>
+<p><strong>命题2</strong>：连续函数芽集不是Hausdorff空间，也不能度量化。</p>
+<p><strong>定义7(稠密集)</strong>：称$E\subset X$是处处稠密集，如果对于$\forall x\in E$，存在$U(x)$：$E\cap U(a)\neq\varnothing$.</p>
+<p><strong>定义8(可分)</strong>：具有可数处处稠密集的度量空间称为可分空间。(注意对象是度量空间！)</p>
+<hr>
+<p>二、拓扑空间的子空间</p>
+<p>现在考虑拓扑空间$(X,\tau)$的子集$Y\subset X$。<br>我们把$X$的一个基$\mathcal B={G_{\alpha}|\alpha\in I}$稍加修改成$\mathcal B_Y={G_{\alpha}\cap Y|\alpha\in I}$作为$Y$的一个基，这样就确定了$Y$上的导出拓扑$\tau_Y$，连同$Y$构成拓扑空间$(Y,\tau_Y)$。</p>
+<p><strong>定义1(拓扑子空间)</strong>：称拓扑空间$(X,\tau)$的子集$Y\subset X$为$X$的子空间，如果在$Y$中具备了导出拓扑$\tau_Y$.</p>
+<p><strong>命题1</strong>：若$(Y,\tau_Y)$是拓扑空间$(X,\tau)$的子空间，$E\subset Y\subset X$且$E\in\tau$，那么$E\in\tau_Y$.</p>
+<p>这里注意：$Y$中的开集$E$可能不是$X$上的开集(闭集同理)，比如$Y=((0,1],\tau)$，$\tau$是标准拓扑，$(0,1]$在$Y$上是开(闭)集，但是在$\Bbb R$中却不是开集也不是闭集。</p>
+<hr>
+<p>三、拓扑空间的直积</p>
+<p>若已知两个拓扑空间$(X_1,\tau_1)$，$(X_2,\tau_2)$.其中$\tau_1={G_1}$,$\tau_2={G_2}$.那么在$X_1×X_2$中可以引入以$G_1×G_2$的所有集合为基的拓扑。</p>
+<p><strong>定义1(拓扑空间的直积)</strong>：$(X_1×X_2,\tau_1×\tau_2)$称为拓扑空间$(X_1,\tau_1)$，$(X_2,\tau_2)$的直积，如果其拓扑基是由形如$G_1×G_2$的所有集合组成的。</p>
+<hr>
+<p>四、连通的拓扑空间</p>
+<p><strong>定义1(连通)</strong>：称拓扑空间$(X,\tau)$连通，如果除了它本身和空集之外该空间中没有其他既开又闭的集合(开-闭集)。</p>
+<p><strong>定义1’</strong>：称拓扑空间$(X,\tau)$连通，如果它不能不能表示为两个不相交的开(闭)集之并。</p>
+<p><strong>定义1’’</strong>：称拓扑空间$(X,\tau)$连通，如果有：$A,B\subset X$，$X=A\cup B$，$A\cap B=\varnothing$，且$A\cap B’\neq\varnothing$或$A’\cap B\neq\varnothing$。</p>
+<p>所谓定义，就是给出等价条件。</p>
+<p><strong>定义2</strong>：称拓扑空间$(X,\tau)$中的集合$E$连通，如果它作为$X$的子空间是连通的。</p>
+<p>这也就是说，$E$的连通性不依赖于包含它的空间。</p>
+<p><strong>eg1</strong>：考虑$E=\Bbb R-{0}$，$\Bbb R_+\subset E$，但是它在$E$中是开-闭集，所以$E$不是连通集。</p>
+<p><strong>定理1</strong>：$E\subset\Bbb R$是连通集等价于$E$是区间。</p>
+<p>proof：必要性，对于任意$a,b\in E$，$a&lt; b$，我们只要证明$\forall a&lt; c&lt; b$，$c\in E$.设$c\notin E$，考虑$E_1={x\in E|x&lt; c},E_2={x\in E|x&gt; c}$。容易知道$E_1\cup E_2=E$，$E_1\cap E_2=\varnothing$且二者都是开集，这与$E$连通矛盾。<br>充分性，如果$E$是区间，考虑$A\subset E$是开-闭集，且$A\neq\varnothing$，设$a\in A$，$b\in B=X-A$，且$a&lt; b$。现在考虑$s_1=\sup(A\cap[a,b])$，$s_2=\inf(B\cap[a,b]) $。由闭集性质知道$s_1\in A,s_2\in B$.由于$A\cap B=\varnothing$，所以$a\le s_1&lt; s_2\le b$，这样一来$(s_1,s_2)$中的所有点都不在$E$中了，矛盾，所以不存在这样的$A$，即证。</p>
+<hr>
+<p>这一块没有“直观”一说了，重要的是例子，通过例子来深化概念。</p>
 
-数学分析：菲赫金哥尔茨《数学分析原理(第二卷)》——这个预计4月3号左右到；张筑生《数学分析新讲》第三册——级数论和Fourier分析部分；陶哲轩《陶哲轩实分析》——Fourier分析部分，感觉Tao的Riemann积分部分不够深入；Zorich《数学分析(第二卷)》；陈纪修《数学分析(下)》——当课本；Rudin《数学分析原理》——这个不急；Stein《傅里叶分析导论》——数分学完就看，大一暑假应该可以开始看。
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/25/%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4/" data-id="ck53o5hao002f5ohm0lr29kvt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a></li></ul>
 
-高等代数：丘维声《高等代数(下)》——今天看到基，觉得写得精彩；张贤科《高等代数学》——还没寄到；Axler《线性代数应该这样学》——放到暑假理顺思路用。
+    </footer>
+  </div>
+  
+</article>
 
-复变龚昇《简明复分析》；Stein《复分析》；Needham《复分析 可视化方法》——没卖的，要找Pdf；周民强《复变函数》——选读；沙巴特《单复变函数》——估计看不了多少；Cartan《解析函数论初步》——久闻大名，放在后面看，觉得看不了多少。
 
-实变(其实这是大二下的目标了)那汤松《实变函数 ...</div><a class="more" href="/2017/03/17/%E8%BF%91%E6%9C%9F%E5%BE%85%E8%AF%BB%E4%B9%A6%E7%9B%AE%E5%8F%8A%E5%85%B6%E4%BB%96/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/03/07/6.2%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E4%BB%96%E6%B1%82%E5%AF%BC%E6%B3%95%E5%88%99/">6.2高阶导数及其他求导法则</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-03-07</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">本节主要涉及高阶导数运算、隐函数求导和参数方程求导。其中高阶导数多是技术性问题，隐函数求导法则更多是理论上的纠结。收录了一个在$x=0$处十分“光滑”的函数例子。
+  
+    <article id="post-度量空间" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/23/%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/" class="article-date">
+  <time datetime="2017-04-23T14:06:00.000Z" itemprop="datePublished">2017-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Math/">Math</a>
+  </div>
 
-对于高阶导数的计算，最重要的是Leibniz公式：若$f(x)$、$g(x)$在$I$上$n$阶可导，则有Leibniz公式：$$(f\cdot g)^{(n)}=\sum_{k=0}^n\dbinom nkf^{(k)}g^{(n-k)}.$$其中$h^{(m)}$表示$h(x)$的m阶导数。具体证明用数学归纳法和变换哑指标。下面给出几个计算高阶导数的例子。
-eg1.求$y^{(n)}\bigg|{x=0}=\arcsin^{(n)}x\bigg|{x=0}$.solve：这种反三角函数高阶求导有一种“通法”(也可以说是一种启发性的思路)，首先有：$$y’\sqrt{1-x^2}=1,$$再求导得到：$$(1-x^2)y’’-xy’=0,$$这个时候就得到不带根号的相乘形式的式子，用Leibniz公式整理得：$$y^{(n+2)}(1-x^2)-(2n+1)xy^{(n+1)}-n^2y^{(n)}=0$$代入$x=0$ ...</div><a class="more" href="/2017/03/07/6.2%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E4%BB%96%E6%B1%82%E5%AF%BC%E6%B3%95%E5%88%99/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/03/05/Euler%E5%85%AC%E5%BC%8F%E5%92%8C%E4%BD%99%E5%85%83%E5%85%AC%E5%BC%8F/">Euler公式和余元公式</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-03-05</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">像Euler公式这样的优美等式，当然是越早接触越好。余元公式是研究$\Gamma(x)$的产物，也是重要的结论。这里把二者再复述一遍，一是因为它们有一定的内在联系，二是用自己的话说一遍也好加深印象。
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/23/%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/">一般理论(1).度量空间</a>
+    </h1>
+  
 
-Euler最先发现，对于$x\in\Bbb R$,$x\neq k\pi(k\in\Bbb Z)$，有如下关系成立：$$\sin x=x\cdot\prod_{n=1}^{+\infty}\left(\frac{x^2}{1-n^2{\pi}^2}\right).$$先把它放在这里，转而研究伽马函数：$\Gamma(x)=\int_0^{+\infty}t^{x-1}e^{-t}\Bbb{d}t(x&gt;0)$.它有如下几条重要性质：
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这个系列是服务于多元微分学的。我们欲考虑$\Bbb R^n$上极限的概念，必须要刻划“距离足够近”这一表达，那么怎么在高维空间给出“距离”的表述？这就促使度量、拓扑等概念的产生，他们都是一般化的理论。</p>
+<hr>
+<p>一、度量空间和度量函数、依度量收敛</p>
+<p><strong>定义1(度量空间)</strong>：度量空间$(X,d)$是一个装备了度量函数$d$的集合$X$,其中$d:X×X\to[0,+\infty)$满足：</p>
+<ul>
+<li>$\forall x\in X$,$d(x,x)=0$;</li>
+<li>$\forall x,y\in X$,$x\neq y$,$d(x,y)&gt;0$;</li>
+<li>$\forall x,y\in X$,$d(x,y)=d(y,x)$;</li>
+<li>$\forall x,y,z\in X$,$d(x,z)\le d(x,y)+d(y,z)$.</li>
+</ul>
+<p><strong>定义2(导出的度量空间)</strong>：$(X,d)$是度量空间，$Y\subset X$,$d’:Y×Y\to[0,+\infty)$,称$(Y,d’)$是$X$上由$Y$导出的子空间。</p>
+<p><strong>eg1(Euclid空间$\Bbb R^n$)</strong>：Euclid空间是度量空间$(\Bbb R^n,d)$,其中$\Bbb R^n={(x_1,\cdots,x_n)|x_k\in\Bbb R^n,k\in\Bbb N_+}$,<br>$$<br>d=d_{l^2}((x_1,\cdots,x_n),(y_1,\cdots,y_n))=\left(\sum_{k=1}^n(x_k-y_k)^2\right)^{\frac12}.<br>$$</p>
+<p><strong>eg2($l^p$度量)</strong>：这里的点仍是$\Bbb R^n$中的，但是度量函数定义为：<br>$$<br>d=d_{l^p}((x_1,\cdots,x_n),(y_1,\cdots,y_n))=\left(\sum_{k=1}^n(x_k-y_k)^p\right)^{\frac1p},p\in[1,+\infty).<br>$$<br>由Minkovski不等式知道该度量满足度量函数的性质。</p>
+<p><strong>eg3(上确界范数度量$l^{\infty}$)</strong>：这里度量函数定义为：<br>$$<br>d=d_{l^\infty}((x_1,\cdots,x_n),(y_1,\cdots,y_n))=\sup{|x_k-y_k|:k=1,2,\cdots,n}<br>$$</p>
+<p><strong>命题1</strong>：对于以上3个度量，有如下不等关系<br>$$<br>\frac1{\sqrt{n}}d_{l^2}(x,y)\le d_{l^{\infty}}(x,y)\le d_{l^1}(x,y).<br>$$<br><strong>eg4</strong>：$C[a,b]$是闭区间$[a,b]$上的度量空间(注意这是一个函数空间！)，其中度量函数为<br>$$<br>d(f,g)=\max_{a\le x\le b}|f(x)-g(x)|.<br>$$</p>
+<p><strong>eg5</strong>:像[eg3]那样引入一般情况的$C[a,b]$上的函数$d_p$:<br>$$<br>d_p(f,g)=\left(\int_a^b|f-g|^p\Bbb dx\right)^{\frac1p},p\in[1,+\infty).<br>$$<br>通过积分形式的Minkovski不等式知$d_p$是度量函数。<br>约定，装备了$d_p$的集合$C[a,b]$是度量空间，用$C_p[a,b]$表示。</p>
+<p><strong>定义3(依度量收敛)</strong>：称度量空间$(X,d)$中的数列${x_n}$依度量$d_p$收敛到$x\in X$，如果$d(x_n,x)\to0$.</p>
+<p><strong>定理1($d_p$之间的等价性)</strong>：设${x_n}\subset\Bbb R^n$，$p,q\in[1,+\infty)$，则以下命题相互等价：</p>
+<p>(1).${x_n}$依$d_p$收敛到$x$;<br>(2).${x_n}$依$d_q$收敛到$x$;<br>(3).记$\pmb x^m=(x_1^m,\cdots,x_n^m)\in\Bbb R^n$,对于任一$1\le k\le n$,${x_k^m}$收敛到$x_k$——注意这是实数列的收敛！</p>
+<hr>
+<p>二、度量空间中的基本概念(如不加说明，下面默认在度量空间上讨论)</p>
+<p><strong>定义1($\delta-$邻域)</strong>：$\delta&gt;0,a\in X$,称集合$B(a,\delta)={x\in X|d(a,X)&lt;\delta}$为a的$\delta-$邻域，或以$a$为中心，$r$为半径的开球。</p>
+<p><strong>定义2(开集)</strong>：称$D\subset X$为开集，如果任一$x\in D$,$\exists \delta&gt;0:B(a,\delta)\subset D$.</p>
+<p><strong>定义3(闭集)</strong>：称$E\subset X$为闭集，如果$X-E$是开集。</p>
+<p><strong>命题1</strong>：(1).$X$中任意个开集之并还是开集；(2).$X$中有限多个开集之交还是开集。(针对闭集请自己写出，注意和开集是对偶的)</p>
+<p><strong>定义4(邻域)</strong>：称包含$x\in X$的开集为这个点在$X$中的邻域，记为$U(x)$。</p>
+<p><strong>定义5(内、外、边界、孤立点)</strong>：称$x\in X$为集合$S\subset X$中的</p>
+<p>(1).内点，若存在$U(x,\delta)\subset X$，记$E$全体内点组成的集合为${\rm int}E$;<br>(2).外点，若$x$是$E-X$中的内点，记$E$全体外点组成的集合为${\rm ext}E$;<br>(3).边界点，若它每个邻域既含$E$中的点又不全在$E$中，记$E$全体边界点组成的集合为$\partial E$；<br>(4).孤立点，若存在$U(a,r)$：$U(a,r)\cap E={a}$.</p>
+<p><strong>定义6(聚点)</strong>：称$a$是集合$E\subset X$的聚点，如果对点$a$的任一邻域$U(a)$，都有$U(a)\cap E\neq\varnothing$，称$E$全体边界点组成的集合为$E$的导集，记为$E’$.</p>
+<p><strong>定义7(闭包)</strong>：称$\overline E=E\cup E’$为$E\subset X$的闭包。</p>
+<p><strong>命题2</strong>：$F$是$X$中的闭集，当且仅当$F=\overline F$.</p>
+<p><strong>命题3</strong>：$\overline F$是闭集.</p>
+<p><strong>命题4</strong>：$\overline F={\rm int}F\cup\partial F=X-{\rm ext} F$.</p>
+<p><strong>命题5</strong>：设$x_0\in X$,$E\subset X$,以下命题等价：</p>
+<p>(1).$x_0\in E’$；(2).$x\in {\rm int}E$或$x\in\partial E$；(3).$\exists{x_n}\subset E$,${x_n}$依度量收敛到$x_0$.</p>
+<p><strong>命题6</strong>($\Bbb R^n$的划分)：$\Bbb R^n$可以写成 ${\rm int}A\cup {\rm ext}A\cup\partial A$，这里$A\subset\Bbb R^n$是任一集合。</p>
+<p>容易发现，其实这些定义和命题和Euclid空间中的定义别无二致，但是更一般化，容易推广和研究。</p>
+<hr>
+<p>三、度量空间的直积</p>
+<p><strong>定义1(直积)</strong>：若$(X_1,d_1),(X_2,d_2)$是两个度量空间，那么$(X_1×X_2,d)$称为$X_1$和$X_2$的直积，其中$d$是按<br>$$<br>d(\pmb x,\pmb y)=d_1(x_1,y_1)+d_2(x_2,y_2)<br>$$<br>或<br>$$<br>d(\pmb x,\pmb y)=\max{d_1(x_1,y_1),d_2(x_2,y_2)}<br>$$<br>或<br>$$<br>d(\pmb x,\pmb y)=\sqrt{d_1^2(x_1,y_1)+d_2^2(x_2,y_2)}<br>$$<br>定义的度量函数。</p>
+<hr>
+<p>按照Zorich和Tao的体系，大概写五章，分别为度量空间、拓扑空间、紧性与紧集、完备的度量空间和拓扑空间上的连续映射(包含压缩映射原理)。我希望是能够不参照书来写，完全用自己的语言，按照自己的理解。</p>
 
-$\forall x&gt;0$,$\Gamma(x)&lt;+\infty$.
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/23/%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/" data-id="ck53o5has002l5ohmerff71vf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a></li></ul>
 
-proof：这说明对于任一自变量伽马函数不是正无穷大，放在下面证明。
+    </footer>
+  </div>
+  
+</article>
 
-$\Gamma(x+1)=x\Gamma(x)$,特别的，当$n\in\Bbb N_+$时，$\Gamma(n)=(n-1)!$.
 
-proof:对其分部积分，得到$$\Gamma(x+1)=-e^ ...</div><a class="more" href="/2017/03/05/Euler%E5%85%AC%E5%BC%8F%E5%92%8C%E4%BD%99%E5%85%83%E5%85%AC%E5%BC%8F/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/03/01/6.1%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E8%BF%90%E7%AE%97/">6.1导数及其运算</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-03-01</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">这一章是比较简单的：计算方面，全然是高中知识；理论方面，难点是反函数求导、复合函数求导、隐函数求导和Leibniz公式。本节讨论前两个。本节中$f\in C^1(I)$只是指$f$在区间$I$上可导而非连续可导。
-几个基本的结论(后两个均假定$f\in C^1{x_0}$，这里$C^1$仅仅指可导！)：
+  
+    <article id="post-讨论班讲义(10)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/22/%E8%AE%A8%E8%AE%BA%E7%8F%AD%E8%AE%B2%E4%B9%89(10)/" class="article-date">
+  <time datetime="2017-04-22T06:06:00.000Z" itemprop="datePublished">2017-04-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Math/">Math</a>
+  </div>
 
-$f(x)\in C^1{x_0^+}\Rightarrow f\in C{x_0^+}$,
-$f(x)\in C^1{x_0^-}\Rightarrow f\in C{x_0^-}$,
-$f(x)$在$x_0$存在两个单侧导数，则f在$x_0$连续(既有左极限又有右极限),
-$\Delta y=f’(x_0)\Delta x+o(\Delta x)(\Delta x\to0)$(有限增量公式),
-$\Delta y=f’(x_0)\Delta x+\omega(x)\Delta x$(上式的加强).
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/22/%E8%AE%A8%E8%AE%BA%E7%8F%AD%E8%AE%B2%E4%B9%89(10)/">讨论班第十周讲义</a>
+    </h1>
+  
 
-下面对最后一个结论作出证明，其中$\lim_{x\to x_0}\omega(x)=\omega(x_0)=0$.proof:定义$$\begin{eqnarray}\omega(x ...</div><a class="more" href="/2017/03/01/6.1%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E8%BF%90%E7%AE%97/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/02/21/Abel%E5%8F%98%E6%8D%A2/">Abel变换及浅显应用(防遗忘)</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-21</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">Abel变换：对于数列${a_n}$、${b_n}$，已知$\sum_{i=1}^k a_k=S_k$,则有如下变换：$$\sum_{i=1}^na_ib_i=\sum_{i=1}^{n-1}S_i\cdot(b_i-b_{i+1})+S_nb_n.$$从形式上看，好像是对${b_n}$作差分，最后再补上$S_nb_n$(其实对${a_n}$也一样)。下面证明之。proof：定义$S_0=0.$$$\begin{align}\sum_{i=1}^na_ib_i&amp;=\sum_{i=1}^n(S_{i}-S_{i-1})\cdot b_i=\sum_{i=1}^nS_ib_i-\sum_{i=1}^nS_{i-1}b_i\&amp;=\sum_{i=1}^nS_ib_i-\sum_{i=0}^{n-1}S_ib_{i+1}=S_nb_n-S_0b_1+\sum_{i=1}^{n-1}S_i(b_i-b_{i+1})\&amp;=\sum_{i=1}^{n-1}S_i\cdot(b_i-b_{i+1})+S_nb_n\&amp;=S_nb_n-\sum_{i=1}^{n-1}S_i\ ...</div><a class="more" href="/2017/02/21/Abel%E5%8F%98%E6%8D%A2/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/02/04/5.6%E5%91%A8%E6%9C%9F3%E8%95%B4%E5%90%AB%E6%B7%B7%E6%B2%8C/">5.6周期3蕴含混沌</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-04</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">混沌(Chaos)的概念最先由李天岩和其导师Yorke提出，是一种长期行为对初态十分敏感的系统。如果把初态表示成因果规律f的定义域中的一点x，那么以后的状态就是f的迭代，所以研究混沌就应该知道关于相应f的迭代之后的性质。可就是形如$f(x)=x^2+x+1$这样简单的函数，经过较多次迭代后的表达式也是复杂的——甚至可能对问题本身并无多大帮助。由是，我们把关注点转向序列${f^n(x)}$.数列中几个比较关键的性质有增减性、周期性和极限。对于不同的初值，研究其构成的迭代序列：$$x,f(x),f^2(x),\cdots, f^n(x)$$所具有的周期性，如果存在正整数$m,s.t:f^m(x)=x$,则称m是点x的一个周期，x是f的一个周期点。$x,f(x),\cdots, f^m(x)$构成一个m-周期轨。点x的周期中必有一个最小的，记作T。命题1.nT也是x的周期$(n\in\Bbb N_+)$.proof:$$f^{nT}(x)=f^{(n-1)T}(f^T(x))=f^{(n-1)T}(x)=f^{(n-2)T}(x)=\cdots=f^T(x)=x.$$命题2.若t也是x的周期 ...</div><a class="more" href="/2017/02/04/5.6%E5%91%A8%E6%9C%9F3%E8%95%B4%E5%90%AB%E6%B7%B7%E6%B2%8C/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/02/03/5.5%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0/">5.5单调函数</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-03</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">第四章时我们已经探讨过单调函数的相关内容，现在与连续性结合起来。下面着重看几个重要结论的证明。
-命题1：单调函数只有第一类间断点。proof：这等价于单调函数在间断点处有两个单侧的不等极限。这里不妨只讨论f是(a,b)上的单增函数。设$x_0$是f的间断点，对于$\forall x_1&lt; x_0&lt; x_2:f(x_1)\le f(x_0)\le f(x_2).$下面令：$$x_1\to x_0^-,x_2\to x_0^+,$$由单调函数的单侧极限存在定理，就得到$f(x_0^-)\le f(x_0)\le f(x_0^+).$其中的两个单侧极限都是有限数。又因为必须有$f(x_0^-)&lt; f(x_0^+),$所以知道$x_0$是第一类间断点。
-命题2：单调函数的间断点至多是可数的。proof：设f是I上的单增函数，则对于间断点$x_1&lt; x_2,$下证：$$(f(x_1^-),f(x_1^+))\cap(f(x_2^-),f(x_2^+))=\phi.$$已知可以找到$x_0\in(x_1,x_2),$则$f(x_1^+)\le f(x_0)\le f(x_2 ...</div><a class="more" href="/2017/02/03/5.5%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0/#more" style="margin-top: 14px">阅读更多</a><hr></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/">&lt;i class&#x3D;&quot;fa fa-chevron-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">&lt;i class&#x3D;&quot;fa fa-chevron-right&quot;&gt;&lt;&#x2F;i&gt;</a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-    processEscapes: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-  },
-  CommonHTML: {
-    linebreaks: { automatic: true, width: "90% container" }
-  },
-  "HTML-CSS": { 
-    linebreaks: { automatic: true, width: "90% container" }
-  },
-  "SVG": { 
-    linebreaks: { automatic: true, width: "90% container" }
-  }
-});
-</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
-  var all = MathJax.Hub.getAllJax(), i;
-  for (i=0; i < all.length; i += 1) {
-    all[i].SourceElement().parentNode.className += ' has-jax';
-  }
-});
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-  $('#nav').addClass('is-mobile')
-  $('footer').addClass('is-mobile')
-}</script></body></html>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前一阵搞讨论班，没时间更新。自即日起，用讨论班的讲义代替原来的整理。讨论班的题目不难，主要是锻炼他们的证明过程，不过讲义我还是会写的有一些难度。</p>
+<p>这次讨论导数。</p>
+<p>一、导数</p>
+<p>1.证明：$f$在$x_0$处可导$\Rightarrow f\in C^0{x_0}$.</p>
+<p>2.证明：某点的切线具有局部逼近最优性。最优性理解：在$x_0$的某邻域内，恒有<br>$$|f(x)-l(x)|&lt;|f(x)-L(x)|,$$<br>那么$y=l(x)$就是最优的。</p>
+<p>3.证明：若$f$在$x_0$处可导，则存在$\omega(x)$，使得$\Delta y=f’(x_0)\Delta x+\omega(x)\Delta x$其中，<br>$$<br>\lim_{x\to x_0}\omega(x)=\omega(x_0)=0.<br>$$</p>
+<p>4.证明一元反函数求导定理。</p>
+<p>5.证明一元函数的复合求导法则。</p>
+<p>6.设$\deg f=n$,记其相异根为$x_1,\cdots,x_k$,其中$x_i$的重数为$n_i$,$n_1+\cdots+n_k=n$,求$f’(x)$.</p>
+<p>二、高阶导数及其他求导法则</p>
+<p>1.证明Leibniz公式。</p>
+<p>2.证明参数求导法则。</p>
+<p>3.已知<br>$$\begin{eqnarray}<br>f(x)=<br>\begin{cases}<br>\Bbb e^{-\frac1{x^2}}, &amp;x\neq 0,\cr 0, &amp;x=0. \end{cases}<br>\end{eqnarray}<br>$$<br>证明：$f^{(n)}(0)=0$.</p>
+<p>4.求$\arcsin^{(n)}(0)$、$\arctan^{(n)}(0)$.</p>
+<p>5.$y=x^{n-1}\Bbb e^{\frac1x}$,证明：$y^{(n)}(x)=\frac{(-1)^n}{x^{n+1}}\Bbb  e^{\frac1x}$.</p>
+<p>6.不展开乘积$y=(6+5x)(4+3x)^2(2+x)^3$，求$y^{(5)}(0)$.</p>
+<p>7.设$\deg f=7$,$(x-1)^4|f+1$且$(x+1)^4|f-1$,求$f$.</p>
+<hr>
+<p>近来可谓比较忙，疏于Blog的更新，主要是因为周五晚上的讨论班。现在改到周四晚上，估计可以稍微有一点余裕时间。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/22/%E8%AE%A8%E8%AE%BA%E7%8F%AD%E8%AE%B2%E4%B9%89(10)/" data-id="ck53o5haq002i5ohm46db9nez" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-近期待读书目及其他" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/17/%E8%BF%91%E6%9C%9F%E5%BE%85%E8%AF%BB%E4%B9%A6%E7%9B%AE%E5%8F%8A%E5%85%B6%E4%BB%96/" class="article-date">
+  <time datetime="2017-03-17T15:32:00.000Z" itemprop="datePublished">2017-03-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Other/">Other</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/17/%E8%BF%91%E6%9C%9F%E5%BE%85%E8%AF%BB%E4%B9%A6%E7%9B%AE%E5%8F%8A%E5%85%B6%E4%BB%96/">待读书目及其他</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>只是写一些书目备忘，其他功效一概不具。这里的近期指的是现在到大二开学前，其中英文原版书籍不强迫自己看，毕竟我的英语差得很。</p>
+<ul>
+<li><p>数学分析：<br>菲赫金哥尔茨《数学分析原理(第二卷)》——这个预计4月3号左右到；<br>张筑生《数学分析新讲》第三册——级数论和Fourier分析部分；<br>陶哲轩《陶哲轩实分析》——Fourier分析部分，感觉Tao的Riemann积分部分不够深入；<br>Zorich《数学分析(第二卷)》；<br>陈纪修《数学分析(下)》——当课本；<br>Rudin《数学分析原理》——这个不急；<br>Stein《傅里叶分析导论》——数分学完就看，大一暑假应该可以开始看。</p>
+</li>
+<li><p>高等代数：<br>丘维声《高等代数(下)》——今天看到基，觉得写得精彩；<br>张贤科《高等代数学》——还没寄到；<br>Axler《线性代数应该这样学》——放到暑假理顺思路用。</p>
+</li>
+<li><p>复变<br>龚昇《简明复分析》；<br>Stein《复分析》；<br>Needham《复分析 可视化方法》——没卖的，要找Pdf；<br>周民强《复变函数》——选读；<br>沙巴特《单复变函数》——估计看不了多少；<br>Cartan《解析函数论初步》——久闻大名，放在后面看，觉得看不了多少。</p>
+</li>
+<li><p>实变(其实这是大二下的目标了)<br>那汤松《实变函数论》；<br>夏道行《实变函数论与泛函分析(上)》；<br>周民强《实变函数论》。</p>
+</li>
+<li><p>解析几何<br>丘维生《解析几何》——一招鲜吃遍天。</p>
+</li>
+</ul>
+<p>常微分什么的等大二开了再做打算，感觉代数方面还要加强。<br>英语还是重要啊。<br>以上书七成买来了，所以资源方面不成问题，没买的或买不到的保证图书馆也有，剩下的就是看了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/17/%E8%BF%91%E6%9C%9F%E5%BE%85%E8%AF%BB%E4%B9%A6%E7%9B%AE%E5%8F%8A%E5%85%B6%E4%BB%96/" data-id="ck53o5hau002o5ohm6spp7eju" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-6.2高阶导数及其他求导法则" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/07/6.2%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E4%BB%96%E6%B1%82%E5%AF%BC%E6%B3%95%E5%88%99/" class="article-date">
+  <time datetime="2017-03-07T03:06:00.000Z" itemprop="datePublished">2017-03-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Math/">Math</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/07/6.2%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E4%BB%96%E6%B1%82%E5%AF%BC%E6%B3%95%E5%88%99/">6.2高阶导数及其他求导法则</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本节主要涉及高阶导数运算、隐函数求导和参数方程求导。其中高阶导数多是技术性问题，隐函数求导法则更多是理论上的纠结。收录了一个在$x=0$处十分“光滑”的函数例子。</p>
+<hr>
+<p>对于高阶导数的计算，最重要的是Leibniz公式：若$f(x)$、$g(x)$在$I$上$n$阶可导，则有Leibniz公式：<br>$$<br>(f\cdot g)^{(n)}=\sum_{k=0}^n\dbinom nkf^{(k)}g^{(n-k)}.<br>$$<br>其中$h^{(m)}$表示$h(x)$的m阶导数。具体证明用数学归纳法和变换哑指标。下面给出几个计算高阶导数的例子。</p>
+<p>eg1.求$y^{(n)}\bigg|<em>{x=0}=\arcsin^{(n)}x\bigg|</em>{x=0}$.<br>solve：这种反三角函数高阶求导有一种“通法”(也可以说是一种启发性的思路)，首先有：<br>$$<br>y’\sqrt{1-x^2}=1,<br>$$<br>再求导得到：<br>$$<br>(1-x^2)y’’-xy’=0,<br>$$<br>这个时候就得到不带根号的相乘形式的式子，用Leibniz公式整理得：<br>$$<br>y^{(n+2)}(1-x^2)-(2n+1)xy^{(n+1)}-n^2y^{(n)}=0<br>$$<br>代入$x=0$得<br>$$<br>y^{(n+2)}(0)=n^2y^{(n)}(0).<br>$$<br>剩下的分奇偶讨论，没有本质困难。</p>
+<p>eg2.设<br>$$<br>\begin{eqnarray} f(x)= \begin{cases} \Bbb e^{-\frac1{x^2}},&amp; \mbox{$x\neq0$, } \ 0, &amp;\mbox{$x=0$. } \end{cases} \end{eqnarray}<br>$$<br>证明$f^{(n)}(0)=0(n\in\Bbb N_+)$.<br>proof:只要注意到$f$的$n$阶导数有<br>$$<br>f^{(n)}(x)=P_n\left(\frac1x\right)\cdot \Bbb e^{-\frac1{x^2}}<br>$$<br>的形式，其中$P_n$是次数单增的多项式，然后用数学归纳法即可。这个函数之所以要拿出来单独说，是因为在后面研究Taylor级数时有很大用处，而且可以经过延拓来构造一些”病态或畸形”的函数。</p>
+<hr>
+<p>隐函数求导：如果一个函数$y=y(x)$满足方程$F(x,y)=0$,则将它代入后就得到$F(x,y(x))=0$.然后对$x$求导就得到$y$的导数。这是一个不严格的说法，较为完善的理论还要等到多元微积分学时再说。<br>简证：若$x=x(y)$和$y=y(x)$互为反函数，则后代入前则得到$x\equiv x(y(x))$.对$x$求导，就有<br>$$<br>1=x’(y(x))y’(x).<br>$$<br>继而有<br>$$<br>y’(x)=\frac1{x’(y)}.<br>$$<br>但是这不能代替泛函数求导法则，因为(1).不知道$y(x)$是否严格单调，即不知道是否存在其反函数；(2).即使有反函数,$x’(y)$是否为0也不确定。</p>
+<hr>
+<p>参数方程求导：设$x=\phi(t),y=\psi(t)$在区间$(a,b)$上可导，且$\phi(t)\neq0$,则：<br>(1).$x=\phi(t)$在$(a,b)$上严格单调，存在反函数$t=t(x)$;<br>(2).$x=\phi(t)$和$y=\psi(t)$存在关系$y=\psi(t(x))$;<br>(3).$y$在$(a,b)$上可导,且<br>$$<br>y’(x)=\frac{\psi’(t)}{\phi’(t)}\Bigg|<em>{t=t(x)}.<br>$$<br>proof：(1).由Darboux定理，$\phi’(t)\neq0\Rightarrow\phi’(t)$在$(a,b)$上保号，所以严格单调，这样一来(2)就是水到渠成的。<br>(3).因为由反函数求导：<br>$$<br>t’(x)=\frac1{\phi’(t)}\Bigg|</em>{t=t(x)},<br>$$<br>所以对$y=\psi(t(x))$求导得<br>$$<br>y’(x)=\psi’(t(x))\cdot\frac1{\phi’(t)}=\frac{\psi’(t)}{\phi’(t)}\Bigg|_{t=t(x)}.<br>$$<br>即证。其实证明的核心是Darboux定理，所以$\phi’(t)\neq0$是必不可少的！</p>
+<p>极坐标方程的求导：若曲线$C$由极坐标方程$x=\rho(\theta)\cos\theta,y=\rho(\theta)\sin\theta$决定，则<br>$$<br>\frac{\Bbb dy}{\Bbb dx}=\frac{\rho’(\theta)\sin\theta+\rho(\theta)\cos\theta}{\rho’(\theta)\cos\theta-\rho(\theta)\sin\theta}=\frac{\rho’(\theta)\tan\theta+\rho(\theta)}{\rho’(\theta)-\rho(\theta)\tan\theta}.①<br>$$<br>这表示了某点切线斜率的函数，而该点向径与切线的夹角$\varphi$的正切是<br>$$<br>\tan\varphi=\frac{\tan(\varphi+\theta)-\tan\theta}{1+\tan(\varphi+\theta)\tan\theta},<br>$$<br>代入①则有<br>$$<br>\tan\varphi=\frac{\rho(\theta)}{\rho’(\theta)}.<br>$$<br>这是比较重要的结论。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/07/6.2%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E4%BB%96%E6%B1%82%E5%AF%BC%E6%B3%95%E5%88%99/" data-id="ck53o5h9x00175ohm2yu22f5n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Euler公式和余元公式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/05/Euler%E5%85%AC%E5%BC%8F%E5%92%8C%E4%BD%99%E5%85%83%E5%85%AC%E5%BC%8F/" class="article-date">
+  <time datetime="2017-03-05T11:40:00.000Z" itemprop="datePublished">2017-03-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/05/Euler%E5%85%AC%E5%BC%8F%E5%92%8C%E4%BD%99%E5%85%83%E5%85%AC%E5%BC%8F/">Euler公式和余元公式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>像Euler公式这样的优美等式，当然是越早接触越好。余元公式是研究$\Gamma(x)$的产物，也是重要的结论。这里把二者再复述一遍，一是因为它们有一定的内在联系，二是用自己的话说一遍也好加深印象。</p>
+<hr>
+<p>Euler最先发现，对于$x\in\Bbb R$,$x\neq k\pi(k\in\Bbb Z)$，有如下关系成立：<br>$$\sin x=x\cdot\prod_{n=1}^{+\infty}\left(\frac{x^2}{1-n^2{\pi}^2}\right).$$<br>先把它放在这里，转而研究伽马函数：$\Gamma(x)=\int_0^{+\infty}t^{x-1}e^{-t}\Bbb{d}t(x&gt;0)$.它有如下几条重要性质：</p>
+<ul>
+<li>$\forall x&gt;0$,$\Gamma(x)&lt;+\infty$.</li>
+</ul>
+<p>proof：这说明对于任一自变量伽马函数不是正无穷大，放在下面证明。</p>
+<ul>
+<li>$\Gamma(x+1)=x\Gamma(x)$,特别的，当$n\in\Bbb N_+$时，$\Gamma(n)=(n-1)!$.</li>
+</ul>
+<p>proof:对其分部积分，得到<br>$$<br>\Gamma(x+1)=-e^t\cdot t^x\bigg|_0^{+\infty}+x\cdot\int_0^{+\infty}  t^{x-1}e^t\Bbb dt=x\Gamma(x).<br>$$<br>又$\Gamma(1)=1$,即证。由此可以看出，$\Gamma(x)$是阶乘在实数域上的延拓，从而又与Stirling公式有联系。</p>
+<ul>
+<li>$\Gamma(\frac12)=\sqrt{\pi}$.</li>
+</ul>
+<p>proof：由Euler-Poisson积分以及换元法得到，<br>$$<br>\Gamma\left(\frac12\right)=\frac12\int_0^{+\infty}\frac{1}{re^{r^2}}\Bbb dr^2=\int_0^{+\infty}\frac1{e^{r^2}}\Bbb dr=\sqrt{\pi}.<br>$$<br>从第三条出发，我们想研究$\Gamma(x)\Gamma(1-x)$的性质。为此，先给出$\Gamma(x)$的另一个定义(无穷乘积)：<br>对于$x\neq k(k\in\Bbb N)$,定义：<br>$$<br>\Gamma(x)=\frac1x\prod_{n=1}^{+\infty}\frac{\left(1+\frac1n\right)^x}{1+\frac xn}.<br>$$<br>由$\ln\frac{\left(1+\frac1n\right)^x}{1+\frac xn}$ ~ $\ln\left(1+\frac{x(x-1)}{2n^2}\right)$ ~ $\frac{x(x-1)}{2n^2}(n\to+\infty)$知该无穷乘积收敛，所以$\Gamma(x)$有意义，从而可以证明第一个命题。由：<br>$$<br>\prod_{i=1}^{n}\frac{\left(1+\frac1i\right)^x}{1+\frac xi}=\left(\frac{n+1}{n}\right)^x\cdot\frac{n!n^x}{x(x+1)\cdots(x+n)},<br>$$<br>就得到Euler-Gauss公式：<br>$$<br>\Gamma(x)=\lim_{n\to+\infty}\frac{n!n^x}{x(x+1)\cdots(x+n)}.<br>$$<br>继而<br>$$<br>\frac{\Gamma(x+1)}{\Gamma(x)}=\lim_{n\to+\infty}\frac{nx}{x+n+1}=x.<br>$$<br>通过引入$\gamma$(Euler常数)得到：<br>$$<br>e^{\gamma x}=\prod_{n=1}^{+\infty}\frac{e^{\frac xn}}{\left(1+\frac1n\right)^x}.<br>$$<br>再结合$\Gamma(x)$的定义就得到Weiestrass公式：<br>$$<br>\frac1{\Gamma(x+1)}=e^{\gamma x}\cdot\prod_{n=1}^{+\infty}\left(1+\frac xn\right)e^{-\frac xn}.<br>$$<br>利用上边结论得到：<br>$$<br>\Gamma(1-x)=(-x)\Gamma(-x)=\prod_{n=1}^{+\infty}\frac{\left(1+\frac1n\right)^{-x}}{1-\frac xn},<br>$$<br>结合Weiestrass公式就得到余元公式：<br>$$<br>\Gamma(1-x)\Gamma(x)=\frac{\pi}{\sin \pi x}.<br>$$<br>令$x=\frac12$就得到$\Gamma(\frac12)=\sqrt{\pi}$.以上是余元公式的推导，下面看余元公式和Euler公式之间有什么关系。</p>
+<hr>
+<p>Euler公式的推导<br>设$x\in(0,\pi)$,在余元公式中，令$t=\frac x{\pi}\in(0,1)$,则$\Gamma(1-t)\Gamma(t)=\frac{\pi}{\sin x}$,则$\sin x=\frac{\pi}{\Gamma(1-t)\Gamma(t)}$.根据Gamma函数的无穷乘积定义，<br>$$<br>\Gamma\left(\frac x{\pi}\right)=\lim_{n\to+\infty}\frac{\pi\frac x{\pi}(1+\frac x{\pi})\cdots(n+\frac x{\pi})}{n!n^{\frac x{\pi}}}=\lim_{n\to+\infty}x\left(1+\frac x{\pi}\right)\cdots\left(1+\frac x{n\pi}\right).<br>$$<br>同理，<br>$$<br>\Gamma\left(1-\frac x{\pi}\right)=\lim_{n\to+\infty}\left(1-\frac x{\pi}\right)\cdots\left(1-\frac x{n\pi}\right)<br>\cdot\frac{n+1-\frac x{\pi}}{n}.<br>$$<br>整理，<br>$$<br>\sin x=\frac{\pi}{\Gamma(1-\frac x{\pi})\Gamma(\frac x{\pi})}=\lim_{n\to+\infty}x\left(1-\frac {x^2}{\pi^2}\right)\left(1-\frac {x^2}{4\pi^2}\right)\cdots\left(1-\frac {x^2}{n^2\pi^2}\right).<br>$$<br>即$x\in(0,\pi)$时，成立，那么当$x\in(-\pi,0)$时由奇偶性易知也成立.<br>下面讨论一般情况，设$x=2k\pi+y(k\in\Bbb Z,y\in(-\pi,\pi),y\neq0)$,则有<br>$$<br>\sin x=\sin y=y\prod_{n=1}^{+\infty}\left(1-\frac{y^2}{n^2{\pi}^2}\right)<br>$$<br>只要证明<br>$$<br>\prod_{n=1}^{+\infty}\left(1-\frac{y^2}{n^2{\pi}^2}\right)=\frac{2k\pi+y}y\prod_{n=1}^{+\infty}\left(1-\frac{(2k\pi+y)^2}{n^2{\pi}^2}\right).<br>$$<br>先考虑k为正整数的情况，记RHS的部分积为$Q_n$，LHS的部分积为$P_n$.<br>$$<br>Q_n=\frac{2k\pi+y}y\cdot\prod_{s=1}^{n}\left[\frac{((s+2k)\pi+y)((s-2k)\pi-y)}{s^2\pi^2}\right].①<br>$$<br>将$s=1$至$s=2k$的$(s-2k)\pi-y$的负号提出，$Q_n$值不变，即：<br>$$<br>Q_n=\frac{2k\pi+y}y\cdot\prod_{s=1}^{2k}\left[\frac{((2k+s)\pi+y)((2k-s)\pi+y)}{s^2\pi^2}\right]\cdot<br>\frac{Q_n}{Q_{2k}},②<br>$$<br>只交换部分项并合并：<br>$$<br>Q_n=\prod_{s=1}^{n-2k}\frac{(s\pi+y)(s\pi-y)}{s^2\pi^2}\cdot\prod_{s=n-2k+1}^{n+2k}\frac{(s\pi+y)(s\pi-y)}{s^2\pi^2}.③<br>$$<br>③中第一个连乘积是$P_{n-2k}$,右边是分子分母均为$4k$次的多项式且最高次项项系数均为$\pi^{4k}$,所以<br>$$<br>\lim_{n\to+\infty}Q_n=\lim_{n\to+\infty}P_n.<br>$$<br>当$k&lt; 0$时，只要让$x=-t$，由已知亦可同理证得。<br>在$\sin x$的无穷乘积展开式中，令$x=\frac {\pi}2$就得到Wallis公式，可知Euler公式是很强力的结论。</p>
+<hr>
+<p>证明过程是有困难的，沿着前人的路子毕竟好走许多。</p>
+<hr>
+<p>参考文献：<br>[1].谢惠民.数学分析习题课讲义(下)，2004<br>[2].陈纪修.数学分析，2004<br>[3].朱传汇.《正弦函数sinx的无穷乘积展开式》.襄阳师专学报(自然科学版)，P51.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/05/Euler%E5%85%AC%E5%BC%8F%E5%92%8C%E4%BD%99%E5%85%83%E5%85%AC%E5%BC%8F/" data-id="ck53o5haa001u5ohm3skzdqf3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-6.1导数及其运算" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/01/6.1%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E8%BF%90%E7%AE%97/" class="article-date">
+  <time datetime="2017-03-01T04:32:00.000Z" itemprop="datePublished">2017-03-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Math/">Math</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/01/6.1%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E8%BF%90%E7%AE%97/">6.1导数及其运算</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这一章是比较简单的：计算方面，全然是高中知识；理论方面，难点是反函数求导、复合函数求导、隐函数求导和Leibniz公式。本节讨论前两个。本节中$f\in C^1(I)$只是指$f$在区间$I$上可导而非连续可导。</p>
+<p>几个基本的结论(后两个均假定$f\in C^1{x_0}$，这里$C^1$仅仅指可导！)：</p>
+<ul>
+<li>$f(x)\in C^1{x_0^+}\Rightarrow f\in C{x_0^+}$,</li>
+<li>$f(x)\in C^1{x_0^-}\Rightarrow f\in C{x_0^-}$,</li>
+<li>$f(x)$在$x_0$存在两个单侧导数，则f在$x_0$连续(既有左极限又有右极限),</li>
+<li>$\Delta y=f’(x_0)\Delta x+o(\Delta x)(\Delta x\to0)$(有限增量公式),</li>
+<li>$\Delta y=f’(x_0)\Delta x+\omega(x)\Delta x$(上式的加强).</li>
+</ul>
+<p>下面对最后一个结论作出证明，其中$\lim_{x\to x_0}\omega(x)=\omega(x_0)=0$.<br>proof:定义<br>$$\begin{eqnarray}<br>\omega(x)=<br>\begin{cases}<br>\frac{\Delta y}{\Delta x}-f’(x_0), &amp;x\neq x_0,\cr 0, &amp;x=x_0. \end{cases}<br>\end{eqnarray}<br>$$<br>容易知道它满足要求。又，这个公式将会被用于证明反函数求导定理和复合函数求导法则。</p>
+<hr>
+<p>反函数求导法则:设$y=f(x)$是$x=\phi(y)$的反函数，若条件都满足则$f’(x_0)=\frac1{\phi’(y_0)}$.<br>proof:<br>设$x=\phi(y)\in C^1{y_0}$,由有限增量公式之加强得到$\Delta x=x-x_0=[\phi’(y_0)+\omega(y)]\Delta y$.因为该式的用处是$x\to x_0$时，所以必须把$\omega(y)$换为$\omega(f(x))$,于是有：<br>$$<br>\lim_{x\to x_0}\omega(f(x))=\omega(\lim_{x\to x_o}(f(x)))=\omega(f(x_0)).<br>$$<br>继而<br>$$<br>\frac{\Delta y}{\Delta x}=\frac 1{\phi’(y_0)+\omega(f(x))}.<br>$$<br>令$\Delta x\to0$,就有$f’(x_0)=\frac1{\phi’(y_0)}.$</p>
+<p>复合函数求导法则(链式法则)：设$u=\phi(x)\in C^1{x_0},y=f(u)\in C^1{u_0}$.则$y=f(\phi(x))$在$x_0$可导，且$y’|_{x=x_0}=f’(\phi(x))\cdot\phi’(x).$<br>proof:<br>将有限增量公式之加强用到$u$、$y$两个函数上得到：<br>$$<br>\Delta u=[\phi’(x_0)+\omega_1(x)]\Delta x,\<br>\Delta y=[f’(u_0)+\omega_2(u)]\Delta u.<br>$$<br>把$\Delta u$代入$\Delta y$得到：<br>$$<br>\Delta y=f’(\phi(x_0))\phi(x_0)\Delta x+\omega(x)\Delta x.<br>$$<br>其中$\omega(x)=f’(u_0)\omega_1(x)+\omega_2(u)\phi’(x_0)+\omega_1(u)\omega_1(x)$.当$x\to x_0$时，很明显$\omega(x)$的第一、三项都趋于0，又因为$\phi(x)\to\phi(x_0)=u_0$,所以$\omega(x)\to0.$<br>所以<br>$$<br>\frac{\Delta y}{\Delta x}=f’(\phi(x_0))\phi(x_0)+\omega(x).<br>$$<br>令$\Delta x\to0$就得到结果。<br>PS：这里不可以从<br>$$<br>\frac{\Delta y}{\Delta x}=\frac{\Delta y}{\Delta u}\cdot\frac{\Delta u}{\Delta x}<br>$$<br>出发，令$\Delta x\to0$得到<br>$$<br>\frac{\Bbb{d}y}{\Bbb{d}x}=\frac{\Bbb{d} y}{\Bbb{d} u}\cdot\frac{\Bbb{d} u}{\Bbb{d} x},<br>$$<br>因为$\Delta u=\phi(x)-\phi(x_0)$是有可能为0的！</p>
+<p>切线的局部最优性：首先解释一下什么叫做最优性，在$x_0$的邻域内，有<br>$$|f(x)-l(x)|&lt;|f(x)-L(x)|,$$<br>那么$y=l(x)$就是最优的，通俗地讲就是在某点处靠得$f$最近的直线就是最优的，下面证明函数某点的切线就是该点处最优的。<br>设$f\in C^1{x_0}$,$l(x)=f’(x_0)(x-x_0)+f(x_0)$,$L(x)=ax+b\neq l(x)$.则存在$\delta&gt;0$,在$U(x_0,\delta)$中恒成立：<br>$$|f(x)-l(x)|&lt;|f(x)-L(x)|.$$<br>proof：分$L$是否通过$(x_0,f(x_0))$来讨论。<br>(1).不通过，这种情况好办。由函数连续性和$L(x_0)\neq f(x_0)$得到:<br>$$<br>\lim_{x\to x_0}|f(x)-l(x)|=|f(x_0)-l(x_0)|=0&lt;|f(x_0)-L(x_0)|=\lim_{x\to x_0}|f(x)-L(x)|.<br>$$<br>这表明不等式成立。<br>(2).通过，用到有限增量公式。设$L(x)=a(x-x_0)+f(x_0)(a\neq f’(x_0)$，这时加上有限增量公式分析如下：<br>$$<br>\lim_{x\to x_0}\left|\frac{f(x)-l(x)}{f(x)-L(x)}\right|=\lim_{x\to x_0}\left|\frac{o(x-x_0)}{(f’(x_0)-a)(x-x_0)+o(x-x_0)}\right|=o(1)&lt; 1.<br>$$<br>由此可以看出有限增量公式的大用处，继而几可窥得Taylor公式的强大，后面我们还会证明Taylor多项式的局部最优性(这个比切线还“优”)。</p>
+<hr>
+<p>习题<br>1.按定义，直接证明即可。</p>
+<p>2.$f’(0)=0$.</p>
+<p>3.$a=\frac1{2e}$.<br>4.<br>proof:充分性，$\Delta y=f’(x_0)\Delta x+o(\Delta x),\Delta g=g’(x_0)\Delta x+o(\Delta x)$.两式相减即得。必要性，由有限增量公式：<br>$$<br>\lim_{x\to x_0}\frac{f(x)-g(x)}{x-x_0}=(f’(x_0)-g’(x_0))+\lim_{x\to x_0}\frac{f(x_0)-g(x_0)}{x-x_0}=0.<br>$$<br>得$f(x_0)=g(x_0)$.继而$f’(x_0)=g’(x_0)$，即$f$和$g$在$x_0$处相切。</p>
+<p>5.<br>proof：$x=\frac{\pi}2+2k\pi(k\in\Bbb{Z})$时，二者相交，此时有<br>$$<br>(f(x)\sin x)’=f’(x)\sin x+f(x)\cos x=g’(x).<br>$$<br>易知$g’(\frac{\pi}2+2k\pi)=f’(\frac{\pi}2+2k\pi)$,即证。</p>
+<p>6.<br>proof：由因式定理，<br>$$<br>p(x)=(x-x_1)^{n_1}(x-x_2)^{n_2}\cdots(x-x_k)^{n_k}.<br>$$<br>对其求导就得到<br>$$<br>p’(x)=\sum_{i=1}^n\left[\prod_{1\le j\le n}^{j\neq i}n_i(x-x_i)^{n_i-1}(x-x_j)^{n_j}\right].<br>$$<br>虽然形式吓人，但把$p(x)$提出后就是答案。</p>
+<p>7.<br>proof：只需研究$f’(0)$即可。其右导数为$\lim_{x\to0^+}\frac1{1+e^{1/x}}=0$,左导数为$\lim_{x\to0^-}\frac1{1+e^{1/x}}=1$,所以f在$\Bbb{R}-{0}$上可导。</p>
+<p>8.基本题，答案分别是$n\neq0$、$n\ge 2$和$n\ge 3$.</p>
+<p>9.<br>proof:注意f在0处可导就在0处连续，由Cauchy方程性质得到f处处连续进而得到$f(x)=f(1)^x$。由$f’(0)=1$不难解出$f(1)=e$,所以$f(x)=e^x$，所以f在实数域上可导且$f(x)=f’(x)$。</p>
+<p>10.<br>solve：(1).只在$x=0$处连续，处处不可导(注意0处的左右导数不等)。(2).只在$x=0$处可导，其余处处不连续(自然也不可导)。</p>
+<p>11.<br>solve：(1).只对有理点作证明，无理点取相同的逼近数列就好。对$x_0\in\Bbb{Q}\neq0$,先取${x_n}=\frac n{n+1}x_0\to x_0$,则${f(x_n)}\to x_0$.再取${y_n}=\frac{\sqrt2n}{\sqrt2n+1}x_0\to x_0$,则${f(y_n)}\to x_0^2+x_0\neq x_0$.所以f在$x_0$处无极限，也不连续。(2).<br>$$<br>f’(0)=\lim_{x\to0}\frac{f(x)}x=\lim_{x\to0}\frac{x+o(x)}x=1.<br>$$<br>12.<br>solve:当$x\le0$时，$\frac{|f(x)|}x\ge\frac{|g(x)|}x$,所以$0\ge\lim_{x\to0^-}\frac{|f(x)|}x\ge\lim_{x\to 0^-}\frac{|g(x)|}x=0$.从而$\lim_{x\to0^-}\frac{|f(x)|}x=0$.同理$\lim_{x\to0^+}\frac{|f(x)|}x=0$.这样就有：<br>$$<br>\lim_{x\to0}\frac{|f(x)|}x=\lim_{x\to 0}\frac{f(x)}x=0.<br>$$<br>再由f和g的连续性得到$f(0)=0$,所以$f’(0)=0$.</p>
+<hr>
+<p>看了孙西坡的日志，倒是感慨万千——何谓反应激烈？时间仿佛又回到初中甚至小学(《西夏旅馆》)，追昔抚今岂不最令人心生纷乱。近来可谓诸事不顺，而且级数颇有些难(拟把$\sin x$的幂级数展开和余元公式拿出来单独说)。</p>
+<p>一直记不得分段函数和等号重齐的多行公式怎么打，去网上一查竟然瞥见了一篇谈论Tex行文规范的文章。其中说对于分式外的小括号不能用“简单粗暴”的”\left(“和”\right)”，真是令人大吃一惊，未曾想此道门路如此之深。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/01/6.1%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E8%BF%90%E7%AE%97/" data-id="ck53o5h9u00145ohmcrb19r8o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Abel变换" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/21/Abel%E5%8F%98%E6%8D%A2/" class="article-date">
+  <time datetime="2017-02-21T04:32:00.000Z" itemprop="datePublished">2017-02-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Math/">Math</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/21/Abel%E5%8F%98%E6%8D%A2/">Abel变换及浅显应用(防遗忘)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Abel变换：对于数列${a_n}$、${b_n}$，已知$\sum_{i=1}^k a_k=S_k$,则有如下变换：<br>$$<br>\sum_{i=1}^na_ib_i=\sum_{i=1}^{n-1}S_i\cdot(b_i-b_{i+1})+S_nb_n.<br>$$<br>从形式上看，好像是对${b_n}$作差分，最后再补上$S_nb_n$(其实对${a_n}$也一样)。下面证明之。<br>proof：定义$S_0=0.$<br>$$<br>\begin{align<em>}<br>\sum_{i=1}^na_ib_i&amp;=\sum_{i=1}^n(S_{i}-S_{i-1})\cdot b_i=\sum_{i=1}^nS_ib_i-\sum_{i=1}^nS_{i-1}b_i\<br>&amp;=\sum_{i=1}^nS_ib_i-\sum_{i=0}^{n-1}S_ib_{i+1}=S_nb_n-S_0b_1+\sum_{i=1}^{n-1}S_i(b_i-b_{i+1})\<br>&amp;=\sum_{i=1}^{n-1}S_i\cdot(b_i-b_{i+1})+S_nb_n\<br>&amp;=S_nb_n-\sum_{i=1}^{n-1}S_i\cdot(b_{i+1}-b_{i}).<br>\end{align</em>}<br>$$<br>我们发现，其本质不过是把$a_k$表示成$S_k-S_{k-1}$，但是经过这个变换，把两个数列对应项乘积和和$S_n$联系了起来。而且最后一个式子很像分部积分，只不过是离散形式($dx$就是那个$b_n-b_{n+1}$的差分)——不知道Abel当时发现它时是不是受到了分部积分的启发。</p>
+<p>Abel引理：设${a_n}$为单调数列，定义$B_k=\sum_{i=1}^kb_k$,若$B_n$有界，即$\forall n,|B_n|\le M$，则：<br>$$<br>\left|\sum_{k=1}^p a_kb_k\right|\le M(|a_1|+2|a_p|).<br>$$<br>proof:这是一个著名引理，用于证明A-D判别法。由Abel变换得：<br>$$<br>\begin{align<em>}<br>\left|\sum_{k=1}^p a_kb_k\right|&amp;\le|a_pB_p|+\sum_{i=1}^{p-1}|a_{k+1}-a_k|\cdot|B_k|\<br>&amp;\le M\left(|a_p|+\sum_{k=1}^{p-1}|a_{k+1}-a_{k}\right)①.<br>\end{align</em>}<br>$$<br>由于$a_n$单调，所以<br>$$<br>\sum_{k=1}^{p-1}|a_{k+1}-a_{k}|=\left|\sum_{k=1}^{p-1}(a_{k+1}-a_{k})\right|=|a_p-a_1|,<br>$$<br>将上式代入①即得结论。</p>
+<hr>
+<p>先看一个简单应用：正项数列${a_n}$、${b_n}$的无穷和都收敛，证明$\sum a_nb_n$也收敛。<br>proof：由Abel变换，<br>$$<br>\sum a_nb_n=\sum S_i(b_i-b_{i+1})+S_{+\infty}\cdot b_{+\infty}\<br>=\sum S_i(b_i-b_{i-1})\<br>&lt;\sum S_i(b_i+b_{i+1})\<br>=\sum_{i=1}^{N}S_i(b_i+b_{i+1})+\left(\sum_{i=N+1}^{+\infty}S_i(b_i+b_{i+1})\right)\<br>&lt;\sum_{i=1}^{N}S_i(b_i+b_{i+1})+\left((S+1)\cdot\sum_{i=N+1}^{+\infty}(b_i+b_{i+1})\right)\<br>\le 2S(S+1)+K.(K=constant)<br>$$<br>或许有简单方法，不过看见乘积我就直接Abel了。从这里可以看出因为${b_n}$不是单调的，所以我必须花一些力气去放缩使它变成单增的(放成${b_n+b_{n+1}}$)，这也提醒了我们最好选择单调的那个数列作为差分项。(原谅我没冲齐等号，因为hexo抽了，其他的都好好的就这个用align命令爆炸)</p>
+<p>eg2.已知正项级数$\sum a_n$收敛，证明$\frac1n\sum_{i=1}^nka_k\to0.$<br>proof:由上一题经验，我们把${n}$作为差分项，记$\sum_{i=1}^ka_k=S_k$,用Abel变换：<br>$$<br>\frac1n\sum_{i=1}^nka_k=\frac1n\left(nS_n-\sum_{i=1}^{n-1}\sum_{j=1}^ia_j\right)=S_n-\frac1n\sum_{i=1}^{n-1}S_{i}.<br>$$<br>由Cauchy命题，$\frac1n\sum_{i=1}^{n-1}S_{i}\to\lim S_n=S$,即证。</p>
+<p>eg3(IMO-20).已知$a_i\in\Bbb N^+$,$a_i\neq a_j(i,j\in\Bbb N^+)$.证明对任一正整数n，有：<br>$$<br>\sum_{i=1}^n\frac{a_k}{k^2}\ge\sum_{i=1}^n\frac1k.<br>$$<br>proof1:这个题很简单，用Cauchy不等式<br>$$<br>\sum_{i=1}^n\frac{a_k}{k^2}\ge\left(\sum_{i=1}^n\frac1k\right)^2\cdot\left(\sum_{i=1}^n\frac 1{a_k}\right)^{-1}\ge\sum_{i=1}^n\frac1k.<br>$$<br>一行就解决了(因为$a_i$各不相等)。<br>proof2：但我还是要用Abel做一下，不然怎么能凑够三个题呢(笑)。记$S_k=a_1+\cdots+a_k.$<br>$$<br>\begin{align<em>}<br>\sum_{i=1}^n\frac{a_k}{k^2}&amp;=\frac1{n^2}S_n+\sum_{i=1}^{n-1}S_i(\frac1{i^2}-\frac1{(i+1)^2})\<br>&amp;\ge\frac1{n^2}\cdot\frac{n(n+1)}2+\sum_{i=1}^{n-1}\frac{i(i+1)}2(\frac1{i^2}-\frac1{(i+1)^2})\<br>&amp;=\frac{n+1}{2n}+\sum_{i=1}^{n-1}\frac{2i+1}{2i(i+1)}\<br>&amp;=\frac{n+1}{2n}+\frac12\sum_{i=1}^{n-1}\frac1{i(i+1)}+\sum_{i=1}^{n-1}\frac1{i+1}\<br>&amp;=\frac12+\frac12+\frac1n+\sum_{i=1}^{n-1}\frac1{i+1}=\sum_{i=1}^n\frac1i.<br>\end{align</em>}<br>$$<br>可以看出就是无脑化简，只是写起来麻烦些。</p>
+<hr>
+<p>更麻烦的Abel变换的应用大概在填坑到级数时会详细说，今天只是为了复习一下。</p>
+<p>又，周期三蕴含混沌的四个习题没做，5.2的第10题也没做出来。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/21/Abel%E5%8F%98%E6%8D%A2/" data-id="ck53o5ha0001d5ohma1xjg5wn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-5.6周期3蕴含混沌" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/04/5.6%E5%91%A8%E6%9C%9F3%E8%95%B4%E5%90%AB%E6%B7%B7%E6%B2%8C/" class="article-date">
+  <time datetime="2017-02-04T02:00:00.000Z" itemprop="datePublished">2017-02-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Math/">Math</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/04/5.6%E5%91%A8%E6%9C%9F3%E8%95%B4%E5%90%AB%E6%B7%B7%E6%B2%8C/">5.6周期3蕴含混沌</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>混沌(Chaos)的概念最先由李天岩和其导师Yorke提出，是一种长期行为对初态十分敏感的系统。如果把初态表示成因果规律f的定义域中的一点x，那么以后的状态就是f的迭代，所以研究混沌就应该知道关于相应f的迭代之后的性质。可就是形如$f(x)=x^2+x+1$这样简单的函数，经过较多次迭代后的表达式也是复杂的——甚至可能对问题本身并无多大帮助。由是，我们把关注点转向序列${f^n(x)}$.<br>数列中几个比较关键的性质有增减性、周期性和极限。对于不同的初值，研究其构成的迭代序列：<br>$$<br>x,f(x),f^2(x),\cdots, f^n(x)<br>$$<br>所具有的周期性，如果存在正整数$m,s.t:f^m(x)=x$,则称m是点x的一个周期，x是f的一个周期点。$x,f(x),\cdots, f^m(x)$构成一个m-周期轨。点x的周期中必有一个最小的，记作T。<br>命题1.nT也是x的周期$(n\in\Bbb N_+)$.<br>proof:<br>$$<br>f^{nT}(x)=f^{(n-1)T}(f^T(x))=f^{(n-1)T}(x)=f^{(n-2)T}(x)=\cdots=f^T(x)=x.<br>$$<br>命题2.若t也是x的周期且t&gt;T，必有$T|t$.<br>proof：<br>反证，设T不整除t。则存在$q、r(0&lt; r&lt; T),s.t:t=qT+r.$由命题1知道：<br>$$<br>f^t(x)=f^{qT+r}(x)=f^{r}(f^{qT}(x))=f^r(x)=x.<br>$$<br>这表明r也是x的周期，与T的最小性矛盾，即证。</p>
+<p>命题3.对于集合M的上确界S，要么$S\in M$,要么$\exists{a_n}\subset M:a_n\to S$且严格单增。<br>proof:<br>若$S\notin M$,由上确界定义，$\forall\varepsilon&gt;0,\exists x\in M:x&gt;S-\varepsilon.$这样取定${\varepsilon_n}$和${x_n}$:<br>$$<br>\varepsilon_1=1,\varepsilon_{n}=\frac1n;x_1\in(S-1,S),x_{n+1}\in(\max{x_n,S-\varepsilon_{n+1}},S).<br>$$<br>由此，对于每个$\varepsilon_i,\exists x_i$满足上确界定义，又因为$\forall i,x_i&lt; S$，由极限定义知道$x_n\to S$且严格单增。</p>
+<p>命题3对后面的证明有帮助。1975年Li和Yorke发表题为《Peirod Three Impiles Chaos》的论文，给”混沌”下了定义并提出了两个定理(Li-Yorke)，这就是我们在此要研究的问题。</p>
+<hr>
+<p>对于一个函数、一个初值，我们容易从几何上判断它是否有1-周期点、2-周期点，但是更高阶的却无从下手，Li-Yorke定理很大程度上帮助我们简化了这个问题——只需要关注3-周期点就可以。</p>
+<p>Li-Yorke第一定理：$f\in C(I),f(I)\subset I$。若存在I中的四个数满足<br>$$<br>d\le a&lt; b&lt; c　or　d\ge a&gt; b&gt;c &gt;d:f(a)=b,f(b)=c,f(c)=d,<br>$$<br>则f具有n-周期点，n为任意正整数。<br>为了证明它，需要3个引理，慢慢来。</p>
+<ul>
+<li>引理1.$f\in C(I),$若$I\subset f(I)$，则f在I中有不动点。</li>
+</ul>
+<p>proof:设I=[a,b]，若a、b之中有一个是不动点，结束，若都不是不动点，则由介值定理，<br>$$<br>\exists \xi、\eta\in (a,b):f(\xi)=a,f(\eta)=b.<br>$$<br>令$F(x)=f(x)-x$，则$F(\xi)&lt; 0,F(\eta)&gt;0\Rightarrow F(\xi)\cdot F(\eta)&lt; 0$,所以$\xi$和$\eta$之间必有不动点。</p>
+<ul>
+<li>引理2.$f\in C(I)$，一有限闭区间J满足$J\subset f(I)$,则存在$I’\subset I:f(I’)=J.$</li>
+</ul>
+<p>proof:设I=[a,b],J=[c,d].由介值定理知道:<br>$$<br>\exists \xi,\eta\in [a,b]:f(\xi)=c,f(\eta)=b.(\xi&lt;\eta)<br>$$<br>对$\xi&gt;\eta$的情况同下处理即可。定义集合$U={x\in [\xi,\eta)|f(x)=c}$，设$u=\sup U$，再设<br>$$<br>v=\sup{x\in (u,\eta]|f(x)=d}.<br>$$<br>下证$f(u)=c,f(v)=d$：若$u\in U$显然成立，若$u\notin U$由命题3和f的连续性也有f(u)=c,同理f(v)=d.由u、v的定义知道，在(u,v)中函数值不可能再取到c和d，所以$f((u,v)\subset (c,d)$,继而$f([u,v])=[c,d]=J.$</p>
+<ul>
+<li>引理3.设f是在有限闭区间$I_0,I_1,\cdots,I_n$上有定义的连续函数且满足条件$I_{i+1}\subset f(I_{i})(i=0,1,\cdots,n-2)$,且$I_0\subset f(I_{n-1})$.则存在点$x_0\in I_0,s.t:f^n(x_0)=x_0,f^k(x_0)\in I_k(k=0,1,…,n-1).$</li>
+</ul>
+<p>proof：由引理2，存在$J_1\subset I_0:f(J_1)=I_1$,又因为$I_2\subset f(I_1)$,所以$I_2\subset f^2(J_1)$,又由引理2，存在$J_2\subset J_1:f^2(J_2)=I_2.$这样不断做下去，就得到一个$J_{n-1}\in I_0$使得：<br>$$<br>f(J_{n-1})\subset I_1,f^2(J_{n-1})\subset I_2,\cdots,f^{n-2}(J_{n-1})\subset I_{n-2},f^{n-1}(J_{n-1})=I_{n-1}①.<br>$$<br>由$I_0\subset f(I_{n-1})$知$J_{n-1}\subset I_0\subset f^n(J_{n-1})$，对区间$J_{n-1}$上的函数$f^n(x)$应用引理1知存在一个$x_0\in J_{n-1}\subset I_0:f^n(x_0)=x_0.$同时由①知$f^k(x_0)\in I_k.$</p>
+<ul>
+<li>Li-Yorke第一定理的证明：</li>
+</ul>
+<p>设区间L=[a,b],K=[b,c]。由介值定理可知$L\subset f(K),K\subset f(L),K\subset f(K).$现对每个自然数n，考察其周期点的情况。<br>(1).n=1时，由$K\subset f(K)$和引理1知道存在1-周期点；<br>(2).n=2时，由$L\subset f(K),K\subset f(L)$和引理3知道存在$x_0\in L:f(x_0)\in K$和$f^2(x_0)=x_0.$若$x_0$的最小周期不是2，那么$x_0$是f的不动点，所以$x_0\in L,x_0\in K$,继而$x_0\in L\cap K={b}$,所以$x_0=b.$但$f(b)=c&gt;b$,所以矛盾，所以$x_0$是最小周期是2；<br>(3).$n\ge 3$时，令$I_0=L,I_1=I_2=\cdots=I_n=K.$这样满足引理3的条件，对这n个区间应用引理3得：<br>$$<br>\exists x_0\in L:f^n(x_0)=x_0,f^k(x_0)\in K,i=1,2,\cdots,n-1.①<br>$$<br>若n不是$x_0$的最小周期,设最小周期为$p&lt; n,f^p(x_0)=x_0.$同(2)中的情况，必然有$x_0=b$.但是$n\ge3,$所以推出：<br>$$<br>f(x_0)=c,f^2(x_0)=d\le a\Rightarrow f^2(x_0)\notin K,<br>$$<br>这就与①矛盾，即证。</p>
+<p>从另一个角度说，如果f存在3-周期点，也就存在n-周期点，因为这是a=d的特例——这就是为什么说周期3蕴含混沌。得到这一强力的结论后我们不禁想：f具有怎样性质的周期点时，可以推出它有n-周期点呢？这个问题在1964年(注意他是比李天岩和Yorke早的)被Sharkoviskii解决：任一自然数都可以写成$2^l\cdot(2k+1)$的形式，我们将它排成一个表：<br>$$<br>2^0\cdot3&lt; 2^0\cdot5&lt; 2^0\cdot7&lt; 2^0\cdot9,\cdots\<br>2^1\cdot3&lt; 2^1\cdot5&lt; 2^1\cdot7&lt; 2^1\cdot9,\cdots\<br>\cdots\<br>\cdots&lt;\cdots&lt; 2^4&lt; 2^3&lt; 2^2&lt; 2^1&lt; 1.<br>$$<br>如果在这张表中有两数m“小于”n,则有如下结论：<br>$f\in C(I),f(I)\subset I,$若f具有m-周期点，则f具有n-周期点。自然地，3是表中”最小的那个”，所以只要有3-周期点就有n-周期点。</p>
+<hr>
+<p>习题方面，选用史济怀编写教材上的题，由于第2道是第3道的特例，故不录。</p>
+<p>1.x是f的一个n-周期点，记$x_0=x,x_k=f^k(x).$求证：在x的n-周期轨中,每项各不相同，且都是f的n-周期点。<br>proof：因为<br>$$<br>f^n(f^i(x))=f^i(f^n(x))=f^i(x),i=1,2,\cdots,n,<br>$$<br>所以后半句成立。若有$0\le p&lt; q\le n-1:f^p(x)=f^q(x)$</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/04/5.6%E5%91%A8%E6%9C%9F3%E8%95%B4%E5%90%AB%E6%B7%B7%E6%B2%8C/" data-id="ck53o5h9s00115ohmbmi74zds" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-5.5单调函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/03/5.5%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0/" class="article-date">
+  <time datetime="2017-02-03T02:00:00.000Z" itemprop="datePublished">2017-02-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Math/">Math</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/03/5.5%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0/">5.5单调函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第四章时我们已经探讨过单调函数的相关内容，现在与连续性结合起来。下面着重看几个重要结论的证明。</p>
+<p>命题1：单调函数只有第一类间断点。<br>proof：<br>这等价于单调函数在间断点处有两个单侧的不等极限。这里不妨只讨论f是(a,b)上的单增函数。设$x_0$是f的间断点，对于$\forall x_1&lt; x_0&lt; x_2:f(x_1)\le f(x_0)\le f(x_2).$下面令：<br>$$<br>x_1\to x_0^-,x_2\to x_0^+,<br>$$<br>由单调函数的单侧极限存在定理，就得到$f(x_0^-)\le f(x_0)\le f(x_0^+).$其中的两个单侧极限都是有限数。又因为必须有$f(x_0^-)&lt; f(x_0^+),$所以知道$x_0$是第一类间断点。</p>
+<p>命题2：单调函数的间断点至多是可数的。<br>proof：<br>设f是I上的单增函数，则对于间断点$x_1&lt; x_2,$下证：<br>$$<br>(f(x_1^-),f(x_1^+))\cap(f(x_2^-),f(x_2^+))=\phi.<br>$$<br>已知可以找到$x_0\in(x_1,x_2),$则$f(x_1^+)\le f(x_0)\le f(x_2^-),$即证。由此我们从这一系列的开区间中，每一个取一个有理数(默认选择公理成立)，就找到了一个与有理数集子集的双射，即这些可列点是至多可数的。</p>
+<p>命题3：设f是I上的单调函数，则f(I)是区间等价于f在I上连续。<br>proof：<br>充分性，若连续，由介值定理容易得到，不需要单调性这一条件。必要性，若存在一点$x_0,f\notin C{x_0},$则$x_0$是跳跃间断点，对$\forall x_1&lt; x_0&lt; x_2,$<br>$$<br>f(x_1)\le f(x_0^-)&lt; f(x_0^+)\le f(x_2).<br>$$<br>所以开区间$(f(x_0^-),f(x_0^+))$内必有一点不在f(I)中。这与f(I)是区间矛盾.</p>
+<p>命题4：若f是I上的严格单调的连续函数，则f的反函数是f(I)上的严格单调的连续函数且与f连续性一致。<br>proof:<br>不妨设f在I上严格单增，由f严格单增，知道$f:I\to f(I)$是双射，由命题3，知道存在逆映射，记作$f^{-1}$也就是f的反函数。设$y_1,y_2\in f(I),x_i=f^{-1}(y_i).$当$y_1&lt; y_2$时，由于$f^{-1}$是双射，若$x_1&gt; x_2$,则<br>$$y_1=f(x_1)&gt;f(x_2)=y_2\Rightarrow y_1&gt; y_2,$$<br>与假设矛盾，所以$x_1&lt; x_2$(不可能相等，因为反函数是双射),由$y_1$、$y_2$的任意性知道$f^{-1}$严格单增。<br>还是由命题3，因为$I,f(I)$都是区间，所以$f^{-1}$是$f(I)$上的连续函数。</p>
+<hr>
+<p>eg1.由Kepler方程$y=x-q\sin x (0&lt; q&lt; 1)$可以惟一确定函数$x=f(y)$,且它是定义在$\Bbb R$上的严格单增的连续函数。<br>proof：<br>由初等函数的连续性知道函数$f(x)=x-q\sin x(x\in\Bbb R)$是连续的，只要证明f严格单增即可。求导固然简单，可是也有：<br>$$<br>(f(x_1)-f(x_2))\cdot(x_1-x_2)=(x_1-x_2)^2+q(x_1-x_2)(\sin x_1-\sin x_2)\\ge (x_1-x_2)^2+q(\sin x_1-\sin x_2)^2&gt; 0.<br>$$<br>所以f严格单增，即证。</p>
+<p>eg2.试构造一个只有可数个间断点的单调函数f。<br>solve：<br>如果$f:\Bbb R\to\Bbb R$那就比较好做，比如在$x\in (k,k+1)$时令f(x)=x+k；当x为整数m时令f(m)=2m-1.这样得到的f是严格单增的。<br>但是如果$f:I\to D$,其中I是有限区间，那就没这么显然了，我们这样做：先看个无赖一点的，对$\tan x$,把$x=\frac 1k(k\in\Bbb Z-{0})$去掉，这样就是个有可数个间断点的严格单增函数。不无赖的就是如同第一种情况，如果<br>$$x\in(\frac 1{k+1},\frac 1k),f(x)=\tan x+\frac 1{2^k},$$<br>当$x=\frac 1k(k\in\Bbb Z-{0})or0$时，$f(x)=\tan \frac 1k+\frac 1 {2^{k-1}}.$这样是一个不减的函数。</p>
+<p>eg3.若$f:[0,1]\to[0,1]$连续且单增，那么对于[0,1]中任一个x，要么x是f的不动点，要么$f^n(x)$趋近f的不动点。<br>proof：<br>由Brouwer不动点定理的最简单形式我们知道f一定存在不动点，记不动点构成的集合为S，我们只要考察一个$x_0\in S$就能知道所有的性质。因为函数是不减的，那么<br>$$\exists\delta&gt;0:x\in U(x_0,\delta),f(x)\neq x.$$<br>且$x\in(x_0,x_0+\delta),f(x)&gt;x;x\in(x_0-\delta,x_0),f(x)&lt; x.$①<br>第二个准备工作：易知如果$f(x)&gt;x,f^n(x)\ge f^{n-1}(x)\ge…&gt;x.$反之亦然。②<br>由是对任一$x\in U’(x_0,\delta)$,令$a_n=f^n(x).$易知$a_n$单增有上界1，则其有极限。③<br>综合①②③及2.6节的命题A知道$a_n=f^n(x)\to x_0.$即证。</p>
+<hr>
+<p>习题<br>1.<br>proof：记点$p$对应的最长单增区间的右端点为$r(p).$对任意的$x_1,x_2\in(a,b),x_1&lt; x_2$，必有:<br>$$<br>f(r^n(x_1))\ge …\ge f(r(x_1))\ge f(x_1).<br>$$<br>如果不断考察单增区间的右端点，可以经有限次递加后有$r^n(x_1)\in (x_2,r(x_2))$,结束；若不然，就可以认为：<br>$$<br>\lim_{n\to+\infty}r^n(x_1)=r_0&lt; x_2.<br>$$<br>也就是说在$(x_1,r_0)$中f是单增的，但$r_0&gt;r(x_1)$，与$r(x_1)$的最大性矛盾，即证。</p>
+<p>2.<br>proof：命题等价于对任意有理数$x_1,x_2\in[a,b]$以及它们之间的任一无理数$x$,都有：<br>$$<br>f(x_1)\le f(x)\le f(x_2).<br>$$<br>反证法。若否，即$\exists x_0,f(x_0)&gt;f(x_2)    or    f(x_0)&lt; f(x_1).$只讨论前一种就可以。因为f连续，第一步取一个有理数列${a_n}\to x_0\Rightarrow f(a_n)\to f(x_0).$第二步取$\varepsilon_0=\frac12(f(x_0)-f(x_2)).$<br>由连续定义，<br>$$<br>\forall\varepsilon&gt;0,\exists N,n&gt;N:f(a_n)&gt;f(x)-\varepsilon.<br>$$<br>于是让$\varepsilon=\varepsilon_0,$就有$f(x_2)\ge f(a_n)&gt;\frac12(f(x_0)+f(x_2))\ge f(x_2)\Rightarrow f(x_2)&gt;f(x_2),$矛盾。</p>
+<p>3.<br>proof：因为f单调，只有跳跃间断点，故右极限处处存在，g处处有定义。因为$g(x)=f(x^+),g(x_0)=f(x_0^+),$所以对任意<br>$$\varepsilon&gt;0,\exists\delta_1,y\in(x,x+\delta_1):|f(y)-g(x)|&lt;\frac12\varepsilon;\\exists\delta_2,y\in(x,x+\delta_2):|f(y)-g(x_0)|&lt;\frac12\varepsilon.$$</p>
+<p>上面两式相加，再取$\delta_0=\min{\delta_1,\delta_2}$,就得到：对任意$\varepsilon&gt;0,$当$x\in(x_0,x_0+\delta_0)$时就有$|g(x)-g(x_0)|&lt;\varepsilon.$<br>即证。</p>
+<p>4.<br>proof：由5.1节中关于Cauchy方程内容知道该方程对所有有理数都成立，不妨设f单增，下面分情况来看。若$f(1)=0$,则必然$f(x)\equiv0$(由此可推出所有有理数相等，用有理数逼近整数得这些有理数函数值都是0，再用有理数逼近无理数就得到结论)，成立。若$f(1)\neq0$,若存在无理数$r\in(x_1,x_2),|f(r)-f(1)r|=2\varepsilon &gt;0,$这里只讨论$f(r)=f(1)r+2\varepsilon$的情况。<br>由单增性，就得到<br>$$<br>\forall x&gt;r,f(x)\ge f(r)&gt;f(1)r+\varepsilon\Rightarrow x-r&gt;\frac {\varepsilon}{f(1)}.(x\in\Bbb Q)<br>$$<br>这显然矛盾。<br>5.<br>proof:充分性，反证。若有极值点，不妨设有极大值M=f(r)，则<br>$$\exists\eta&gt;0,x\in(r,r+\eta):f(x)\le M,$$<br>矛盾。必要性，不妨设$f(a)=f_{\min},f(b)=f_{\max}.$下面证明f严格单增。对$\forall\varepsilon&gt;0$,任取闭区间$[r,r+\varepsilon]\subset(a,b),$则该闭区间上的最值也在端点处取得。若$f(r)&gt;f(r+\varepsilon)$则$f(r+\varepsilon)&gt;f(r+2\varepsilon)$(否则$r+\varepsilon$会成为极值点)，依此类推有限次叠加后就得到$f(r)&gt;f(b)$，这与f(b)是f的最大值矛盾，所以$f(r)&lt; f(r+\varepsilon).$又由$\varepsilon,r$的任意性知f严格单增。</p>
+<hr>
+<p>好久没更新了，一来是年假到来人变得十分懒惰(起码要放松个痛快)，另一方面是有些内容还不完善。本来想挑一些别的书上的题做例，但是反复考量仍觉不妥，最后选了3个Zorich后面的题目。</p>
+<p>下一节是周期3蕴含混沌，把基本的东西捋顺再参考史济怀的课后习题就行。</p>
+<p>下一章是导数与微分，比较容易，关键是对一阶微分不变性的理解和高阶、参数求导，故不会花费太多笔墨。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/03/5.5%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0/" data-id="ck53o5h9o000v5ohmb7ls86ty" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Analysis/">Analysis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Complex-Ana/">Complex Ana.</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Math/">Math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Stats/">Stats.</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/" rel="tag">复分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A6%82%E7%BB%9F/" rel="tag">概统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E8%AE%B0/" rel="tag">随记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%88%86%E6%9E%90/" style="font-size: 20px;">分析</a> <a href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/" style="font-size: 13.33px;">复分析</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 16.67px;">日常</a> <a href="/tags/%E6%A6%82%E7%BB%9F/" style="font-size: 16.67px;">概统</a> <a href="/tags/%E9%9A%8F%E8%AE%B0/" style="font-size: 10px;">随记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/07/%E5%A4%9A%E5%80%BC%E5%87%BD%E6%95%B0/">多值函数</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/08/EPT2/">EPT Chapter2 Solution</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/06/EPT1/">EPT Chapter1 Solution</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/17/stats1/">关于期望的小结论</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/15/About%20Pi/">About Pi</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 一白<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
