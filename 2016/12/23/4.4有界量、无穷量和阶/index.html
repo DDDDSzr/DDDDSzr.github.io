@@ -1,98 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>4.4有界量、无穷量和阶 | 雪夜闻钟</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本节研究的一是含有$o,O,\sim$的“等式”，即渐进等式，它描述了一种渐进性态。这种等式需要自左向右读，比如$o(1)&#x3D;O(1)$表示无穷小量一定是有界量，反过来却不然。二是“阶”，并非数论里的那个阶，它的定义如下：$$if:f(x)&#x3D;o(1)(x\to a),\exists r&gt;0,s.t:\lim_{x\to a}\left|\frac{f(x)}{(x-a)^r}\right|&#x3D;\">
-<meta property="og:type" content="article">
-<meta property="og:title" content="4.4有界量、无穷量和阶">
-<meta property="og:url" content="http://yoursite.com/2016/12/23/4.4%E6%9C%89%E7%95%8C%E9%87%8F%E3%80%81%E6%97%A0%E7%A9%B7%E9%87%8F%E5%92%8C%E9%98%B6/index.html">
-<meta property="og:site_name" content="雪夜闻钟">
-<meta property="og:description" content="本节研究的一是含有$o,O,\sim$的“等式”，即渐进等式，它描述了一种渐进性态。这种等式需要自左向右读，比如$o(1)&#x3D;O(1)$表示无穷小量一定是有界量，反过来却不然。二是“阶”，并非数论里的那个阶，它的定义如下：$$if:f(x)&#x3D;o(1)(x\to a),\exists r&gt;0,s.t:\lim_{x\to a}\left|\frac{f(x)}{(x-a)^r}\right|&#x3D;\">
-<meta property="article:published_time" content="2016-12-23T15:58:28.000Z">
-<meta property="article:modified_time" content="2016-12-24T02:53:27.470Z">
-<meta property="article:author" content="一白">
-<meta property="article:tag" content="分析">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="雪夜闻钟" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-<meta name="generator" content="Hexo 4.2.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">雪夜闻钟</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-4.4有界量、无穷量和阶" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/23/4.4%E6%9C%89%E7%95%8C%E9%87%8F%E3%80%81%E6%97%A0%E7%A9%B7%E9%87%8F%E5%92%8C%E9%98%B6/" class="article-date">
-  <time datetime="2016-12-23T15:58:28.000Z" itemprop="datePublished">2016-12-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Math/">Math</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      4.4有界量、无穷量和阶
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本节研究的一是含有$o,O,\sim$的“等式”，即渐进等式，它描述了一种渐进性态。这种等式需要自左向右读，比如$o(1)=O(1)$表示无穷小量一定是有界量，反过来却不然。二是“阶”，并非数论里的那个阶，它的定义如下：<br>$$<br>if:f(x)=o(1)(x\to a),\exists r&gt;0,s.t:\lim_{x\to a}\left|\frac{f(x)}{(x-a)^r}\right|=\ell&gt;0.<br>$$<br>则f是x趋近a时的$r$阶无穷小量。</p>
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="4.4有界量、无穷量和阶"><meta name="keywords" content="分析"><meta name="author" content="一白"><meta name="copyright" content="一白"><title>4.4有界量、无穷量和阶 | 雪夜闻钟</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">一白</div><div class="author-info__description text-center">不能喻之于怀</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">35</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">4.4有界量、无穷量和阶</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2016-12-23</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Math/">Math</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>本节研究的一是含有$o,O,\sim$的“等式”，即渐进等式，它描述了一种渐进性态。这种等式需要自左向右读，比如$o(1)=O(1)$表示无穷小量一定是有界量，反过来却不然。二是“阶”，并非数论里的那个阶，它的定义如下：<br>$$<br>if:f(x)=o(1)(x\to a),\exists r&gt;0,s.t:\lim_{x\to a}\left|\frac{f(x)}{(x-a)^r}\right|=\ell&gt;0.<br>$$<br>则f是x趋近a时的$r$阶无穷小量。</p>
 <hr>
 <p>下面讨论等价量之间的替换。如果$u\sim u_1,v\sim v_1(x\to a),$则可以在求极限的运算中相互替换，即：<br>$$<br>\lim_{x\to a}uv=\lim_{x\to a}uv_1=\lim_{x\to a}u_1v=\lim_{x\to a}u_1v_1.<br>$$<br>除法在分母不为0的时候也可以如此替换。这种替换的正确性，只需要注意到:<br>$$<br>\lim_{x\to a}uv=\lim_{x\to a}u\cdot \left(\frac {u_1}u\right)\cdot v<br>$$<br>即可。注意到加减运算中，不能直接替换，但是有一些充分条件，比如如果考虑x趋近a的过程：<br>$$<br>if:u\sim u_1,v\sim v_1,\lim_{x\to a}u+v\neq 0\Rightarrow u+v\sim u_1+v_1.<br>$$<br>prove：<br>$u_1=u+o(u),v_1=v+o(v),$那么考察比例：<br>$$<br>\lim_{x\to a}\frac {u_1+v_1}{u+v}=\lim_{x\to a}\left(1+\frac{o(u)+o(v)}{u+v}\right).<br>$$<br>这里$o(u)+o(v)$也是无穷小量，如果x趋近a时，u+v的极限不是0，那么上式就是1，即$u_1+v_1\sim u+v.$</p>
 <p>给出一些常用的结论，并附以简证。</p>
@@ -112,154 +27,29 @@
 <p>这一篇偏重计算，所以在写解答的时候，省略了一些“算”的步骤而突出了主要思路。一些题由于过于久远，不记得当时是怎么做的了，只能重新做一遍，还发现了以前的一些错误。最后我想说：Fejer积分好难啊，我什么时候能氪出来呢？</p>
 <hr>
 <p>参考书籍：<br>[1].谢惠民.数学分析习题课讲义.<br>[2].张筑生.数学分析新讲.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/23/4.4%E6%9C%89%E7%95%8C%E9%87%8F%E3%80%81%E6%97%A0%E7%A9%B7%E9%87%8F%E5%92%8C%E9%98%B6/" data-id="ck53o5h9g000j5ohm3r3kf48u" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/12/26/5.1%E8%BF%9E%E7%BB%AD%E6%80%A7%E6%A6%82%E5%BF%B5/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          5.1连续性概念
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/12/17/4.3%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">4.3两个重要极限</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Analysis/">Analysis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Complex-Ana/">Complex Ana.</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Math/">Math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Stats/">Stats.</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%9E%90/" rel="tag">分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/" rel="tag">复分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A6%82%E7%BB%9F/" rel="tag">概统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E8%AE%B0/" rel="tag">随记</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/%E5%88%86%E6%9E%90/" style="font-size: 20px;">分析</a> <a href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/" style="font-size: 13.33px;">复分析</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 16.67px;">日常</a> <a href="/tags/%E6%A6%82%E7%BB%9F/" style="font-size: 16.67px;">概统</a> <a href="/tags/%E9%9A%8F%E8%AE%B0/" style="font-size: 10px;">随记</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/01/07/%E5%A4%9A%E5%80%BC%E5%87%BD%E6%95%B0/">多值函数</a>
-          </li>
-        
-          <li>
-            <a href="/2017/11/08/EPT2/">EPT Chapter2 Solution</a>
-          </li>
-        
-          <li>
-            <a href="/2017/11/06/EPT1/">EPT Chapter1 Solution</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/17/stats1/">关于期望的小结论</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/15/About%20Pi/">About Pi</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 一白<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2016/12/26/5.1%E8%BF%9E%E7%BB%AD%E6%80%A7%E6%A6%82%E5%BF%B5/"><i class="fa fa-chevron-left">  </i><span>5.1连续性概念</span></a></div><div class="next-post pull-right"><a href="/2016/12/17/4.3%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90/"><span>4.3两个重要极限</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>
