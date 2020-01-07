@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="4.2函数极限性质"><meta name="keywords" content="分析"><meta name="author"><meta name="copyright"><title>4.2函数极限性质 | 雪夜闻钟</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center"></div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">8</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">2</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">1</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">4.2函数极限性质</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2016-12-16</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Math/">Math</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>基本的：极限的唯一性、保号性、迫敛性、局部有界性和保不等式性。不是那么显然的极限运算四则法则——因为归根结底还是三角形不等式，当然，换一种思路可以用Heine定理通过数列来证明。</p>
+<p>关于函数极限基本性质的思考题。</p>
+<p>进阶一点的：单调函数单侧极限存在定理、Heine定理和函数的Cauchy收敛准则。下面展开来说。</p>
+<hr>
+<p>单调函数单侧极限存在定理：单调函数每点的单侧极限一定存在。</p>
+<p>prove：我们只对要考察的点的左极限作研究。设f在(a,b)上单调递增，考察b点的左极限。为此，我们要考虑f在(a,b)上的值域。</p>
+<ul>
+<li>若值域有上界，即函数在b点附近有界，设其上确界是S，对任意的$\varepsilon&gt;0,$有$S-\varepsilon&lt; f(x_0)\le S,\forall b&gt;x&gt;x_0时，S-\varepsilon&lt; f(x_0)\le f(x)\le S .$这就证明了$f(b^-)=S.$</li>
+<li>若值域无上界，则对$\forall G&gt;0,\exists x_0,f(x_0)&gt;G,\forall b&gt;x&gt;x_0时,f(x)\ge f(x_0)&gt;G,$即$f(b^-)=+\infty.$</li>
+<li>此定理的直接推论就是单调函数的间断点均为第一类（跳跃点）。</li>
+<li>第二个不显然的推论是单调函数间断点是可列的——对每个间断点$x_k,$设该点振幅为$\omega_k \neq 0,$在每个$\omega_k$中取一个有理数$p_k$就说明点集${x_i}$与${p_i}$继而与$\Bbb Q$的子集建立起一一映射关系，即点集${x_i}$中元素至多可列。这就与积分学中的Lebesgue定理建立起关系，甚至不需要可积性三定理就可以说：有界的单调函数在闭区间上可积。</li>
+</ul>
+<p>有关习题是第7、8题。</p>
+<p>7.<br>设其上确界是S。任取严格单增且趋向正无穷的数列，其对应的函数值列是单调有界的，故收敛到上确界S。由Heine定理推论知道f也存在极限。（这里不需要讨论f的极限为何，只需要证明其存在性）<br>PS:Heine定理在下文会详细说明。</p>
+<p>8.<br>(1).设$\exists x_0: f(b)\ge f(x_0)&gt; A,$因为$x_n\to b,$所以在b的任一左邻域都有数列的无穷项,取一项记为$x_k&gt;x_0$。因为f单增，所以在$[f(x_k),f(b)]$中有函数列${f(x_n)}$的无穷多项，<br>$\varepsilon = 1/2(f(x_0)-A),$则在$U(A,\varepsilon)$外有函数值列的无穷多项，与函数值列收敛到A矛盾。</p>
+<p>(2).对任意$\varepsilon&gt;0,\exists N,n&gt;N:A-\varepsilon&lt; f(x_n)\le A,$因为f单增，故任意满足$x&gt;x_{N+1}$的x，有$A-\varepsilon&lt; f(x_{N+1})\le f(x)\le A,取\delta=b-x_{N+1},\forall x\in(b-\delta,b):|f(x)-A|&lt; A.$证毕。</p>
+<hr>
+<p>Heine定理：简而言之就是所有不等于$x_0$且收敛到$x_0$的数列对应的函数值都收敛到A，那么函数在$x_0$处的极限就是A。</p>
+<p>推论1：函数在$x_0$点存在极限的充要条件是任一不等于$x_0$且收敛到$x_0$的数列对应的函数值都收敛。看上去没什么用，其实是把Heine定理的条件和结论同时削弱后的推论。</p>
+<p>prove：必要性由Heine定理不成问题，下证充分性。现设$x_n,y_n \neq a,_n,y_n \to a,f(x_n)\to A,f(y_n)\to B,A \neq B,$那么令$z_n$的奇数项列是$x_n$,偶数项列是$y_n$，那么$z_n \to a,f(z_n)$发散，矛盾。</p>
+<p>推论2：设A是有限数，f在正无穷远处存在极限A的充要条件是任一严格单调的正无穷大数列，其对应的函数值列收敛到A。</p>
+<p>prove：必要性，因为$f\to A$,所以$\forall \varepsilon&gt;0,\exists M,x&gt;M:|f(x)-A|&lt; \varepsilon.$由于数列是正无穷大数列，所以对上式中的$M，\exists N,n&gt;N:x_n&gt;M,$则$A&gt;f(x_n)&gt;A-\varepsilon,$所以$x_n$ 对应的函数值列也收敛到A。<br>充分性，用反证法写：若f不趋于A，那么$\exists \varepsilon&gt;0,\forall G&gt;0,x&gt;G:|f(x)-A| \ge \varepsilon.$由是，先取$G_1=1,x&gt;1:|f(x)-A| \ge \varepsilon,$再取$G_k=max{k,x_{k-1}},$就得到一个严格单增的数列x_n,但是其对应的函数值列并不收敛到A，这就矛盾。<br>PS：这个充分性的证明所用的技巧我起名作“上楼梯”，意为一步一步上，总能够造出一个单调的数列，这个方法在以后的证明中还会用到。</p>
+<p>推论3(即习题11)：单调函数存在单侧极限（这里我们用Heine定理证明）。</p>
+<p>prove：先推广Heine定理到单侧极限。f在a的右极限（左极限同理）为A的充要条件是任一收敛到a且不小于a的单减数列其对应的函数值列收敛到A。下面证明：必要性由Heine定理是成立的。充分性，同推论2,这次要“下楼梯”，令$G_k=min{1/k,x_{k-1}}$,就得到单减收敛到a的数列对应函数值列不收敛到A，得出矛盾。<br>下面证明就无本质困难：不妨设f单增有界（无界易说明），任取趋近a且不小于a的单减子列，其对应的函数值列也是单减而有下界f(a)的，所以函数值列收敛，由推论1知$f(a^+)$存在。</p>
+<p>习题：</p>
+<p>9.<br>$\forall\varepsilon&gt;0,\exists G&gt;0,x&gt;G:A-\varepsilon&lt; f(x) &lt; A+ \varepsilon,$因为c&lt;A,令$\varepsilon = A-c$,以下同保号性证明即可。</p>
+<p>10.<br>设$f(a^+)=b&gt;a=f(a^-),$取$\varepsilon=1/2(b-a),\exists\delta_1,x\in(a-\delta_1,a)时，f(x)&lt; a + \varepsilon;\exists\delta_2,y\in(a,a+\delta_2)，$$f(y)&gt; b- \varepsilon.$所以$f(x)&lt; a+\varepsilon=b-\varepsilon&lt; f(y),$即$f(x)&lt; f(y).$</p>
+<hr>
+<p>基本性质习题（不难）：<br>1.<br>不赘。不过要注意数列极限可以转化为函数极限，但反过来不行，除非遍历（我想说这几乎不可能）所有数列。</p>
+<p>2.<br>不妨先设y大于等于1.<br>$$<br>\lim=\lim\frac{\sqrt{1+y^3}(\sqrt{y^2+y^3}-y)}{y^3},<br>$$<br>因为<br>$$<br>\frac{\sqrt{y^2+y^3}-y}{y^3}&lt;\frac{\sqrt{1+y^3}(\sqrt{y^2+y^3}-y)}{y^3}&lt; \frac{\sqrt{1+y^3}\cdot\sqrt{y^2+y^3}}{y^3},<br>$$<br>故由夹逼准则得原极限为1.</p>
+<p>3.<br>Ans=1（1的无穷次方是不定型，1的有限次方可就不是了，本题取对数也能做）。</p>
+<p>4.<br>本题最简单的方法是利用$(1+x)^{\alpha}-1\sim\alpha x(x\to0),$立即得到原极限是1/n。如果规矩点就是利用<br>$$[(1+x)^{1/n}]^n-1=[(1+x)^{1/n}-1][(1+x)^{(n-1)/n}+…+(1+x)^{1/n}+1],$$<br>所以<br>$$<br>\lim=\lim\frac{1}{(1+x)^{(n-1)/n}+…+(1+x)^{1/n}+1}=\frac1n.<br>$$<br>如果这里不是n而是$\alpha\in\Bbb R,$还是要用等价无穷小来做。</p>
+<p>5.<br>$$<br>\lim_{x\to0}\frac{f(bx)}x=b\cdot\lim_{x\to0}\frac{f(bx)}{bx}=bl.<br>$$</p>
+<p>6.<br>$$<br>\lim=\lim\frac{2\sin x}{\sin x \cdot (\sqrt{1+\sin x}+\sqrt{1-\sin x})}=\lim\frac{2}{\sqrt{1+\sin x}+\sqrt{1-\sin x}}=1.<br>$$</p>
+<hr>
+<p>单调函数无论什么时候都是研究重点，到了有界变差函数类（Apostol那本里有）就比较深入。做过后面的题回来看这些题倒都不算难了，不过参考题还是能把人“做”死。</p>
+<p>顺便吐槽一下，定积分性质那一章Zorich的题全破，谢惠民的做出一半多一道，我都怀疑我是不是写错了章节。到了Newton-Leibniz公式和变限积分一节习题又变得亲民了，颇有些醉。感觉谢老大的微积分学应用的一章写得很好（难），不等式尤其好，计算几何方面也令人大开眼界。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined"></a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2016/12/16/4.2%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E6%80%A7%E8%B4%A8/">http://yoursite.com/2016/12/16/4.2%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E6%80%A7%E8%B4%A8/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com">雪夜闻钟</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2016/12/17/4.3%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90/"><i class="fa fa-chevron-left">  </i><span>4.3两个重要极限</span></a></div><div class="next-post pull-right"><a href="/2016/12/09/4.1%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90/"><span>4.1函数极限</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By null</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="4.3两个重要极限"><meta name="keywords" content="分析"><meta name="author"><meta name="copyright"><title>4.3两个重要极限 | 雪夜闻钟</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center"></div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">8</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">2</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">1</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">4.3两个重要极限</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2016-12-17</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Math/">Math</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>所谓两个重要极限，是指：<br>$$<br>\lim_{x\to0}(1+x)^{\frac1x}=e<br>$$<br>和<br>$$<br>\lim_{x\to0}\frac{\sin x}x=1.<br>$$<br>第一个证明是通过Heine定理、夹逼准则和复合函数极限。有关复合函数极限，在4.1节中已较详细论述，这里值得一说的是第二个极限。自高中始，我们就知道<br>$$<br>\frac2{\pi}x&lt;\sin x &lt; x &lt; \tan x,x\in(0,\frac{\pi}2).<br>$$<br>其中最左边的是Jordan不等式，这个不等式用导数、凸性都能很容易证明，它与重要极限2无关。但是$\sin x&lt; x$就不能用导数，因为知道这个不等式才知道$\sin x$的导数是$\cos x$。高中时我们通过三角形和扇形面积大小关系来证明了它，可是还是并不很好，我们的目的是使得地基严格到无法挑剔，所以谢老大提到的证明就十分契合我这个要求，摘录于此。</p>
+<p>prove：在单位圆O中用$2x(x\in(0,\frac\pi2])$分圆，若$\pi/x$是正整数，就做出一个圆内接正n边形。若不是整数，则可以做出一个圆内接正$[\frac{\pi}{x}]+1$边形，其中n条边对应的圆心角都是2x，余下的一条边对应的圆心角记为$\theta_x(if:\pi/x\in\Bbb N+,\theta_x=0)$,则可以计算出：<br>$$<br>0&lt;\theta_x=2\pi-2n\pi=2\pi-2x[\frac{\pi}{x}]=2x(\frac\pi x-[\frac{\pi}x])&lt;2x.<br>$$<br>记这个圆内接正多边形的周长是$C_x,$则得到：<br>$$<br>C_x=2n\sin x+2\sin {(\theta_x/2)}=2[\frac \pi x]\sin x+2\sin {(\theta_x/2)},<br>$$<br>而这个式子又等于<br>$$<br>2\pi\cdot\frac{\sin x}{x}+2([\frac{\pi}{x}]-\frac \pi x)\sin x+2\sin{(\theta_x/2)}.<br>$$<br>利用$\lim_{x\to0}\sin x=0$(这个是没争议的，证明它可以不用sinx&lt;x)，就有：<br>$$<br>C_x=2\pi\cdot\frac{\sin x}{x}+o(1)(x\to0^+).<br>$$<br>由于x从右边趋近于0时，正多边形的周长逼近圆的周长(割圆术原理)，所以$C_x\to2\pi(x\to0^+).$结合上式就得到：<br>$$<br>\lim_{x\to0}\frac{\sin x}x=\lim_{x\to0}\left(\frac{C_x} {2\pi}+o(1)\right)=1.<br>$$</p>
+<hr>
+<p>几个自变量趋于0时的渐进等式(基本的)：</p>
+<ul>
+<li>$\tan x\sim x\sim \sin x; $</li>
+<li>$1-\cos x\sim 1/2x^2;$</li>
+<li>$\ln{(1+x)}\sim x;$</li>
+<li>$a^x-1\sim \ln a\cdot x;$</li>
+<li>$\tan x-\sin x\sim 1/2\cdot x^3.$</li>
+</ul>
+<hr>
+<p>关于$1^{\infty}$型极限的套路：<br>这个是简单的，形如<br>$$<br>\lim_{x\to x_0}f(x)^{g(x)},f\to1,g\to \infty(x\to x_0),<br>$$<br>的极限，大都可以化为：<br>$$<br>\lim_{x\to x_0}[(1+(f-1)]^{(\frac1{f-1})\cdot g\cdot(f-1)}=\lim_{x\to x_0}e^{g\cdot(f-1)}<br>$$<br>就转化为求$\lim_{x\to x_0}g\cdot(f-1).$通常这是好求的,下面举一例。</p>
+<p>eg：求极限<br>$$<br>\lim_{x\to 0}\left(\frac1n\cdot\sum_{i=1}^na_i^x\right)^{\frac1x}(a_i&gt;0).<br>$$<br>Solve:原式=<br>$$<br>\lim\left(1+\frac{\sum_{i=1}^n(a_i^x-1)}n\right)^{\frac1x\cdot\frac{\sum_{i=1}^n(a_i^x-1)}n\cdot\frac n{\sum_{i=1}^n(a_i^x-1)}}<br>=\lim e^{\frac1x\cdot\frac1n\cdot\sum_{i=1}^n(a_i^x-1)}<br>=\lim e^{\frac1x\cdot\frac1n\cdot(\sum(\ln a_i\cdot x))}，<br>$$<br>最后一步由$a^x-1\sim \ln a\cdot x$得到，所以原极限是<br>$$<br>\sqrt[n]{a_1 a_2…a_n}.<br>$$<br>这就是练习的第4题。</p>
+<hr>
+<p>习题：<br>我们先从最有意义的第5题看起，这是韦达在1593年发表的结论，是数学史上第一次用无穷乘积表示无理数的成果。这个无限乘积，高二时上竞赛时我就看出了它的奥秘，很是兴奋。为证明这个等式，我们先求极限$\lim\prod_{i=1}^n\cos{\frac x{2^i}}(n\to+\infty).$<br>$$<br>\lim=\lim\frac{2^n\sin{\frac x2}\cdot\prod_{i=1}^n\cos{\frac x{2^i}}}{2^n\sin{\frac x2}}=\lim\frac{\sin x}{2^n\sin {\frac x{2^n}}}=\frac{\sin x}x(n\to+\infty).<br>$$<br>接下来把$\sqrt{1/2}$看成$\cos{\pi/4},$则公式右端就可以写成<br>$$<br>\frac1{\cos{\frac \pi4}\cos{\frac \pi8}\cdot\cdot\cdot\cos{\frac \pi{2^{n+1}}}}(n\to+\infty).<br>$$<br>在我们刚才求得的结论里令$x=\frac \pi2$,比较韦达公式的两端得到：<br>$$<br>\frac \pi2=\frac 1{\prod_{i=1}^n\cos{\frac \pi{2^{n+1}}}}(n\to+\infty)=\left(\frac{\sin {\frac \pi2}}{\frac \pi 2}\right)^{-1}.<br>$$<br>这是显然成立的。</p>
+<p>3.<br>先用Heine定理把数列极限化为函数极限，这是$1^{\infty}$型的函数极限，所以直接上套路就好了。<br>Solve:原极限=<br>$$<br>\lim_{x\to+\infty}\left(1+\frac{\sqrt[x]a-1+\sqrt[x]b-1}2\right)^{\gamma},\<br>\gamma=\frac1x\cdot\frac{\sqrt[x]a-1+\sqrt[x]b-1}2\cdot\frac2{\sqrt[x]a-1+\sqrt[x]b-1}.<br>$$<br>$$<br>=\lim_{x\to+\infty}e^{\frac1x\cdot\frac{\sqrt[x]a-1+\sqrt[x]b-1}2}=\lim_{x\to+\infty}e^{\frac1x\cdot\frac{\ln ab}2\cdot x}=\sqrt{ab}.<br>$$</p>
+<p>2.<br>ez，第一个是无穷小乘有界量是0；第二个值得注意，括号里面的逼近1、指数无穷极限才是e，如果反过来极限则是1.</p>
+<p>1.<br>Ans：$0,1,\frac1{e^2},1,-1,\frac2{\pi}.$</p>
+<hr>
+<p>参考书籍：<br>[1].谢惠民.数学分析习题课讲义.<br>[2].卓里奇.数学分析.</p>
+<hr>
+<p>最近比较心不在焉，希望能尽快调整吧。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined"></a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2016/12/17/4.3%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90/">http://yoursite.com/2016/12/17/4.3%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com">雪夜闻钟</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2016/12/16/4.2%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E6%80%A7%E8%B4%A8/"><span>4.2函数极限性质</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By null</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>
