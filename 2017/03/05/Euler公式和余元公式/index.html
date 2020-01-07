@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Euler公式和余元公式"><meta name="keywords" content="分析"><meta name="author"><meta name="copyright"><title>Euler公式和余元公式 | 雪夜闻钟</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center"></div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">34</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">Euler公式和余元公式</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-03-05</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>像Euler公式这样的优美等式，当然是越早接触越好。余元公式是研究$\Gamma(x)$的产物，也是重要的结论。这里把二者再复述一遍，一是因为它们有一定的内在联系，二是用自己的话说一遍也好加深印象。</p>
+<hr>
+<p>Euler最先发现，对于$x\in\Bbb R$,$x\neq k\pi(k\in\Bbb Z)$，有如下关系成立：<br>$$\sin x=x\cdot\prod_{n=1}^{+\infty}\left(\frac{x^2}{1-n^2{\pi}^2}\right).$$<br>先把它放在这里，转而研究伽马函数：$\Gamma(x)=\int_0^{+\infty}t^{x-1}e^{-t}\Bbb{d}t(x&gt;0)$.它有如下几条重要性质：</p>
+<ul>
+<li>$\forall x&gt;0$,$\Gamma(x)&lt;+\infty$.</li>
+</ul>
+<p>proof：这说明对于任一自变量伽马函数不是正无穷大，放在下面证明。</p>
+<ul>
+<li>$\Gamma(x+1)=x\Gamma(x)$,特别的，当$n\in\Bbb N_+$时，$\Gamma(n)=(n-1)!$.</li>
+</ul>
+<p>proof:对其分部积分，得到<br>$$<br>\Gamma(x+1)=-e^t\cdot t^x\bigg|_0^{+\infty}+x\cdot\int_0^{+\infty}  t^{x-1}e^t\Bbb dt=x\Gamma(x).<br>$$<br>又$\Gamma(1)=1$,即证。由此可以看出，$\Gamma(x)$是阶乘在实数域上的延拓，从而又与Stirling公式有联系。</p>
+<ul>
+<li>$\Gamma(\frac12)=\sqrt{\pi}$.</li>
+</ul>
+<p>proof：由Euler-Poisson积分以及换元法得到，<br>$$<br>\Gamma\left(\frac12\right)=\frac12\int_0^{+\infty}\frac{1}{re^{r^2}}\Bbb dr^2=\int_0^{+\infty}\frac1{e^{r^2}}\Bbb dr=\sqrt{\pi}.<br>$$<br>从第三条出发，我们想研究$\Gamma(x)\Gamma(1-x)$的性质。为此，先给出$\Gamma(x)$的另一个定义(无穷乘积)：<br>对于$x\neq k(k\in\Bbb N)$,定义：<br>$$<br>\Gamma(x)=\frac1x\prod_{n=1}^{+\infty}\frac{\left(1+\frac1n\right)^x}{1+\frac xn}.<br>$$<br>由$\ln\frac{\left(1+\frac1n\right)^x}{1+\frac xn}$ ~ $\ln\left(1+\frac{x(x-1)}{2n^2}\right)$ ~ $\frac{x(x-1)}{2n^2}(n\to+\infty)$知该无穷乘积收敛，所以$\Gamma(x)$有意义，从而可以证明第一个命题。由：<br>$$<br>\prod_{i=1}^{n}\frac{\left(1+\frac1i\right)^x}{1+\frac xi}=\left(\frac{n+1}{n}\right)^x\cdot\frac{n!n^x}{x(x+1)\cdots(x+n)},<br>$$<br>就得到Euler-Gauss公式：<br>$$<br>\Gamma(x)=\lim_{n\to+\infty}\frac{n!n^x}{x(x+1)\cdots(x+n)}.<br>$$<br>继而<br>$$<br>\frac{\Gamma(x+1)}{\Gamma(x)}=\lim_{n\to+\infty}\frac{nx}{x+n+1}=x.<br>$$<br>通过引入$\gamma$(Euler常数)得到：<br>$$<br>e^{\gamma x}=\prod_{n=1}^{+\infty}\frac{e^{\frac xn}}{\left(1+\frac1n\right)^x}.<br>$$<br>再结合$\Gamma(x)$的定义就得到Weiestrass公式：<br>$$<br>\frac1{\Gamma(x+1)}=e^{\gamma x}\cdot\prod_{n=1}^{+\infty}\left(1+\frac xn\right)e^{-\frac xn}.<br>$$<br>利用上边结论得到：<br>$$<br>\Gamma(1-x)=(-x)\Gamma(-x)=\prod_{n=1}^{+\infty}\frac{\left(1+\frac1n\right)^{-x}}{1-\frac xn},<br>$$<br>结合Weiestrass公式就得到余元公式：<br>$$<br>\Gamma(1-x)\Gamma(x)=\frac{\pi}{\sin \pi x}.<br>$$<br>令$x=\frac12$就得到$\Gamma(\frac12)=\sqrt{\pi}$.以上是余元公式的推导，下面看余元公式和Euler公式之间有什么关系。</p>
+<hr>
+<p>Euler公式的推导<br>设$x\in(0,\pi)$,在余元公式中，令$t=\frac x{\pi}\in(0,1)$,则$\Gamma(1-t)\Gamma(t)=\frac{\pi}{\sin x}$,则$\sin x=\frac{\pi}{\Gamma(1-t)\Gamma(t)}$.根据Gamma函数的无穷乘积定义，<br>$$<br>\Gamma\left(\frac x{\pi}\right)=\lim_{n\to+\infty}\frac{\pi\frac x{\pi}(1+\frac x{\pi})\cdots(n+\frac x{\pi})}{n!n^{\frac x{\pi}}}=\lim_{n\to+\infty}x\left(1+\frac x{\pi}\right)\cdots\left(1+\frac x{n\pi}\right).<br>$$<br>同理，<br>$$<br>\Gamma\left(1-\frac x{\pi}\right)=\lim_{n\to+\infty}\left(1-\frac x{\pi}\right)\cdots\left(1-\frac x{n\pi}\right)<br>\cdot\frac{n+1-\frac x{\pi}}{n}.<br>$$<br>整理，<br>$$<br>\sin x=\frac{\pi}{\Gamma(1-\frac x{\pi})\Gamma(\frac x{\pi})}=\lim_{n\to+\infty}x\left(1-\frac {x^2}{\pi^2}\right)\left(1-\frac {x^2}{4\pi^2}\right)\cdots\left(1-\frac {x^2}{n^2\pi^2}\right).<br>$$<br>即$x\in(0,\pi)$时，成立，那么当$x\in(-\pi,0)$时由奇偶性易知也成立.<br>下面讨论一般情况，设$x=2k\pi+y(k\in\Bbb Z,y\in(-\pi,\pi),y\neq0)$,则有<br>$$<br>\sin x=\sin y=y\prod_{n=1}^{+\infty}\left(1-\frac{y^2}{n^2{\pi}^2}\right)<br>$$<br>只要证明<br>$$<br>\prod_{n=1}^{+\infty}\left(1-\frac{y^2}{n^2{\pi}^2}\right)=\frac{2k\pi+y}y\prod_{n=1}^{+\infty}\left(1-\frac{(2k\pi+y)^2}{n^2{\pi}^2}\right).<br>$$<br>先考虑k为正整数的情况，记RHS的部分积为$Q_n$，LHS的部分积为$P_n$.<br>$$<br>Q_n=\frac{2k\pi+y}y\cdot\prod_{s=1}^{n}\left[\frac{((s+2k)\pi+y)((s-2k)\pi-y)}{s^2\pi^2}\right].①<br>$$<br>将$s=1$至$s=2k$的$(s-2k)\pi-y$的负号提出，$Q_n$值不变，即：<br>$$<br>Q_n=\frac{2k\pi+y}y\cdot\prod_{s=1}^{2k}\left[\frac{((2k+s)\pi+y)((2k-s)\pi+y)}{s^2\pi^2}\right]\cdot<br>\frac{Q_n}{Q_{2k}},②<br>$$<br>只交换部分项并合并：<br>$$<br>Q_n=\prod_{s=1}^{n-2k}\frac{(s\pi+y)(s\pi-y)}{s^2\pi^2}\cdot\prod_{s=n-2k+1}^{n+2k}\frac{(s\pi+y)(s\pi-y)}{s^2\pi^2}.③<br>$$<br>③中第一个连乘积是$P_{n-2k}$,右边是分子分母均为$4k$次的多项式且最高次项项系数均为$\pi^{4k}$,所以<br>$$<br>\lim_{n\to+\infty}Q_n=\lim_{n\to+\infty}P_n.<br>$$<br>当$k&lt; 0$时，只要让$x=-t$，由已知亦可同理证得。<br>在$\sin x$的无穷乘积展开式中，令$x=\frac {\pi}2$就得到Wallis公式，可知Euler公式是很强力的结论。</p>
+<hr>
+<p>证明过程是有困难的，沿着前人的路子毕竟好走许多。</p>
+<hr>
+<p>参考文献：<br>[1].谢惠民.数学分析习题课讲义(下)，2004<br>[2].陈纪修.数学分析，2004<br>[3].朱传汇.《正弦函数sinx的无穷乘积展开式》.襄阳师专学报(自然科学版)，P51.</p>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2017/03/07/6.2%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E4%BB%96%E6%B1%82%E5%AF%BC%E6%B3%95%E5%88%99/"><i class="fa fa-chevron-left">  </i><span>6.2高阶导数及其他求导法则</span></a></div><div class="next-post pull-right"><a href="/2017/03/01/6.1%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E8%BF%90%E7%AE%97/"><span>6.1导数及其运算</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By null</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>

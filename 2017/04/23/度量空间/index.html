@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="一般理论(1).度量空间"><meta name="keywords" content="分析"><meta name="author"><meta name="copyright"><title>一般理论(1).度量空间 | 雪夜闻钟</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center"></div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">34</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">一般理论(1).度量空间</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-23</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Math/">Math</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>这个系列是服务于多元微分学的。我们欲考虑$\Bbb R^n$上极限的概念，必须要刻划“距离足够近”这一表达，那么怎么在高维空间给出“距离”的表述？这就促使度量、拓扑等概念的产生，他们都是一般化的理论。</p>
+<hr>
+<p>一、度量空间和度量函数、依度量收敛</p>
+<p><strong>定义1(度量空间)</strong>：度量空间$(X,d)$是一个装备了度量函数$d$的集合$X$,其中$d:X×X\to[0,+\infty)$满足：</p>
+<ul>
+<li>$\forall x\in X$,$d(x,x)=0$;</li>
+<li>$\forall x,y\in X$,$x\neq y$,$d(x,y)&gt;0$;</li>
+<li>$\forall x,y\in X$,$d(x,y)=d(y,x)$;</li>
+<li>$\forall x,y,z\in X$,$d(x,z)\le d(x,y)+d(y,z)$.</li>
+</ul>
+<p><strong>定义2(导出的度量空间)</strong>：$(X,d)$是度量空间，$Y\subset X$,$d’:Y×Y\to[0,+\infty)$,称$(Y,d’)$是$X$上由$Y$导出的子空间。</p>
+<p><strong>eg1(Euclid空间$\Bbb R^n$)</strong>：Euclid空间是度量空间$(\Bbb R^n,d)$,其中$\Bbb R^n={(x_1,\cdots,x_n)|x_k\in\Bbb R^n,k\in\Bbb N_+}$,<br>$$<br>d=d_{l^2}((x_1,\cdots,x_n),(y_1,\cdots,y_n))=\left(\sum_{k=1}^n(x_k-y_k)^2\right)^{\frac12}.<br>$$</p>
+<p><strong>eg2($l^p$度量)</strong>：这里的点仍是$\Bbb R^n$中的，但是度量函数定义为：<br>$$<br>d=d_{l^p}((x_1,\cdots,x_n),(y_1,\cdots,y_n))=\left(\sum_{k=1}^n(x_k-y_k)^p\right)^{\frac1p},p\in[1,+\infty).<br>$$<br>由Minkovski不等式知道该度量满足度量函数的性质。</p>
+<p><strong>eg3(上确界范数度量$l^{\infty}$)</strong>：这里度量函数定义为：<br>$$<br>d=d_{l^\infty}((x_1,\cdots,x_n),(y_1,\cdots,y_n))=\sup{|x_k-y_k|:k=1,2,\cdots,n}<br>$$</p>
+<p><strong>命题1</strong>：对于以上3个度量，有如下不等关系<br>$$<br>\frac1{\sqrt{n}}d_{l^2}(x,y)\le d_{l^{\infty}}(x,y)\le d_{l^1}(x,y).<br>$$<br><strong>eg4</strong>：$C[a,b]$是闭区间$[a,b]$上的度量空间(注意这是一个函数空间！)，其中度量函数为<br>$$<br>d(f,g)=\max_{a\le x\le b}|f(x)-g(x)|.<br>$$</p>
+<p><strong>eg5</strong>:像[eg3]那样引入一般情况的$C[a,b]$上的函数$d_p$:<br>$$<br>d_p(f,g)=\left(\int_a^b|f-g|^p\Bbb dx\right)^{\frac1p},p\in[1,+\infty).<br>$$<br>通过积分形式的Minkovski不等式知$d_p$是度量函数。<br>约定，装备了$d_p$的集合$C[a,b]$是度量空间，用$C_p[a,b]$表示。</p>
+<p><strong>定义3(依度量收敛)</strong>：称度量空间$(X,d)$中的数列${x_n}$依度量$d_p$收敛到$x\in X$，如果$d(x_n,x)\to0$.</p>
+<p><strong>定理1($d_p$之间的等价性)</strong>：设${x_n}\subset\Bbb R^n$，$p,q\in[1,+\infty)$，则以下命题相互等价：</p>
+<p>(1).${x_n}$依$d_p$收敛到$x$;<br>(2).${x_n}$依$d_q$收敛到$x$;<br>(3).记$\pmb x^m=(x_1^m,\cdots,x_n^m)\in\Bbb R^n$,对于任一$1\le k\le n$,${x_k^m}$收敛到$x_k$——注意这是实数列的收敛！</p>
+<hr>
+<p>二、度量空间中的基本概念(如不加说明，下面默认在度量空间上讨论)</p>
+<p><strong>定义1($\delta-$邻域)</strong>：$\delta&gt;0,a\in X$,称集合$B(a,\delta)={x\in X|d(a,X)&lt;\delta}$为a的$\delta-$邻域，或以$a$为中心，$r$为半径的开球。</p>
+<p><strong>定义2(开集)</strong>：称$D\subset X$为开集，如果任一$x\in D$,$\exists \delta&gt;0:B(a,\delta)\subset D$.</p>
+<p><strong>定义3(闭集)</strong>：称$E\subset X$为闭集，如果$X-E$是开集。</p>
+<p><strong>命题1</strong>：(1).$X$中任意个开集之并还是开集；(2).$X$中有限多个开集之交还是开集。(针对闭集请自己写出，注意和开集是对偶的)</p>
+<p><strong>定义4(邻域)</strong>：称包含$x\in X$的开集为这个点在$X$中的邻域，记为$U(x)$。</p>
+<p><strong>定义5(内、外、边界、孤立点)</strong>：称$x\in X$为集合$S\subset X$中的</p>
+<p>(1).内点，若存在$U(x,\delta)\subset X$，记$E$全体内点组成的集合为${\rm int}E$;<br>(2).外点，若$x$是$E-X$中的内点，记$E$全体外点组成的集合为${\rm ext}E$;<br>(3).边界点，若它每个邻域既含$E$中的点又不全在$E$中，记$E$全体边界点组成的集合为$\partial E$；<br>(4).孤立点，若存在$U(a,r)$：$U(a,r)\cap E={a}$.</p>
+<p><strong>定义6(聚点)</strong>：称$a$是集合$E\subset X$的聚点，如果对点$a$的任一邻域$U(a)$，都有$U(a)\cap E\neq\varnothing$，称$E$全体边界点组成的集合为$E$的导集，记为$E’$.</p>
+<p><strong>定义7(闭包)</strong>：称$\overline E=E\cup E’$为$E\subset X$的闭包。</p>
+<p><strong>命题2</strong>：$F$是$X$中的闭集，当且仅当$F=\overline F$.</p>
+<p><strong>命题3</strong>：$\overline F$是闭集.</p>
+<p><strong>命题4</strong>：$\overline F={\rm int}F\cup\partial F=X-{\rm ext} F$.</p>
+<p><strong>命题5</strong>：设$x_0\in X$,$E\subset X$,以下命题等价：</p>
+<p>(1).$x_0\in E’$；(2).$x\in {\rm int}E$或$x\in\partial E$；(3).$\exists{x_n}\subset E$,${x_n}$依度量收敛到$x_0$.</p>
+<p><strong>命题6</strong>($\Bbb R^n$的划分)：$\Bbb R^n$可以写成 ${\rm int}A\cup {\rm ext}A\cup\partial A$，这里$A\subset\Bbb R^n$是任一集合。</p>
+<p>容易发现，其实这些定义和命题和Euclid空间中的定义别无二致，但是更一般化，容易推广和研究。</p>
+<hr>
+<p>三、度量空间的直积</p>
+<p><strong>定义1(直积)</strong>：若$(X_1,d_1),(X_2,d_2)$是两个度量空间，那么$(X_1×X_2,d)$称为$X_1$和$X_2$的直积，其中$d$是按<br>$$<br>d(\pmb x,\pmb y)=d_1(x_1,y_1)+d_2(x_2,y_2)<br>$$<br>或<br>$$<br>d(\pmb x,\pmb y)=\max{d_1(x_1,y_1),d_2(x_2,y_2)}<br>$$<br>或<br>$$<br>d(\pmb x,\pmb y)=\sqrt{d_1^2(x_1,y_1)+d_2^2(x_2,y_2)}<br>$$<br>定义的度量函数。</p>
+<hr>
+<p>按照Zorich和Tao的体系，大概写五章，分别为度量空间、拓扑空间、紧性与紧集、完备的度量空间和拓扑空间上的连续映射(包含压缩映射原理)。我希望是能够不参照书来写，完全用自己的语言，按照自己的理解。</p>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2017/04/25/%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4/"><i class="fa fa-chevron-left">  </i><span>一般理论(2).拓扑空间</span></a></div><div class="next-post pull-right"><a href="/2017/04/22/%E8%AE%A8%E8%AE%BA%E7%8F%AD%E8%AE%B2%E4%B9%89(10)/"><span>讨论班第十周讲义</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By null</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>

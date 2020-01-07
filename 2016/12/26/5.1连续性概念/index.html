@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="5.1连续性概念"><meta name="keywords" content="分析"><meta name="author"><meta name="copyright"><title>5.1连续性概念 | 雪夜闻钟</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center"></div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">34</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">5.1连续性概念</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2016-12-26</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Math/">Math</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>连续性的重要性不消多说，在这里我想强调“振幅”这一概念，振幅与后面的一元积分学关系非常大，故事先研究一下是有必要的。</p>
+<p>定义：函数f在某点a的$\delta$邻域内的振幅定义为：<br>$$<br>\omega_{a,\delta}=\sup{f(x)}-\inf{f(x)}(x\in U(a,\delta)).<br>$$<br>当$\delta\to0$时，称作f在点a的振幅。于是有下面的定理：<br>$$<br>f\in C{x_0}\Longleftrightarrow\omega_{x_0}=0.<br>$$<br>prove:充分性。若f在x=a处的振幅为0，那么对任意$\varepsilon&gt;0$,$\exists \delta&gt;0,x\in U(x_0,\delta)$:<br>$$|f(x)-f(x_0)| \le|\sup{f(x)}-\inf{f(x)}|&lt;\varepsilon.$$<br>这就意味着f在x=a处连续。<br>必要性用反证法。若f在x=a处的振幅不为0，则存在一个$\varepsilon&gt;0$，对任意的$\delta&gt;0$,当$x\in U(a,\delta)$时都有：<br>$$|\sup{f(x)}-\inf{f(x)}|\ge\varepsilon.$$<br>由上下确界定义得，对于任一$\varepsilon&gt;0$，存在$x_1,x_2\in U(a,\delta),s.t:$<br>$$<br>f(x_1)&gt;\sup-\frac 14 \varepsilon,f(x_2)&lt; \inf+\frac 14 \varepsilon，<br>$$<br>那么就推出<br>$$<br>\left|f(x_1)-f(x_2)\right|&gt; \sup-\inf-\frac 12 \varepsilon&gt;\frac 12\varepsilon.<br>$$<br>因为<br>$$<br>|f(x_0)-f(x_1)|+|f(x_0)-f(x_2)|\ge |f(x_1)-f(x_2)|&gt; \frac 12 \varepsilon,<br>$$<br>所以由平均值原理必然存在$|f(x_0)-f(x_i)|&gt; \frac 14 \varepsilon(i\in{1,2}),$又由$\delta$之任意性可以得出f在x=a处不连续，矛盾。这就是练习的第12题。</p>
+<hr>
+<p>第二个点就是有理列逼近无理点在函数连续时的性质：若对于两个函数f、g有相同的定义域，二者在定义域所有有理点处函数值恒相等，则f与g在任一点的函数值都是恒相等的。</p>
+<p>prove：选一列有理数列(比如无理数r的n位不足近似，以后这样的数列都可以取这个)去逼近r，再由连续的定义就得到结论。</p>
+<p>PS：这样的数列表达显式是$x_n=\frac{[10^n r]}{10^n}，$如果用无理列逼近有理数q可以取$y_n=q\cdot\frac{\sqrt{2}n+1}{\sqrt 2n}.$</p>
+<hr>
+<p>函数方程</p>
+<p>最著名的函数方程是Cauchy方程：定义在$\Bbb R$上的连续函数f满足：<br>$$<br>f(x)+f(y)=f(x+y).<br>$$<br>有关它的解，我记得有老师曾说过只要函数图象在实平面上不稠密就能推出它的解是$f(x)=f(1)x.$这个方程解的要点是通过所有有理数都满足此方程，加上第二点的结论就推出在实数集上都满足。又，把条件减弱为只在一点连续也能得出相同的结论——设f在x=a处连续，只要注意<br>$$<br>\lim_{x\to x_0}f(x)=\lim_{\Delta x\to 0}f(x_0-a+a+\Delta x)=f(x_0-a)+\lim_{\Delta x\to 0}f(a+\Delta x),<br>$$<br>就由f在a点的连续性得：<br>$$<br>f(x_0-a)+\lim_{\Delta x\to 0}f(a+\Delta x)=f(x_0-a)+f(a)=f(x_0).<br>$$<br>下面看两个稍难的函数方程(练习10、11题)。</p>
+<p>10.f在$\Bbb R$上连续，对任意实数x，y有$f(x+y)=f(x)f(y),$证明：此方程解除了0，就是$f(x)=f(1)^x.$<br>prove:<br>首先知道$f(0)=f(0)^2,if:f(0)=0,$则f恒为0，下面看f(0)不为0的情况。首先对互素的整数m,n,有$f(\frac mn)=f^m(\frac 1n),$再研究$f(\frac 1n)$,<br>$$<br>f(1)=f(\frac{n-1}{n})f(\frac 1n)=f^2(\frac 1n)f(\frac{n-2}{n})=\cdots=f^n(\frac 1n),<br>$$<br>所以$f(\frac 1n)=f^{\frac 1n}(1),$继而$f^{\frac mn}(1)=f(\frac mn).$这说明这个解对所有有理数都成立，由第二点的结论知它对任意实数都成立。</p>
+<p>11.f在$\Bbb R$上连续，对任意实数x，y有$f(\frac {x+y}2)=\frac 12[f(x)+f(y)],$证明：$f(x)=[f(1)-f(0)]x+f(0).$<br>prove:<br>看得出这是线性函数，这由Jensen不等式取等条件立得，但是如果从凸性入手，就会误入歧途。设直线为g(x),下面只看[0,1]区间内的情形。首先知道x=0和1时，这两个点都在g上，那么1/2也在直线上，继而推出$\frac 1{2^k}(k\in\Bbb N+)$也都在直线上。对于(0,1)中任意一点$x_0$，总能找到[0,1/2]or[1/2,1]来包含它，记作$[a_1,b_1],$二分之，得到的两个区间又会有一个包含$x_0,$记作$[a_2,b_2]\cdots$一直做下去会得到闭区间套$I={[a_i,b_i]},$这时我们要注意到两点：</p>
+<ul>
+<li>每个闭区间的中点都在g上；</li>
+<li>$x_0$是惟一在闭区间套中的点。</li>
+</ul>
+<p>对于I中每个闭区间的中点，记为数列$x_n,x_n\to x_0,$由f的连续性知：<br>$$\lim_{n\to \infty}f(x_n)=\lim_{n\to \infty}g(x_n)=g(x_0)=f(x_0),$$<br>这说明$x_0$在g上,继而[0,1]中任一点都在g上.任取[0,1]中的点t,[t-1,t+1]上的任一点都在g上，依次类推，得到任意实数对应的函数值都与g相等，那么$f\equiv g.$</p>
+<hr>
+<p>Dirichlet函数与Rimann函数</p>
+<p>容易知道D(x)在任一点都不连续，且类型为第二类间断点(练习第8题)。证明我在4.1的练习11的解答中用三种方法做过，这里不赘。</p>
+<p>D(x)的一大作用是构造特殊的函数，比如练习第9题，让构造只在某点连续的函数，我们就可以让$f(x)=(x-x_0)^2D(x).$同理可以做出只在有限个点连续的函数：<br>$$<br>f(x)=\prod_{i=1}^n(x-x_i)^2\cdot D(x).<br>$$<br>而Rimann函数R(x)是在任一点极限都为0，只在有理点不连续，这个性质非常好，一方面可以构造很多“变态”函数，另一方面说明了R(x)在[0,1]可积。现给一题:试构造在[0,1]内任一点附近都无界的函数。结合证明R(x)任一点极限都为0的思路(分析分母的大小)，只需要把R(x)在有理分段中函数值由自变量分母的倒数改为分母的值即可。</p>
+<hr>
+<p>2.<br>(1).$x\in\Bbb Z,Jump;$<br>(2).$f(x)\in C(\Bbb R);$<br>(3).$x\in\Bbb Z,Removable;$<br>(4).$x=0,Jump;x=1,Removable;x=-1,second kind.$</p>
+<p>3.<br>prove:由Weierstrass定理知，$\exists {x_{n_k}}\subset{x_n}\subset[a,b].$设${x_{n_k}}\to\xi\in[a,b]$.由f连续性可知:<br>$$<br>\lim_{n_k\to\infty}f(x_{n_k})=f(\xi)=A.$$<br>4.<br>prove:f是偶函数，只要研究正半轴上的点就可以。当$x\neq0$时，$f(x)=f(x^{\frac1{2n}})_{n\to+\infty}=f(1),$所以在0的任一邻域内所有点对应的函数值都是f(1),那么f(0)=f(x)=f(1),即f恒等于f(1)(或说f(0)).</p>
+<p>5.<br>prove：只看最大值，因为$\max{f,g}=\frac12(f+g+|f-g|),$故只需研究$|f-g|$的连续性。对$\forall \varepsilon&gt;0,$<br>$$<br>||f-g|-|f_0-g_0||\le|(f-f_0)-(g-g_0)|\le|f-f_0|+|g-g_0|&lt;2\varepsilon.<br>$$<br>这就证明了其连续性。</p>
+<p>6.<br>prove:只需注意到$f(x)=\max{f_1,\min{f_2,f_3}}$即可。这样f就可以写成<br>$$<br>\frac12\left(f_1+\frac{f_2+f_3-|f_2-f_3|}{2}\right)+\frac12\left|f_1-f_3+|f_2-f_3|\right|.<br>$$<br>由第5题思路知整个f小于$5\varepsilon$，也是连续的。</p>
+<p>7.<br>prove:只证明充分性，必要性只要注意到$f=\max{-n,\min{f,n}}$就归结为第6题。若$f_n(x)$连续，那么它每一段函数都连续，即$f(x)\in C(-n,n]$,由n的任意性可知$f(x)\in C(\Bbb R).$</p>
+<hr>
+<p>Hexo昨晚大抽风，直接把这一篇404了……刚才证实了一下，其实是我抽风，把时间调的超前了当然会404。Zorich的习题里有连续模、函数芽、环的极大理想，我表示技不如人，甘拜下风。或许会在一致连续那部分提一下吧，这些东西有些超前(其实是我太弱)。</p>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2017/01/13/5.3%E6%9C%89%E7%95%8C%E6%80%A7%E5%AE%9A%E7%90%86%E5%92%8C%E6%9C%80%E5%80%BC%E5%AE%9A%E7%90%86/"><i class="fa fa-chevron-left">  </i><span>5.3有界性定理和最值定理</span></a></div><div class="next-post pull-right"><a href="/2016/12/23/4.4%E6%9C%89%E7%95%8C%E9%87%8F%E3%80%81%E6%97%A0%E7%A9%B7%E9%87%8F%E5%92%8C%E9%98%B6/"><span>4.4有界量、无穷量和阶</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By null</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>

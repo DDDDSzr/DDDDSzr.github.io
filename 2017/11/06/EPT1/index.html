@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="EPT Chapter1 Solution"><meta name="keywords" content="概统"><meta name="author"><meta name="copyright"><title>EPT Chapter1 Solution | 雪夜闻钟</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem"><span class="toc-number">1.</span> <span class="toc-text">Problem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Solution-of-Exercises"><span class="toc-number">2.</span> <span class="toc-text">Solution of Exercises</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center"></div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">34</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">EPT Chapter1 Solution</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-11-06</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Stats/">Stats.</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>EPT全称是Elementary Probability Theory，Kai Lai Chung著。是为概率论的入门书籍，试选好习题将答案录于此。</p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>问题：将集合$A_1,\cdots,A_n$经运算（交并补差和对称差$\Delta$）得到的新集合记为$\mathcal A_n$，则$\mathcal A_n$必可以表示为若干不相交元素的并。</p>
+<p>pf.<br>对于$\mathcal A_n$中的任一元素$x$，我们将它所有的关于集合$A_1,A_2,\cdots,A_n$从属关系的可能性写出来（必然是有限种且不超过$2^n$）。如其中一种可能为$x\in A_{i_1},A_{i_2},\cdots,A_{i_k};x\notin A_{i_{(k+1)}},\cdots,A_{i_n}$，那么必有<br>$$<br>x\in A_{i_1}A_{i_2}\cdots A_{i_k}A^c_{i_{k+1}}\cdots A^c_{i_n}.<br>$$<br>将所有可能写出来就得出$\mathcal A_n\subset E_1+\cdots+E_m$（其中$E_i$是元素且他们两两不交）。</p>
+<p>反过来，若$x\in E_1+\cdots+E_m$，由$E_i\cap E_j=\varnothing$得$x\in E_t$，其中<br>$$<br>E_t=A_{t_1}A_{t_2}\cdots A_{t_l}A^c_{t_{l+1}}\cdots A^c_{t_n}<br>$$<br>这表示了<br>$$<br>x\in A_{t_1},A_{t_2},\cdots,A_{t_l};x\notin A_{t_{l+1}},\cdots,A_{t_n}.<br>$$<br>故$x\in\mathcal A_n$，得证。</p>
+<h2 id="Solution-of-Exercises"><a href="#Solution-of-Exercises" class="headerlink" title="Solution of Exercises"></a>Solution of Exercises</h2><p>10.$x\in(A\cap B)-C\Leftrightarrow(x\in A)\wedge(x\in B)\wedge(x\notin C) $，$x\in(A-C)\cap(B-C)\Leftrightarrow (x\in A)\wedge(x\notin C)\wedge(x\in B)\wedge(x\notin C)$，显然这两者是等价的，故原命题之对偶亦成立。</p>
+<p>12.$x\in(A\cup B)-(C\cup D)\Leftrightarrow((x\in A)\vee(x\in B))\wedge(x\notin C)\wedge(x\notin D)$，$x\in(A-C)\cup(B-D)\Leftrightarrow((x\in A)\wedge(x\notin C))\vee((x\in B)\wedge(x\notin D))$，容易看出后者蕴含前者。</p>
+<p>13.<br>(2).等价于证明$(A^c\cup B)\cap(B^c\cup C)=(A^c\cup B)\cap(A^c\cup C)$，他们所包含的从属情况是相同的，故相等，继而(1)也得证。<br>(3).$(A\Delta B)^c=(A-B)^c\cap(B-A)^c=(A^c\cup B)\cap(B^c\cup A)=(A/B)\cap(B/A)$.</p>
+<p>14.因为$A-B=A\cap B^c$，$A\Delta B=(A-B)\cup(B-A)$，故我们只要从新定义的运算中导出余和并运算就行了。定义$A\sim B=A^c\cup B^c$，则$A\sim A=A^c,(A\sim A)\sim( B\sim B)=A\cup B$.</p>
+<p>19.$I_{A-B}=I_{A\cap B^c}=I_A(1-I_B)$，特别地，当$B\subset A$时，有$I_{A-B}=I_A-I_B$.</p>
+<p>20.考虑$1-I_{A\cup B\cup C}$，它等于$I_{A^cB^cC^c}=(1-I_A)(1-I_B)(1-I_C)$，整理得<br>$$<br>I_{A\cup B\cup C}=I_A+I_B+I_C-I_{AB}-I_{BC}-I_{AC}+I_{ABC}.<br>$$<br>继而考虑$n$元情形（本质是容斥原理，归纳可证），得<br>$$<br>I_{A_1\cup\cdots\cup A_n}=\sum_1^n I_{A_i}-\sum_{i,j}I_{A_iA_j}+\cdots+(-1)^{k+1}\sum I_{A_1\cdots A_k}\cdots+(-1)^{n+1}I_{A_1\cdots A_n}.<br>$$</p>
+<p>21.在20中注意到$I_{AB}=I_A+I_B-I_{A\cup B}$，代入即得。</p>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%A6%82%E7%BB%9F/">概统</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2017/11/08/EPT2/"><i class="fa fa-chevron-left">  </i><span>EPT Chapter2 Solution</span></a></div><div class="next-post pull-right"><a href="/2017/10/17/stats1/"><span>关于期望的小结论</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By null</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>

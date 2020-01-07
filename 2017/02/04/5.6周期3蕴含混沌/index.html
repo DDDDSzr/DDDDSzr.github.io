@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="5.6周期3蕴含混沌"><meta name="keywords" content="分析"><meta name="author"><meta name="copyright"><title>5.6周期3蕴含混沌 | 雪夜闻钟</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center"></div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">34</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">5.6周期3蕴含混沌</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-04</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Math/">Math</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>混沌(Chaos)的概念最先由李天岩和其导师Yorke提出，是一种长期行为对初态十分敏感的系统。如果把初态表示成因果规律f的定义域中的一点x，那么以后的状态就是f的迭代，所以研究混沌就应该知道关于相应f的迭代之后的性质。可就是形如$f(x)=x^2+x+1$这样简单的函数，经过较多次迭代后的表达式也是复杂的——甚至可能对问题本身并无多大帮助。由是，我们把关注点转向序列${f^n(x)}$.<br>数列中几个比较关键的性质有增减性、周期性和极限。对于不同的初值，研究其构成的迭代序列：<br>$$<br>x,f(x),f^2(x),\cdots, f^n(x)<br>$$<br>所具有的周期性，如果存在正整数$m,s.t:f^m(x)=x$,则称m是点x的一个周期，x是f的一个周期点。$x,f(x),\cdots, f^m(x)$构成一个m-周期轨。点x的周期中必有一个最小的，记作T。<br>命题1.nT也是x的周期$(n\in\Bbb N_+)$.<br>proof:<br>$$<br>f^{nT}(x)=f^{(n-1)T}(f^T(x))=f^{(n-1)T}(x)=f^{(n-2)T}(x)=\cdots=f^T(x)=x.<br>$$<br>命题2.若t也是x的周期且t&gt;T，必有$T|t$.<br>proof：<br>反证，设T不整除t。则存在$q、r(0&lt; r&lt; T),s.t:t=qT+r.$由命题1知道：<br>$$<br>f^t(x)=f^{qT+r}(x)=f^{r}(f^{qT}(x))=f^r(x)=x.<br>$$<br>这表明r也是x的周期，与T的最小性矛盾，即证。</p>
+<p>命题3.对于集合M的上确界S，要么$S\in M$,要么$\exists{a_n}\subset M:a_n\to S$且严格单增。<br>proof:<br>若$S\notin M$,由上确界定义，$\forall\varepsilon&gt;0,\exists x\in M:x&gt;S-\varepsilon.$这样取定${\varepsilon_n}$和${x_n}$:<br>$$<br>\varepsilon_1=1,\varepsilon_{n}=\frac1n;x_1\in(S-1,S),x_{n+1}\in(\max{x_n,S-\varepsilon_{n+1}},S).<br>$$<br>由此，对于每个$\varepsilon_i,\exists x_i$满足上确界定义，又因为$\forall i,x_i&lt; S$，由极限定义知道$x_n\to S$且严格单增。</p>
+<p>命题3对后面的证明有帮助。1975年Li和Yorke发表题为《Peirod Three Impiles Chaos》的论文，给”混沌”下了定义并提出了两个定理(Li-Yorke)，这就是我们在此要研究的问题。</p>
+<hr>
+<p>对于一个函数、一个初值，我们容易从几何上判断它是否有1-周期点、2-周期点，但是更高阶的却无从下手，Li-Yorke定理很大程度上帮助我们简化了这个问题——只需要关注3-周期点就可以。</p>
+<p>Li-Yorke第一定理：$f\in C(I),f(I)\subset I$。若存在I中的四个数满足<br>$$<br>d\le a&lt; b&lt; c　or　d\ge a&gt; b&gt;c &gt;d:f(a)=b,f(b)=c,f(c)=d,<br>$$<br>则f具有n-周期点，n为任意正整数。<br>为了证明它，需要3个引理，慢慢来。</p>
+<ul>
+<li>引理1.$f\in C(I),$若$I\subset f(I)$，则f在I中有不动点。</li>
+</ul>
+<p>proof:设I=[a,b]，若a、b之中有一个是不动点，结束，若都不是不动点，则由介值定理，<br>$$<br>\exists \xi、\eta\in (a,b):f(\xi)=a,f(\eta)=b.<br>$$<br>令$F(x)=f(x)-x$，则$F(\xi)&lt; 0,F(\eta)&gt;0\Rightarrow F(\xi)\cdot F(\eta)&lt; 0$,所以$\xi$和$\eta$之间必有不动点。</p>
+<ul>
+<li>引理2.$f\in C(I)$，一有限闭区间J满足$J\subset f(I)$,则存在$I’\subset I:f(I’)=J.$</li>
+</ul>
+<p>proof:设I=[a,b],J=[c,d].由介值定理知道:<br>$$<br>\exists \xi,\eta\in [a,b]:f(\xi)=c,f(\eta)=b.(\xi&lt;\eta)<br>$$<br>对$\xi&gt;\eta$的情况同下处理即可。定义集合$U={x\in [\xi,\eta)|f(x)=c}$，设$u=\sup U$，再设<br>$$<br>v=\sup{x\in (u,\eta]|f(x)=d}.<br>$$<br>下证$f(u)=c,f(v)=d$：若$u\in U$显然成立，若$u\notin U$由命题3和f的连续性也有f(u)=c,同理f(v)=d.由u、v的定义知道，在(u,v)中函数值不可能再取到c和d，所以$f((u,v)\subset (c,d)$,继而$f([u,v])=[c,d]=J.$</p>
+<ul>
+<li>引理3.设f是在有限闭区间$I_0,I_1,\cdots,I_n$上有定义的连续函数且满足条件$I_{i+1}\subset f(I_{i})(i=0,1,\cdots,n-2)$,且$I_0\subset f(I_{n-1})$.则存在点$x_0\in I_0,s.t:f^n(x_0)=x_0,f^k(x_0)\in I_k(k=0,1,…,n-1).$</li>
+</ul>
+<p>proof：由引理2，存在$J_1\subset I_0:f(J_1)=I_1$,又因为$I_2\subset f(I_1)$,所以$I_2\subset f^2(J_1)$,又由引理2，存在$J_2\subset J_1:f^2(J_2)=I_2.$这样不断做下去，就得到一个$J_{n-1}\in I_0$使得：<br>$$<br>f(J_{n-1})\subset I_1,f^2(J_{n-1})\subset I_2,\cdots,f^{n-2}(J_{n-1})\subset I_{n-2},f^{n-1}(J_{n-1})=I_{n-1}①.<br>$$<br>由$I_0\subset f(I_{n-1})$知$J_{n-1}\subset I_0\subset f^n(J_{n-1})$，对区间$J_{n-1}$上的函数$f^n(x)$应用引理1知存在一个$x_0\in J_{n-1}\subset I_0:f^n(x_0)=x_0.$同时由①知$f^k(x_0)\in I_k.$</p>
+<ul>
+<li>Li-Yorke第一定理的证明：</li>
+</ul>
+<p>设区间L=[a,b],K=[b,c]。由介值定理可知$L\subset f(K),K\subset f(L),K\subset f(K).$现对每个自然数n，考察其周期点的情况。<br>(1).n=1时，由$K\subset f(K)$和引理1知道存在1-周期点；<br>(2).n=2时，由$L\subset f(K),K\subset f(L)$和引理3知道存在$x_0\in L:f(x_0)\in K$和$f^2(x_0)=x_0.$若$x_0$的最小周期不是2，那么$x_0$是f的不动点，所以$x_0\in L,x_0\in K$,继而$x_0\in L\cap K={b}$,所以$x_0=b.$但$f(b)=c&gt;b$,所以矛盾，所以$x_0$是最小周期是2；<br>(3).$n\ge 3$时，令$I_0=L,I_1=I_2=\cdots=I_n=K.$这样满足引理3的条件，对这n个区间应用引理3得：<br>$$<br>\exists x_0\in L:f^n(x_0)=x_0,f^k(x_0)\in K,i=1,2,\cdots,n-1.①<br>$$<br>若n不是$x_0$的最小周期,设最小周期为$p&lt; n,f^p(x_0)=x_0.$同(2)中的情况，必然有$x_0=b$.但是$n\ge3,$所以推出：<br>$$<br>f(x_0)=c,f^2(x_0)=d\le a\Rightarrow f^2(x_0)\notin K,<br>$$<br>这就与①矛盾，即证。</p>
+<p>从另一个角度说，如果f存在3-周期点，也就存在n-周期点，因为这是a=d的特例——这就是为什么说周期3蕴含混沌。得到这一强力的结论后我们不禁想：f具有怎样性质的周期点时，可以推出它有n-周期点呢？这个问题在1964年(注意他是比李天岩和Yorke早的)被Sharkoviskii解决：任一自然数都可以写成$2^l\cdot(2k+1)$的形式，我们将它排成一个表：<br>$$<br>2^0\cdot3&lt; 2^0\cdot5&lt; 2^0\cdot7&lt; 2^0\cdot9,\cdots\<br>2^1\cdot3&lt; 2^1\cdot5&lt; 2^1\cdot7&lt; 2^1\cdot9,\cdots\<br>\cdots\<br>\cdots&lt;\cdots&lt; 2^4&lt; 2^3&lt; 2^2&lt; 2^1&lt; 1.<br>$$<br>如果在这张表中有两数m“小于”n,则有如下结论：<br>$f\in C(I),f(I)\subset I,$若f具有m-周期点，则f具有n-周期点。自然地，3是表中”最小的那个”，所以只要有3-周期点就有n-周期点。</p>
+<hr>
+<p>习题方面，选用史济怀编写教材上的题，由于第2道是第3道的特例，故不录。</p>
+<p>1.x是f的一个n-周期点，记$x_0=x,x_k=f^k(x).$求证：在x的n-周期轨中,每项各不相同，且都是f的n-周期点。<br>proof：因为<br>$$<br>f^n(f^i(x))=f^i(f^n(x))=f^i(x),i=1,2,\cdots,n,<br>$$<br>所以后半句成立。若有$0\le p&lt; q\le n-1:f^p(x)=f^q(x)$</p>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2017/02/21/Abel%E5%8F%98%E6%8D%A2/"><i class="fa fa-chevron-left">  </i><span>Abel变换及浅显应用(防遗忘)</span></a></div><div class="next-post pull-right"><a href="/2017/02/03/5.5%E5%8D%95%E8%B0%83%E5%87%BD%E6%95%B0/"><span>5.5单调函数</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By null</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>

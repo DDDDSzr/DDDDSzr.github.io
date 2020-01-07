@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="4.1函数极限"><meta name="keywords" content="分析"><meta name="author"><meta name="copyright"><title>4.1函数极限 | 雪夜闻钟</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center"></div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">34</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">4.1函数极限</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2016-12-09</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Math/">Math</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>Zorich的书里确定了一种更广义的极限定义——基于点集拓扑中的“基”的定义，但我没有很好地理解，就按最基本的来吧。下面一共三个比较关键的内容：<br>1.用定义证明函数极限；<br>2.复合函数极限；<br>3.基本的证明。</p>
+<hr>
+<p>定义证明要旨只有二字：放缩。<br>1.<br>限制x在-1到1之间，<br>$$<br>|\frac{\sqrt{1+x}-\sqrt{1-x}}{x}-1|=|\frac{2}{x(\sqrt{1+x}+\sqrt{1-x})}-1|&lt;|\frac{4}{x}|,<br>$$<br>此时取$\delta=min(1,\frac{4}{\varepsilon})$即可。</p>
+<p>2.<br>限制$|x-1|&lt;1/2$,则<br>$$<br>|\frac{x^2+x-2}{x(x^2-3x+2)}+3|=|\frac{3x^2-5x+2}{x(x-2)}|&lt;2|3x^2-5x+2|&lt;9(x-1)^2,<br>$$<br>此时取$\delta=min(1/2,1+\sqrt{\frac{\varepsilon}{9}})$即可。</p>
+<p>3.<br>限制$x&gt;3$,则<br>$$<br>|\frac{x+1}{x^2-x}|&lt;|\frac2x|,<br>$$<br>取$G=max(3,\frac 2\varepsilon)$即可。</p>
+<p>4.分子趋于0，则分母必须趋近零以保证极限存在，即分母要包含(x+1)这一因式。待定系数解得a=4，此时极限是10.</p>
+<p>5.同(4)，分母是(x-2)(x-1)，致零因素是(x-2)故分母上应有(x-2)这一因式，且约去(x-2)后的极限应该是2，待定系数法解得(a,b)=(2,-8).</p>
+<p>6.此题有趣，并不需要写式子，只要想一下：只要分母不为0(不是无穷小，就是真实的0)，极限就是正负无穷了。致零因子是$\sin{\frac1x}$，故如果a在-1和1之间取值，那么只要取一列$x_n=\frac{1}{arcsina+2n\pi}\to 0$，则这一数列的极限是0，由$Heine$定理，函数极限一定不为无穷，所以反其道只要让$a\in C_{\Bbb R}[-1,1]$即可。</p>
+<p>7.<br>prove:<br>$$<br>|\ln x-\ln a|=|\ln{\frac x{ea}}|,<br>$$<br>所以取$\delta=a(e^{1+\varepsilon}-1)$即可。</p>
+<p>8.<br>prove：<br>$$<br>|e^x-e^a|=e^a|e^{x-a}-1|,<br>$$<br>所以取$\delta=\ln({1+\frac \varepsilon{e^a}})$即可。由此可见，不能把(7)、(8)当成理所当然的，还是要去证明。</p>
+<hr>
+<p>复合函数极限法则用得倒是很纯熟，但是还是要知其所以然。大多数教材都给出了使用复合函数极限法则的若干必要条件，这里不赘。书中一道思考题：设$\lim_{x \to a}g(x)=A,\lim_{y\to A}f(y)=B,$则$lim_{x\to a}f(g(x))$只有三种情况：$B,f(A)$或不存在。</p>
+<p>试证：对极限存在的情况，若$\exists U_0(a,\delta),s.t ：g(x)\neq A,$则由复合函数极限法则，极限是B；反之若$\forall U_0(a,\delta),s.t ：g(x)=A,$那么f(A)有意义则极限是f(A),若无意义就不存在极限。第三种就是极限不存在的情况了。</p>
+<p>这方面的习题是第9、10题.<br>9.<br>prove:若同时存在，则因为$x^3$是$\Bbb R$上连续的，所以二者极限相等。故只要证前一句。<br>若f(x)存在极限，则$\exists \delta,|x|&lt;\delta,|f(x)-A|&lt; \varepsilon,$那么对于$\delta_0={\delta}^{1/3},|f(x^3)-A|&lt; \varepsilon$成立。反过来若$f(x^3)$存在，只要取$\delta_0={\delta}^3$即可。</p>
+<p>10.<br>令<br>$$<br>f(x)=\begin{cases}<br>1&amp;\text{x $\ge$ 0},\<br>-1<br>&amp;\text{x &lt; 0}.<br>\end{cases}<br>$$<br>就有$lim_{x\to 0}f(x)$不存在而$lim_{x\to 0}f(x^2)=1.$</p>
+<hr>
+<p>下面是关于函数极限的证明题。<br>11.<br>这个题至少三种解法,<br>prove1（定义）:设极限是A，那么任给一个x的0邻域，有$|D(x)-A|&lt;\varepsilon$,分别取x为有理数和无理数，则$|A|&lt;\varepsilon,|A-1|&lt;\varepsilon$，由前一不等式，A=0，那么在后一不等式令$\varepsilon=1$即得矛盾。</p>
+<p>prove2（Heine）：对任一点，用有理列逼近则有理列极限是1，用无理列逼近则极限是0，由Heine定理知D(x)极限不存在。</p>
+<p>prove3（Cauchy收敛准则）：对任一0邻域，总有无穷多有理数和无理数，他们的函数值之差是1，所以找到了一系列函数值差不能任意小，由柯西收敛准则D(x)极限不存在。</p>
+<p>12.<br>令$f(x)=(x-1)D(x),$因为D(x)是有界量，所以f在x=1处的极限是0而其他处不存在极限。</p>
+<p>13.<br>设f的一个正周期为t，由题意知$\forall \varepsilon&gt;0,\exists G&gt;0,|x|&gt;G,|f(x)|&lt; \varepsilon,$所以当x在(G-t,G+1-t)中时，函数绝对值也任意小，如此继续下去，至多减去$[\frac{2G}{t}]+1$次t，就可以推出$\forall x\in[-G,G],|f(x)|&lt;\varepsilon$。那么就得到对任一实数，其函数值的绝对值都任意小的结论，所以只有$f\equiv0.$（这里注意，x趋近正无穷极限是0，相应的趋近负无穷时极限也是0。因为若x&gt;G,就存在$N=[\frac{2G}{t}]+1,s.t:x-Nt&lt;-G.$)</p>
+<p>14.<br>反证，设$f(x)=\frac{g(x)}{h(x)}$,其中g，h都是系数为实数的多项式，设deg(g)=n,deg(h)=m。设f的一个正周期为t，则$f(x)=f(x+kt).$<br>若n&lt;m，令$k\to +\infty,$有$f(x+kt)\to 0$,由13题，$f\equiv0,$矛盾；<br>若n=m，令$k\to +\infty,$有$f(x+kt)\to c$(c是g与h的最高次项系数之比）,因f不是常函数，所以在R中存在一个$x_0,s.t:f(x_0+lt)\neq c$。由13的分析知道，周期函数在无穷远处的极限情况可以推至“内部”，所以若周期函数f在无穷远处的极限是r，则f恒等于r（这是13的一个明显的推论），而$f(x_0+lt)\neq c$，这就矛盾。<br>若n大于m，则$f(+\infty)=\infty$,即整个函数的任一点函数值的绝对值都是任意大的，矛盾。</p>
+<hr>
+<p>真费时间啊……比较有趣的在连续那一块，那个要拿出周末来弄了。<br>用打印机打了400页的Apostol的分析，本来是要再商榷一番，结果老妈太果决直接打出来了。心疼打印机啊。400页A4纸和400页普通薄纸的厚度差……不敢想象！<br>最后希望二级裸考过线。</p>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2016/12/16/4.2%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E6%80%A7%E8%B4%A8/"><i class="fa fa-chevron-left">  </i><span>4.2函数极限性质</span></a></div><div class="next-post pull-right"><a href="/2016/12/06/%E3%80%8A%E9%BB%8E%E6%9B%BC%E5%87%A0%E4%BD%95%E5%88%9D%E6%AD%A5%E3%80%8B%E5%BA%8F/"><span>伍鸿熙《黎曼几何初步》序</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By null</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>
