@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="About Pi"><meta name="keywords" content="随记"><meta name="author"><meta name="copyright"><title>About Pi | 雪夜闻钟</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center"></div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">34</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">About Pi</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-10-15</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Math/">Math</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>今天心情还行，写点东西（水货），谈谈$\pi$。</p>
+<p>根据集合论、Peano公理系统(归纳法是公理！)构造了$\Bbb N$(然后可以定义阶乘)，继而按照$\Bbb Z\to\Bbb Z^2\sim\Bbb Q\to\Bbb R\to\Bbb R^2\sim\Bbb C$的顺序给出复数域。复数域中的虚单位$i$涉及到“指数”运算。<br><strong>Def0.</strong>集合上下确界的定义。</p>
+<p><strong>Def1.</strong>$x\in\Bbb R$,定义$x^n=x^{n-1}\cdot x$,$x^0=1$($n\in\Bbb N_+$).</p>
+<p><strong>Def2.</strong>$x^{-n}=\frac1{x^n}$($n\in\Bbb N_+$).</p>
+<p><strong>Def3.</strong>设$x&gt; 0,n\in\Bbb N_+$，定义$x^{\frac1n}=\sup{y|y\ge0,y^n\le x}$.这样的定义依赖于一个引理：$E={y|y\ge0,y^n\le x}$不空。</p>
+<p><strong>Def5.</strong>设$x\in\Bbb R_+,r\in\Bbb R$,${p_n}$是任一趋近$x$的有理数列，定义$x^r=\lim_{n\to\infty} x^{p_n}$.</p>
+<p>下面定义复数$z$：<br><strong>Def6.</strong>一个复数$z$是形如$(a,b)$的序偶，其中$a,b$是实数。</p>
+<p><strong>Def7.</strong>定义复数之间的加减乘除，略。</p>
+<p><strong>Def8.</strong>定义$i=(0,1)$，推论就是$i^2=-1$.</p>
+<p><strong>Corollary.</strong>$a+bi=(a,0)+(b,0)(0,1)=(a,b)$，这样复数可以写作$z=a+bi$。</p>
+<p><strong>Def9.</strong>同实数一样定义复数的整数幂，略。</p>
+<p>构造实数时采用的Cauchy列的方式可以直接引出极限的概念(直接推广到$\Bbb C$乃至$\Bbb R^n$上)，加上函数和确界的概念可以引出连续、可微、可积(这里采用Darboux上和=下和确定Riemann积分)等等性质。</p>
+<p>根据极限定义无穷级数，定义收敛和绝对收敛，给出Hadamard-Cauchy公式计算幂级数收敛的半径。定义级数乘积，给出Mertens定理。</p>
+<p><strong>Def10.</strong>定义$e^z=1+\frac{z}{1!}+\frac{z^2}{2!}+\cdots+\frac{z^n}{n!}+\cdots$.</p>
+<p><strong>The1.</strong>$e^z$绝对收敛，且$e^z\cdot e^w=e^{z+w}$.(前者通过H-C公式得到，后者通过Mertens定理得到)</p>
+<p><strong>The2.</strong>$e^z$可微，且$(e^z)’=e^z$.</p>
+<p><strong>The3.</strong>设$x\in\Bbb R$，则$e^x$严格单增，当$x\to\infty,e^x\to\infty$；当$x\to-\infty,e^x\to0^+$.</p>
+<p><strong>Def11.</strong>像定义实数的指数运算一样，定义$e^x=\sup{e^y|y\in\Bbb Q,y&lt; x}(x\in\Bbb R)$.</p>
+<p><strong>Def12.</strong>定义$\cos(x)=\frac12(e^{ix}+e^{-ix}),\sin(x)=\frac1{2i}(e^{ix}-e^{-ix})$。这里容易知道若$x$为实数，则$\cos x$和$\sin x$也是实数，且$e^{ix}=\cos x+i\sin x$，故$\cos x$和$\sin x$分别为$e^{iz}$的实部和虚部。</p>
+<p><strong>The4.</strong>设$x\in\Bbb R$，则$|e^{ix}|=\cos^2x+\sin^2x=1$.($|e^{ix}|^2=e^{ix}\cdot\overline{e^{ix}}=e^{ix}\cdot e^{-ix}$)。</p>
+<p><strong>The5.</strong>$\cos0=1,\sin0=0$；$(\cos x)’=-\sin x,(\sin x)’=\cos x$.</p>
+<p><strong>The6.</strong>存在正实数$x$，使得$\cos x=0$.</p>
+<p>pf.若否，由$\cos0=1$和介值定理知$\cos x&gt; 0$恒成立，由$(\sin x)’=\cos x&gt;0$知$\sin x$严格单增。设$0&lt; x&lt; y$，则$\cos y-\cos x=\sin\xi(y-x)&gt;\sin x(y-x)$。因$\cos y-\cos x$至多为2，那固定$x$不动，令$y\to\infty$就得到矛盾。故存在$x&gt;0$使得$\cos x=0$.</p>
+<p><strong>The7.</strong>存在最小的正数$x_0$使得$\cos x_0=0$.</p>
+<p>pf.因为连续函数的零集一定闭，且集合${x\in\Bbb R|\cos x=0}$不空，故其下确界就是最小值。</p>
+<p><strong>Def13.</strong>定义$\pi=2x_0$.</p>
+<p>这样就完成了对$\pi$以及三角函数的不依赖于几何的分析定义，下面验证它的一些直观上的性质（与原来接受的$\pi$的定义做比较）。</p>
+<p><strong>The8.</strong>$\cos x$和$\sin x$都是周期函数且最小正周期为$2\pi$.</p>
+<p>pf.先给一个引理，证明显然：</p>
+<ul>
+<li>Lemma.$e^{i\frac{\pi}2}=i$，$e^{i\pi}=-1$，$e^{i2\pi}=1$.</li>
+</ul>
+<p>由引理，$\cos x$和$\sin x$都是以$2\pi$为周期的函数已证。最小性：考虑$\cos(0+T’)=\cos T’=1$，与$0&lt;\cos x&lt; 1(x\in(0,2\pi))$矛盾（并不显然）。</p>
+<p><strong>The9.</strong>单位圆的周长为$2\pi$.</p>
+<p>pf.通过积分定义了由可微映射$\gamma:[a,b]\to\Bbb R$确定的弧长：<br>$$l(\gamma)=\int_a^b |\gamma’(t)|\Bbb dt,$$<br>现令$\gamma(x)=e^{ix}(x\in[0,2\pi])$，容易知道$\gamma$代表了单位圆。简单计算就得到$l(\gamma)=2\pi$。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined"></a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2017/10/15/About%20Pi/">http://yoursite.com/2017/10/15/About%20Pi/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com">雪夜闻钟</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9A%8F%E8%AE%B0/">随记</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2017/10/17/stats1/"><i class="fa fa-chevron-left">  </i><span>关于期望的小结论</span></a></div><div class="next-post pull-right"><a href="/2017/10/09/CA1/"><span>Complex Analysis Solution Chapter 1</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By null</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>
