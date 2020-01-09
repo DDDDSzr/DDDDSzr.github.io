@@ -7,256 +7,69 @@
     error: '复制错误',
     noSupport: '浏览器不支持'
   }
-} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">一白</div><div class="author-info__description text-center">不能喻之于怀</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">35</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><nav class="no-bg" id="nav"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="site-info"><div id="site-title">雪夜闻钟</div><div id="site-sub-title"></div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2020/01/07/%E5%A4%9A%E5%80%BC%E5%87%BD%E6%95%B0/">多值函数</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-07</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Analysis/">Analysis</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></span><div class="content"><p>首先，一个复函数的反函数不一定是双射了，复函数$w:U\to V$的逆$w^{-1}$存在只要求$w$是满映射，即</p>
-<ul>
-<li>任一$v\in V,\exists u\in U,w(u)=v$；</li>
-<li>$w(U)\subset V$.</li>
-</ul>
-<p>也就是说只要$w$是满的，就可以有反函数，但是反函数不一定单值。<br>多值这种问题，多出于辐角上，如$n$次幂函数的反函数：<br>$$<br>w=\sqrt[n] z,w=\rho e^{i\eta},z=re^{i\theta}.<br>$$<br>那么有<br>$$<br>\rho=\sqrt[n]r,\eta=\frac{\theta+2k\pi}n<br>$$<br>模的对应是一一的，但辐角却有$n$个值满足要求，所以这是多值函数。对于这种情况，我们自然地考虑能不能找出$w$的一个限制使得它是一一且解析的，这种限制称为$w$的单值解析分支。这个概念涉及到两个方面：各种限制按什么区分？在什么区域上进行限制？</p>
-<ul>
-<li>区分：自然的想法是按照$k$区分，令$w_k=\sqrt[n]r\exp{i\frac{\theta+2k\pi}n},k=0,1,\cdots,n-1$。这样就画出$n$个分支。</li>
-<li>区域：考虑$0$和$\infty$两点和任一不在复实轴上的点$z$，如果$z$绕着$0$的任一邻域的边界转一圈后的点记为$z’$，那么辐角就会变化$2\pi$，从而$w_k(z)\neq w_k(z’)$（也就是说$z’$的像点跑到另外一个单值解析分支上去了），所以这个区域最好不要包含任一围绕$0$的闭曲线，所以考虑$G=\Bbb C-{0}-A$，$A$为负实轴，那么从$G$上就能划分出$n$个单值解析分支来。</li>
-</ul>
-<p>像上面这样连接$0$和$\infty$这两个支点连线称为支割线，我们可以在去掉支割线的复平面上来划分单值解析分支。下面考虑对数函数。</p>
-<hr>
-<p>定义对数函数<br>$$<br>\rm{Ln}(z)=ln|z|+iArg(z).<br>$$<br>同样，$0$和$\infty$是其支点，令<br>$$<br>\ln_k(z)=\ln|z|+i(\arg z+2k\pi),z\in G<br>$$<br>为$\rm Lnz$的单值解析分支.而且$\rm Lnz$的单叶性区域是任一平行于实轴、宽度不大于$2\pi$的带状区域。</p>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/11/08/EPT2/">EPT Chapter2 Solution</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-11-08</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Stats/">Stats.</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E6%A6%82%E7%BB%9F/">概统</a></span><div class="content"><p>这里我们必须说明“测度”在概率论中的必要性，Chung在第二章中稍微提到了measure但是并不严格精确。先给一个例子：$\Omega=\Bbb N$，扔无数次硬币，设扔的硬币正反面朝上是等可能的，按照Chapter2中一开始概率的定义，必须定义每个特定情况下硬币正反情况的概率，且只能是$\frac1{\infty}=0$。如此看来，前10次都是正面的概率必然是0，矛盾（应该是$1/1024$）。</p>
-<p>第二点就是有限集的一个关系$|A\cup B|=|A|+|B|(A\cap B=\varnothing)$，这个关系不是什么定理，而是根据测度的定义直接推出的。（没学实变说这些事真是浑身难受）</p>
-<p>第三点是Pascal分赌本问题，这个问题有两种解法（四局拉满或者赢了就停），但是答案是相同的。容易证明这一点，可是背后的问题是什么？</p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>[1.2.3]. 这三道题用一个引理就解决了：<br>$$<br>\sum^n|A_i\cap A|=|(A_1\cup A_2\cup\cdots\cup A_n)\cap A|(A_i\cap A_j=\varnothing).<br>$$<br>这个证明显然。</p>
-<p>7.只要$P(A)\neq 0$，就有$P^2(A)+P^2(A^c)&lt; P(A)+P(A^c)=1$.</p>
-<p>8.因为$P(A\cup B)=P(A)+P(A^cB)$，故$P(A\cup B)\ge \max{P(A),P(B)}$，同理对于集合之交亦成立（换为小于等于号和$\min$）.</p>
-<p>10.不可能事件的样本空间不一定是空集！</p>
-<p>11.只要$P(A)P(B)&gt;0,A\cap B=\varnothing$即可。</p>
-<p>17.因为$[m,n]\le mn$，故$P(A_nA_m)=\frac1{[m,n]}\ge\frac1{mn}=P(A_m)P(A_n)$，当且仅当$(m,n)=1$时等号成立（注意$mn=[m,n]\cdot(m,n)$）.</p>
-<p>18.因为特征函数满足在$S$上为$1$，在$\Omega-S$上为$0$，故有：<br>$$<br>\iint_S dxdy-\iint_{\Omega}I_s(x,y)dxdy=\iint_S 0 dxdy=0.<br>$$</p>
-<p>21.只需要证明下连续性（上连续性取余即得）：首先$\bigcup_{\Bbb N}A_n=\bigcup_{\Bbb N}(A_n-A_{n-1})$，很明显等号右边的$(A_i-A_{i-1})\cap(A_j-A_{j-1})=\varnothing$，由可列可加性即得：<br>$$<br>P\left(\sum^{\infty}(A_i-A_{i-1})\right)=\sum^{\infty}P(A_i-A_{i-1})=P(A_{\infty}).<br>$$</p>
-<p>22.欲求$P(A_3^cA_4^c(A_2\cup A_5))=P(A_3^cA_4^cA_2)+P(A_3^cA_4^cA_5)-P(A_3^cA_4^cA_2A_5)$。分别计算且注意到$A_2\subset A_4$得$P(A_3^cA_4^cA_2)=1/6$，$P(A_3^cA_4^cA_5)=1/10$，$P(A_3^cA_4^cA_2A_5)=1/30$.故最终结果为$7/30$.<br>PS：注意第三项必须再拆开用容斥原理算一遍，此题较繁。</p>
-<p>25.注意到$P(B)-P(AB)=P(A^cB)=P(B)(1-P(A))=P(A^c)P(B)$就得到二元的结论。很容易推广到$n$元的情况：若$(A_1,\cdots ,A_n)$两两独立，则$(A_{i_1}^c,\cdots A_{i_k}^c,A_{i_{k+1}},\cdots ,A_{i_n})$两两独立。简证：先证明$k=1$的情况，将剩下的集合之交看作新集合$A_0$应用二元的结论即得，$k\ge2$时只要单拿出一个余集，剩下的看作一个集合再应用二元的结论即可。</p>
-<p>26.<br>(1).$LHS=P(AB\cup AC)=P(AB)+P(AC)-P(ABC)$，$RHS=P(A)(P(B)+P(C)-P(BC))$，即证；<br>(2).由25，$(A,B^c,C)$两两独立，即得。</p>
-<p>27.因为$P(A\cup B)+P(A\cap B)=P(A)+P(B)$，将$B\cup C$看作新集合应用之即可。</p>
-<p>29.</p>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/11/06/EPT1/">EPT Chapter1 Solution</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-11-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Stats/">Stats.</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E6%A6%82%E7%BB%9F/">概统</a></span><div class="content"><p>EPT全称是Elementary Probability Theory，Kai Lai Chung著。是为概率论的入门书籍，试选好习题将答案录于此。</p>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>问题：将集合$A_1,\cdots,A_n$经运算（交并补差和对称差$\Delta$）得到的新集合记为$\mathcal A_n$，则$\mathcal A_n$必可以表示为若干不相交元素的并。</p>
-<p>pf.<br>对于$\mathcal A_n$中的任一元素$x$，我们将它所有的关于集合$A_1,A_2,\cdots,A_n$从属关系的可能性写出来（必然是有限种且不超过$2^n$）。如其中一种可能为$x\in A_{i_1},A_{i_2},\cdots,A_{i_k};x\notin A_{i_{(k+1)}},\cdots,A_{i_n}$，那么必有<br>$$<br>x\in A_{i_1}A_{i_2}\cdots A_{i_k}A^c_{i_{k+1}}\cdots A^c_{i_n}.<br>$$<br>将所有可能写出来就得出$\mathcal A_n\subset E_1+\cdots+E_m$（其中$E_i$是元素且他们两两不交）。</p>
-<p>反过来，若$x\in E_1+\cdots+E_m$，由$E_i\cap E_j=\varnothing$得$x\in E_t$，其中<br>$$<br>E_t=A_{t_1}A_{t_2}\cdots A_{t_l}A^c_{t_{l+1}}\cdots A^c_{t_n}<br>$$<br>这表示了<br>$$<br>x\in A_{t_1},A_{t_2},\cdots,A_{t_l};x\notin A_{t_{l+1}},\cdots,A_{t_n}.<br>$$<br>故$x\in\mathcal A_n$，得证。</p>
-<h2 id="Solution-of-Exercises"><a href="#Solution-of-Exercises" class="headerlink" title="Solution of Exercises"></a>Solution of Exercises</h2><p>10.$x\in(A\cap B)-C\Leftrightarrow(x\in A)\wedge(x\in B)\wedge(x\notin C) $，$x\in(A-C)\cap(B-C)\Leftrightarrow (x\in A)\wedge(x\notin C)\wedge(x\in B)\wedge(x\notin C)$，显然这两者是等价的，故原命题之对偶亦成立。</p>
-<p>12.$x\in(A\cup B)-(C\cup D)\Leftrightarrow((x\in A)\vee(x\in B))\wedge(x\notin C)\wedge(x\notin D)$，$x\in(A-C)\cup(B-D)\Leftrightarrow((x\in A)\wedge(x\notin C))\vee((x\in B)\wedge(x\notin D))$，容易看出后者蕴含前者。</p>
-<p>13.<br>(2).等价于证明$(A^c\cup B)\cap(B^c\cup C)=(A^c\cup B)\cap(A^c\cup C)$，他们所包含的从属情况是相同的，故相等，继而(1)也得证。<br>(3).$(A\Delta B)^c=(A-B)^c\cap(B-A)^c=(A^c\cup B)\cap(B^c\cup A)=(A/B)\cap(B/A)$.</p>
-<p>14.因为$A-B=A\cap B^c$，$A\Delta B=(A-B)\cup(B-A)$，故我们只要从新定义的运算中导出余和并运算就行了。定义$A\sim B=A^c\cup B^c$，则$A\sim A=A^c,(A\sim A)\sim( B\sim B)=A\cup B$.</p>
-<p>19.$I_{A-B}=I_{A\cap B^c}=I_A(1-I_B)$，特别地，当$B\subset A$时，有$I_{A-B}=I_A-I_B$.</p>
-<p>20.考虑$1-I_{A\cup B\cup C}$，它等于$I_{A^cB^cC^c}=(1-I_A)(1-I_B)(1-I_C)$，整理得<br>$$<br>I_{A\cup B\cup C}=I_A+I_B+I_C-I_{AB}-I_{BC}-I_{AC}+I_{ABC}.<br>$$<br>继而考虑$n$元情形（本质是容斥原理，归纳可证），得<br>$$<br>I_{A_1\cup\cdots\cup A_n}=\sum_1^n I_{A_i}-\sum_{i,j}I_{A_iA_j}+\cdots+(-1)^{k+1}\sum I_{A_1\cdots A_k}\cdots+(-1)^{n+1}I_{A_1\cdots A_n}.<br>$$</p>
-<p>21.在20中注意到$I_{AB}=I_A+I_B-I_{A\cup B}$，代入即得。</p>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/10/17/stats1/">关于期望的小结论</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-10-17</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Stats/">Stats.</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E6%A6%82%E7%BB%9F/">概统</a></span><div class="content"><p>Lemma1.设连续随机变量$X$的分布函数为$F(x)$，$EX$存在，则有:<br>$$<br>EX=\int_0^\infty1-F(x)\Bbb dx-\int_{-\infty}^0F(x)\Bbb dx.<br>$$<br>Lemma2.设$X$为非负连续变量，$E(X^n)$存在，则</p>
-<ul>
-<li>$$<br>EX=\int_0^\infty P(X&gt;x)\Bbb dx,<br>$$</li>
-<li>$$<br>E(X^n)=\int_0^\infty nx^{n-1}P(X&gt;x)\Bbb dx.<br>$$</li>
-</ul>
-<p>pf.首先，<br>$$<br>EX=\int_0^{\infty}xp(x)\Bbb dx+\int_{-\infty}^0xp(x)\Bbb dx,①<br>$$<br>其次，<br>$$<br>\int_0^{\infty}xp(x)\Bbb dx=\int_0^{\infty}\left(\int_0^x\Bbb dy\right)p(x)\Bbb dx=\int_0^{\infty}\left(\int_y^{\infty}p(x)\Bbb dx\right),<br>$$<br>由$F’=p$知道它等于$\int_0^{\infty}1-F$，对①中后半个积分也做同样的顺序交换再相加即得结论。</p>
-<p>Lemma2在Lemma1中令$y=x$和$y=x^n$可以得到。</p>
-<p>Problem：再记一道“复分析”的题目（我的stein中出了一道数论！）<br>设$S\subset\Bbb N_+$是形如<br>$$<br>S_{a,d}={a,a+d,a+2d,\cdots,a+kd\cdots}<br>$$<br>这样由无穷等差数列构成的集合，证明$\Bbb N_+$不可能表示为有限个这样集合的并，除非是$a=d=1$,即：<br>$$<br>\Bbb N_+\neq\bigcup_{i=1}^n S_{a_i,d_i}.<br>$$</p>
-<p>pf.若可以，设<br>$$s_i=z^{a_i}+z^{a_i+d_i}+\cdots+z^{a_i+kd_i}+\cdots,s_0=\sum_{1}^{\infty} z^k(|z|&lt; 1,i=1,\cdots,n),$$<br>则有$s_j(j=0,1,\cdots,n)$绝对收敛且$\sum_{1}^{n}s_k=s_0$，即<br>$$<br>\sum_{1}^{n}\frac{z^{a_i}}{1-z^{d_i}}=\frac z{1-z}.②<br>$$<br>记$d_0=\max{d_i}$，注意$d_0\ge 3$。取$z=re^{i\frac{2\pi}{d_0}}(0&lt; r&lt; 1)$，令$r\to 1^-$即得②的右端趋于一常数而左端趋于$\infty$，矛盾。</p>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/10/15/About%20Pi/">About Pi</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-10-15</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E9%9A%8F%E8%AE%B0/">随记</a></span><div class="content"><p>今天心情还行，写点东西（水货），谈谈$\pi$。</p>
-<p>根据集合论、Peano公理系统(归纳法是公理！)构造了$\Bbb N$(然后可以定义阶乘)，继而按照$\Bbb Z\to\Bbb Z^2\sim\Bbb Q\to\Bbb R\to\Bbb R^2\sim\Bbb C$的顺序给出复数域。复数域中的虚单位$i$涉及到“指数”运算。<br><strong>Def0.</strong>集合上下确界的定义。</p>
-<p><strong>Def1.</strong>$x\in\Bbb R$,定义$x^n=x^{n-1}\cdot x$,$x^0=1$($n\in\Bbb N_+$).</p>
-<p><strong>Def2.</strong>$x^{-n}=\frac1{x^n}$($n\in\Bbb N_+$).</p>
-<p><strong>Def3.</strong>设$x&gt; 0,n\in\Bbb N_+$，定义$x^{\frac1n}=\sup{y|y\ge0,y^n\le x}$.这样的定义依赖于一个引理：$E={y|y\ge0,y^n\le x}$不空。</p>
-<p><strong>Def5.</strong>设$x\in\Bbb R_+,r\in\Bbb R$,${p_n}$是任一趋近$x$的有理数列，定义$x^r=\lim_{n\to\infty} x^{p_n}$.</p>
-<p>下面定义复数$z$：<br><strong>Def6.</strong>一个复数$z$是形如$(a,b)$的序偶，其中$a,b$是实数。</p>
-<p><strong>Def7.</strong>定义复数之间的加减乘除，略。</p>
-<p><strong>Def8.</strong>定义$i=(0,1)$，推论就是$i^2=-1$.</p>
-<p><strong>Corollary.</strong>$a+bi=(a,0)+(b,0)(0,1)=(a,b)$，这样复数可以写作$z=a+bi$。</p>
-<p><strong>Def9.</strong>同实数一样定义复数的整数幂，略。</p>
-<p>构造实数时采用的Cauchy列的方式可以直接引出极限的概念(直接推广到$\Bbb C$乃至$\Bbb R^n$上)，加上函数和确界的概念可以引出连续、可微、可积(这里采用Darboux上和=下和确定Riemann积分)等等性质。</p>
-<p>根据极限定义无穷级数，定义收敛和绝对收敛，给出Hadamard-Cauchy公式计算幂级数收敛的半径。定义级数乘积，给出Mertens定理。</p>
-<p><strong>Def10.</strong>定义$e^z=1+\frac{z}{1!}+\frac{z^2}{2!}+\cdots+\frac{z^n}{n!}+\cdots$.</p>
-<p><strong>The1.</strong>$e^z$绝对收敛，且$e^z\cdot e^w=e^{z+w}$.(前者通过H-C公式得到，后者通过Mertens定理得到)</p>
-<p><strong>The2.</strong>$e^z$可微，且$(e^z)’=e^z$.</p>
-<p><strong>The3.</strong>设$x\in\Bbb R$，则$e^x$严格单增，当$x\to\infty,e^x\to\infty$；当$x\to-\infty,e^x\to0^+$.</p>
-<p><strong>Def11.</strong>像定义实数的指数运算一样，定义$e^x=\sup{e^y|y\in\Bbb Q,y&lt; x}(x\in\Bbb R)$.</p>
-<p><strong>Def12.</strong>定义$\cos(x)=\frac12(e^{ix}+e^{-ix}),\sin(x)=\frac1{2i}(e^{ix}-e^{-ix})$。这里容易知道若$x$为实数，则$\cos x$和$\sin x$也是实数，且$e^{ix}=\cos x+i\sin x$，故$\cos x$和$\sin x$分别为$e^{iz}$的实部和虚部。</p>
-<p><strong>The4.</strong>设$x\in\Bbb R$，则$|e^{ix}|=\cos^2x+\sin^2x=1$.($|e^{ix}|^2=e^{ix}\cdot\overline{e^{ix}}=e^{ix}\cdot e^{-ix}$)。</p>
-<p><strong>The5.</strong>$\cos0=1,\sin0=0$；$(\cos x)’=-\sin x,(\sin x)’=\cos x$.</p>
-<p><strong>The6.</strong>存在正实数$x$，使得$\cos x=0$.</p>
-<p>pf.若否，由$\cos0=1$和介值定理知$\cos x&gt; 0$恒成立，由$(\sin x)’=\cos x&gt;0$知$\sin x$严格单增。设$0&lt; x&lt; y$，则$\cos y-\cos x=\sin\xi(y-x)&gt;\sin x(y-x)$。因$\cos y-\cos x$至多为2，那固定$x$不动，令$y\to\infty$就得到矛盾。故存在$x&gt;0$使得$\cos x=0$.</p>
-<p><strong>The7.</strong>存在最小的正数$x_0$使得$\cos x_0=0$.</p>
-<p>pf.因为连续函数的零集一定闭，且集合${x\in\Bbb R|\cos x=0}$不空，故其下确界就是最小值。</p>
-<p><strong>Def13.</strong>定义$\pi=2x_0$.</p>
-<p>这样就完成了对$\pi$以及三角函数的不依赖于几何的分析定义，下面验证它的一些直观上的性质（与原来接受的$\pi$的定义做比较）。</p>
-<p><strong>The8.</strong>$\cos x$和$\sin x$都是周期函数且最小正周期为$2\pi$.</p>
-<p>pf.先给一个引理，证明显然：</p>
-<ul>
-<li>Lemma.$e^{i\frac{\pi}2}=i$，$e^{i\pi}=-1$，$e^{i2\pi}=1$.</li>
-</ul>
-<p>由引理，$\cos x$和$\sin x$都是以$2\pi$为周期的函数已证。最小性：考虑$\cos(0+T’)=\cos T’=1$，与$0&lt;\cos x&lt; 1(x\in(0,2\pi))$矛盾（并不显然）。</p>
-<p><strong>The9.</strong>单位圆的周长为$2\pi$.</p>
-<p>pf.通过积分定义了由可微映射$\gamma:[a,b]\to\Bbb R$确定的弧长：<br>$$l(\gamma)=\int_a^b |\gamma’(t)|\Bbb dt,$$<br>现令$\gamma(x)=e^{ix}(x\in[0,2\pi])$，容易知道$\gamma$代表了单位圆。简单计算就得到$l(\gamma)=2\pi$。</p>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/10/09/CA1/">Complex Analysis Solution Chapter 1</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-10-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Complex-Ana/">Complex Ana.</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></span><div class="content"><p>Ahlfors的《Complex Analysis,3ed》，第一章Riemann球面之前的内容。看这本书的编排和风格，我决定切换到Stein。<br><strong>Chapter 1 Complex Numbers</strong></p>
-<hr>
-<p><strong>1.1 The Algebra of Complex Numbers</strong></p>
-<ul>
-<li><strong>1.1.1 Exercises</strong></li>
-</ul>
-<p>1.$6i-19$;$-\frac{3+4i}{5}$;$\frac{46i-9}{169}$;$(1+i)^n+(1-i)^n=(\sqrt2)^n(\cos\frac{n\pi}{4}+i\sin\frac{n\pi}{4}+\cos\frac{n\pi}{4}-\sin\frac{n\pi}{4})=2^{\frac n2+1}\cdot\cos\frac{n\pi}{4}$.</p>
-<p>2.$z=x^4+y^4-6x^2y^2+4(x^3y-xy^3)i$;$\frac{x-yi}{x^2+y^2}$;$\frac{(x^2+y^2-1)-2yi}{(x-1)^2+y^2}$;$\frac{(x^2-y^2)-2xyi}{(x^2+y^2)^2}$.</p>
-<p>3.若$(\frac{-1\pm\sqrt3}{2})^3=1$,那么$(\frac{1\pm\sqrt3}{2})^3=-1$,继而$(\frac{\pm1\pm\sqrt3}{2})^6=1$.而前者等价于$\omega^3=1$，自然成立。</p>
-<ul>
-<li><strong>1.1.2 Exercises</strong></li>
-</ul>
-<p>1.$z_{1,2}=\pm(\frac{\sqrt2}2+\frac{\sqrt2}2i)$;$z_{1,2}=\pm(\frac{\sqrt2}2-\frac{\sqrt2}2i)$;$z_{1,2}=\pm(\sqrt{\frac{1+\sqrt2}2}+\frac{1}{\sqrt{2+2\sqrt2}}i)$;$z_{1,2}=\pm(\frac{\sqrt3}2+\frac{1}2i)$.</p>
-<p>2.$\sqrt[4]{-1}=\sqrt{\pm i}$,故$z_{1,2,3,4}=\pm\frac{\sqrt2}2\pm\frac{\sqrt2}2i$.</p>
-<p>3.用代数形式计算较繁，这里用指数形式：$\sqrt[4]{i}=\exp[i\cdot(\frac{\pi}8+\frac{2k\pi}4)]$,$\sqrt[4]{-i}=\exp[-i\cdot(\frac{\pi}8+\frac{2k\pi}4)]$,$k=0,1,2,3$.</p>
-<p>4.由于开方、加减法对于复数仍然成立，故二次方程的求根公式对复数方程依然成立。</p>
-<ul>
-<li><strong>1.1.3 Exercises</strong></li>
-</ul>
-<p>1.取映射$\sigma:F\to\Bbb C$为$\sigma([\alpha,\beta])=\alpha+\beta i$,其中$[\alpha,\beta]=\begin{pmatrix} \alpha &amp; \beta \ -\beta &amp; \alpha \end{pmatrix}\in F$.由矩阵的加乘易知$\sigma([\alpha,\beta])+\sigma([u,v])=\sigma([\alpha+u,\beta+v]),\sigma([\alpha,\beta]\cdot[u,v])=\sigma([\alpha,\beta])\cdot\sigma([u,v])$且$\sigma$是双射，故$F\sim\Bbb C$.</p>
-<ul>
-<li><strong>1.1.4 Exercises</strong></li>
-</ul>
-<p>1.由共轭的性质，$\overline{\frac{z}{z^2+1}}=\frac{\overline z}{\overline{z^2}+1}=\frac{\overline z}{(\overline{z})^2+1}$.<br>2.$40$；$\frac 52$.<br>3.<br>$$|z|=\left|\frac{a-b}{1-\overline ab}\right|=1\Leftrightarrow z\overline z=1\Leftrightarrow a\overline a+b\overline b=1+a\overline ab\overline b,$$<br>当$|a|=1$时，$a\overline a=1$代入即得，同理$|b|=1$时，$|z|=1$.若$|a|=|b|=1$，一方面分子不能为0，故$a\neq b$，另一方面分母不能为0，故$\overline ab\notin\Bbb R$.</p>
-<p>4.这里考虑$a,b,c\in\Bbb C$的情况(若为实数则更简单)：设$a=c+di,b=e+fi,c=u+vi$，则方程等价于$(c+di)z+(e+fi)\overline z+(u+vi)=0$，再设$z=x+yi$，则方程等价于<br>$$\left{<br>\begin{aligned}<br>(c+e)x+(f-d)y+u=0,\<br>(c+f)x+(d-e)y+v=0.<br>\end{aligned}<br>\right.<br>$$<br>由Cramer法则知只要$\left|\begin{array}{cccc}<br>    c+e &amp;   f-d\<br>    c+f &amp;   d-e<br>\end{array}\right|\neq0$即可。<br>5.<br>$$<br>LHS=\sum a_ib_i(\overline a_1b_1+\cdots+\overline a_nb_n)=\sum|a_ib_i|^2+\sum_{i,j}a_ib_i\overline a_j\overline b_j$$<br>$$RHS=\sum|a_ib_i|^2+\sum_{i,j}|a_ib_j|^2-\sum_{1\le i&lt; j\le n}(a_i\overline b_j-a_j\overline b_i)(\overline a_ib_j-\overline a_jb_i)$$<br>$$=\sum|a_ib_i|^2+\sum_{1\le i&lt; j\le n}|a_ib_j|^2+|a_jb_i|^2-(|a_ib_j|^2+|a_jb_i|^2-a_i\overline a_j\overline b_ib_j-a_j\overline a_i\overline b_jb_i)$$<br>$$=\sum|a_ib_i|^2+\sum_{i,j}a_ib_i\overline a_j\overline b_j=LHS.$$</p>
-<ul>
-<li><strong>1.1.5 Exercises</strong></li>
-</ul>
-<p>1.由1.1.4-3得$|\frac{a-b}{1-\overline ab}|&lt; 1\Leftrightarrow \overline a+b\overline b&lt; 1+a\overline ab\overline b\Leftrightarrow 0&lt;(1-|a|)(1-|b|) $.<br>2.当$n=2$时，由恒等式$(a^2+b^2)(c^2+d^2)=(ac+bd)^2-(ad-bc)^2$即知成立，现设$n$时成立，考虑$n+1$时：<br>$$<br>\left(\sum^{n+1}a_i^2\right)\left(\sum^{n+1}b_i^2\right)=\left(\sum^{n}a_i^2+a_{n+1}^2\right)\left(\sum^{n}b_i^2+b_{n+1}^2\right)$$<br>$$\ge\left(\sum^n a_ib_i\right)^2+b_{n+1}^2\left(\sum^{n}a_i^2\right)+a_{n+1}^2\left(\sum^{n}b_i^2\right)+a_{n+1}^2b_{n+1}^2$$<br>$$\ge\left(\sum^n a_ib_i\right)^2+2a_{n+1}b_{n+1}\sqrt{\left(\sum^n a_i^2\right)\left(\sum^n b_i^2\right)}+a_{n+1}^2b_{n+1}^2$$<br>$$\ge\left(\sum^n a_ib_i\right)^2+2a_{n+1}b_{n+1}\left(\sum^n a_ib_i\right)+a_{n+1}^2b_{n+1}^2=\left(\sum^{n+1} a_ib_i\right)^2.$$</p>
-<p>3.$|\sum\lambda_ia_i|\le\sum|\lambda_i||a_i|\le|a_0|\cdot\sum\lambda_i=|a_0|&lt; 1$.其中$|a_0|=\max{|a_i|}_{i=1}^n$.</p>
-<p>4.必要性由$2|c|=|z+a|+|z-a|\ge 2|a|$即得；当$|c|\ge|a|$时，取$z=0$就满足要求继而充分性得证。显然$|z|$可以取到0，又因$2|c|=|z+a|+|z-a|\ge 2|z|$得$|z|\le|c|$，取$z=a$就有$|z|=|a|=|c|$，故$|z|$的最大值为$|c|$.</p>
-<hr>
-<p><strong>1.2 Geometric Representation of Complex Numbers</strong></p>
-<ul>
-<li><strong>1.2.1 Exercises</strong></li>
-</ul>
-<p>1.复平面的坐标轴分角线分别为$z=t(1+i)$和$z=t(1-i),t\in\Bbb R$，$P=(x,y)$关于前者的对称点为$(y,x)$，关于后者的对称点为$(-y,-x)$.</p>
-<p>2.先考虑特殊情况$a_1=0,a_2=1,a_3=re^{i\theta}$，这时条件等价于$1+r\cos2\theta=\cos\theta$以及$r\sin2\theta=\sin\theta$，解方程得到$\theta=\frac{\pi}3,r=1$。再看一般情况，将所给条件化为：<br>$$<br>1+\left(\frac{a_3-a_1}{a_2-a_1}\right)^2=\left(\frac{a_3-a_1}{a_2-a_1}\right)，<br>$$<br>故可以化简为简单情况。</p>
-<p>3.当$a,b$为正方形两顶点时，有两种情况(将AB绕a顺时针/逆时针旋转90度)。先进行坐标变换：$a\to0,b\to b-a$,故$c=(b-a)(\pm i)+a,d=(a-b)(\pm i)+b$.若$a,b$为正方形对角线顶点，记$AB$中点为$z=\frac{a+b}2$，再进行变换$z\to0,a\to\frac{b-a}2,b\to\frac{b-a}2$，然后求得$c=\frac{(a-b)i+(a+b)}2,d=\frac{(b-a)i+(a+b)}2$.</p>
-<p>4.记$p=\frac12(|a_1-a_2|+|a_2-a_3|+|a_1-a_3|)，a=|a_1-a_2|,b=|a_2-a_3|,c=|a_1-a_3|$.由正弦定理得$R=\frac{abc}{4S}$，由Helen公式，$R=\frac{abc}{4\sqrt{p(p-a)(p-b)(p-c)}}$.设外接圆圆心对应的复数为$a$，那么有$|a-a_1|=|a-a_2|=|a-a_3|$，它等价于<br>$$\left{<br>\begin{aligned}<br>(a-a_1)(\overline a-\overline {a_1})=(a-a_2)(\overline a-\overline {a_2}),\<br>(a-a_2)(\overline a-\overline {a_2})=(a-a_3)(\overline a-\overline {a_3}).<br>\end{aligned}<br>\right.<br>$$<br>记$z_1=a_2-a_1,w_1=a_2^2-a_1^2;z_2=a_3-a_2,w_2=a_3^2-a_2^2$，解上述方程组即得<br>$$<br>a=\frac{w_2\overline {z_1}-w_1\overline {z_2}}{z_2\overline{z_1}-z_1\overline{z_2}}.<br>$$</p>
-<ul>
-<li><strong>1.2.2 Exercises</strong></li>
-</ul>
-<p>1.由De Moivre定理和指数形式知道$\cos n\theta=\frac{e^{in\theta}+e^{-in\theta}}{2},\sin n\theta=\frac{e^{in\theta}-e^{-in\theta}}{2}$，代入相应的$n$即得：$\cos3\theta=4\cos^3\theta-3\cos\theta$,$\cos4\theta=1-8\cos^2\theta+8\cos^4\theta$,$\sin 5\theta=16\sin^5\theta-20\sin^3\theta+5\sin\theta$.</p>
-<p>2.一点小技巧：$\frac{2\sin\theta}{2\sin\theta}\cdot\sum\cos k\theta=\frac{2\sin\theta\cos\theta+\cdots+2\sin\theta\cos n\theta}{2\sin\theta}=\frac{(\sin2\theta-0)+\cdots+(\sin(n+1)\theta-\sin(n-1)\theta)}{2\sin\theta}$,化简并加一得$\frac{\sin(n+1)\theta+\sin n\theta+\sin\theta}{2\sin\theta}$；同理，$1+\sum \sin k\theta=\frac{\cos(n+1)\theta+\cos n\theta+\cos\theta}{2\cos\theta}$.</p>
-<p>3.关键是求出$\cos\frac{\pi}5$.考虑$\sin\frac{3\pi}5=\cos\frac{2\pi}5$，设$\sin\frac{\pi}5=x$，由倍角公式得$3x-4x^3=1-2x^2$，解得$x=(\sqrt5-1)/4$，故$\cos\frac{\pi}5=\sqrt{2(5+\sqrt5)}/4$.</p>
-<p>4.注意到等比求和公式对于复数列仍成立，故$1+\omega^h+\cdots+\omega^{(n-1)h}=\frac{1-\omega^{nh}}{1-\omega^h}$，因为$\omega^n=1$且$h\neq kn(k\in\Bbb N)$，故$\omega^h\neq1$，代入即证。</p>
-<p>5.同上，$1-\omega^h+\omega^{2h}+\cdots+(-1)^{n-1}\omega^{(n-1)h}=\frac{1-(-1)\omega^{nh}}{1+\omega^h}$，当$n$为偶数时，原式$=0$；$n$为奇数时，原式$=\frac{2}{1+\omega^h}$.</p>
-<ul>
-<li><strong>1.2.3 Exercises</strong></li>
-</ul>
-<p>1.设实平面中的直线为$y=kx+b$，代入$x=\frac{z+\overline z}2,y=\frac{z-\overline z}2$得$(k-1)z+(k+1)\overline z+2b=0$.故只要满足$b-a=2$且$(a,b,c)\neq\pm(-1,1,0)$即可。</p>
-<p>2.椭圆：$|z-z_1|+|z-z_2|=2a(2a&gt;|z_1-z_2|)$；<br>  双曲线：$||z-z_1|-|z-z_2||=2a(2a&lt;|z_1-z_2|)$;<br>  抛物线(标准形式)：$z^2+(\overline z)^2-2z\overline z-4p(z+\overline z)=0$.</p>
-<p>3.不失一般性，设$A=0,B=z,C=z+w,D=w$,则$AC$和$BD$中点都为$\frac{z+w}2$，即两对角线交于其中点。若$ABCD$为菱形，则$z\overline z=w\overline w$，只要证明$\left|\arg\frac{z-w}{z+w}\right|=\frac{\pi}2$亦即$\frac{z-w}{z+w}$为纯虚数即可。对它上下同乘$\overline {z+w}$得$\frac{|z|^2-|w|^2+z\overline w-w\overline z}{|z+w|^2}=\frac{z\overline w-w\overline z}{|z+w|^2}$显然是纯虚数，得证。</p>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/06/08/6%E6%9C%88%E6%89%8B%E6%9C%AD/">2017.6数学系の手札</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-06-08</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content"><ol>
-<li><p>$\Bbb R^3$中的正则曲面，即所谓$\pi:F(x,y,z)=0$，且满足$F_x,F_y,F_z\neq0$，各个偏导数都连续的曲面。这样的正则曲面在局部一定有参数表达：由隐函数存在定理，能够解出$z=f(x,y)$，这样$\pi$的参数表达即为$(x,y,z)=(u,v,f(u,v))$。<br>但是并不好确定是否在整体能够解出$z=f(x,y)$，但是如果加上$\exists M&gt;0,F_z\ge  M$，就能在整体解出。</p>
-</li>
-<li><p>在解决与积分路径无关的问题时，如果$f(\pmb{x})$在某个$\pmb {x_0}$处没有定义或者偏导数不连续，就找一个足够小的$D_{\varepsilon}$把这个点包起来，则$I=I-I_D+I_D$，对$I-I_D$用Green公式，则$I=I_D$，这时的$D$要选得容易计算，不能一味地用极坐标(最好根据被积函数的性质选择)。</p>
-</li>
-<li><p>正交变换。首先注意Possion公式：若$\sigma:x^2+y^2+z^2=R^2$，则<br>$$<br>\int_{\sigma}f(ax+by+cz)\Bbb dS=2\pi\cdot\int_{-1}^1f(u\cdot\sqrt{a^2+b^2+c^2})\Bbb du.$$<br>其中$f$是$|u|\le\sqrt{a^2+b^2+c^2}$时的连续函数。在正交变换下，几何性质不变(特别注意球心在原点的球完全不变)，所以出现形如$ax+by+cz$形式的曲面积分，可以将$\pi:ax+by+cz=0$旋转到新的坐标系$O-uvw$中，使$\pi$为$w=0$，$w=0$上的单位外法向量为$\frac1{\sqrt{a^2+b^2+c^2}}(a,b,c)$，则$O-xyz$中的点$(x,y,z)$在$w$上的投影为$\frac1{\sqrt{a^2+b^2+c^2}}(ax+by+cz)$，继而写出$\sigma$在新坐标系中的参数方程。</p>
-</li>
-<li><p>设$\sigma\subset\Bbb R^2$是平面上一有界闭区域，其面积为$S$，取$\sigma$上侧法向量为$\pmb n,\cos(\pmb n,z)=C$，则$\sigma$在平面$xOy$上的的投影面积为$CS$。容易证明，对于任一矩形该结论成立，由于$\sigma$位于平面上，所以其切平面就是本身，故用细分的矩形面积的Riemann和来近似$|\sigma|$，即<br>$$<br>|\sigma|<em>{xOy}=\lim</em>{n\to\infty}\sum_{k=1}^n|I_k|<em>{xOy}=C\cdot\lim</em>{n\to\infty}\sum_{k=1}^n|I_k|=CS.<br>$$</p>
-</li>
-<li><p>求恰当微分形式原函数的一种方法：以$\omega=P\Bbb dx+Q\Bbb dy+R\Bbb dz$为例，首先对$R$求关于$z$的原函数$\xi(x,y,z)$，所以$\omega$的原函数$U=\xi(x,y,z)+\eta(x,y)$.由恰当形式的性质，<br>$$<br>\frac{\partial U}{\partial x}=P,\frac{\partial U}{\partial y}=Q,<br>$$<br>与$P,Q$对比就解出$\eta$.</p>
-</li>
-<li><p>第二型曲面积分符号的确定：当用$z=z(x,y)$的显式曲面表达计算时，若选定的一侧法向量与$z$轴正向夹角为锐角则取＋，钝角则取－；若是使用参数方程表达曲面，若向量<br>$$<br>\left(\frac{\partial(y,z)}{\partial(u,v)},\frac{\partial(z,x)}{\partial(u,v)},\frac{\partial(x,y)}{\partial(u,v)}\right)<br>$$<br>与选定一侧的法向量同向则取＋，反向则取－。</p>
-</li>
-<li><p>若映射$\pmb f\in C^1(\Bbb R^m\supset D;\Bbb R^n)$，且$D\pmb f\equiv\pmb0$，则$\pmb f=constant$.这里$D$是开域。若$D$是道路连通的，那么用Borel引理可以解决，这时有一个小结论：$d(x,\partial D)\ge a&gt;0,\forall x\in \Bbb{int} D$，下简证之：如不然，取命题反面：$\exists x_0\in \Bbb{int} D,\forall a&gt;0,\exists y\in\partial D,d(x,y)&lt; a$.由于$x_0\in \Bbb{int} D$，故存在一个开球$B(x_0,r)\subset D$，但是这时必然存在与$x_0$的距离小于$a=\frac{1}{[1/r]+1}$的$y\in\partial D$，有$y\in B$，矛盾.</p>
-</li>
-<li><p>第一型曲面积分在正交变换下的不变性：<br>$$<br>\int_{\Sigma}f(\pmb X)\Bbb dS=\int_{\Sigma’}f(\pmb {A^TAX})\Bbb dS.<br>$$<br>其中$\pmb X=(x,y,z)^T,\pmb{AX}=(u,v,w)^T$，$\pmb A$是正交矩阵，$\Sigma’$是$\Sigma$在该正交变换下的像。</p>
-</li>
-<li><p>下面讨论有关调和函数的性质。第二Green公式：<br>$$<br>\int_{\Omega}<br>\left|\begin{array}{cccc}<br> \Delta u&amp; \Delta v\<br> u&amp;    v   \<br>\end{array}\right|\Bbb d\mu =\int_{\partial\Omega}\left|\begin{array}{cccc}<br> \frac{\partial u}{\partial\pmb n}&amp; \frac{\partial v}{\partial\pmb n}\<br> u&amp;    v   \<br>\end{array}\right|\Bbb dS.<br>$$<br>证明不赘（用散度定理瞬秒），下面的重要命题：调和函数的取值只与边界上点的取值有关。</p>
-</li>
-<li><p>若$u$是$D\subset\Bbb R^3$为闭区域上的调和函数，则<br>$$<br>u(\pmb p_0)=\frac1{4\pi}\int_{\partial\Omega}\left(u\frac{\cos(\pmb p,\pmb n)}{p^2}+\frac1p\cdot\frac{\partial u}{\partial\pmb n}\right)\Bbb dS.<br>$$<br>其中$\pmb p_0\in\Bbb{int}D,p=\Vert{\pmb p}\Vert$，$\pmb p$是$\pmb p_0$到$\partial\Omega$上点的向量。具体证明：在第二Green公式令$u=u,v=\frac1p$，则$u、v$都是调和函数。但是在$\pmb p_0$处$v$的偏导数不存在，所以用一个小球包起来特殊处理即可。</p>
-</li>
-<li><p>特别的（调和函数的平均值定理），若$D=\overline B(\pmb p_0,r)$，则<br>$$<br>u(\pmb p_0)=\frac1{4\pi r^2}\int u \Bbb dS.<br>$$<br>只要在上一个命题中注意到$\pmb n=(x-x_0,y-y_0,z-z_0)/r,p=r$即可。</p>
-</li>
-<li><p>最重要的：非常值的调和函数$u$在有界闭域$D$上的最值只能在边界上取到。若不然(即在内部取到了最值，不妨设取到最大值)，存在一个小球$\overline B(\pmb p_0)\subset D$，由11，在$\partial\overline B$要么有函数值严格大于$u(\pmb p_0)$的点，要么所有点的取值都和$u(\pmb p_0)$一样。前者显然矛盾，后者由调和函数的可微性和条件亦矛盾。</p>
-</li>
-</ol>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/06/06/%E7%B4%A7%E6%80%A7%E4%B8%8E%E7%B4%A7%E9%9B%86/">一般理论(3).紧性与紧集</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-06-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content"><p>紧致性(紧性)是非常重要的拓扑性质，在后面整理的连续映射部分中有很重要的应用。它主要代表了一种自不变性，在某种作用下仍能保持原有性质，所以说紧性是很好的性质。</p>
-<p><strong>定义1(紧集，紧致集)</strong>：称拓扑空间$(X,\tau)$中的集合$Y$是紧集，如果从任一$Y$的开覆盖中都能选出有限子覆盖。<br>即对于任意的$\bigcup_{\alpha\in I}A_{\alpha}\supset Y$，总存在$\bigcup_{\alpha\in I}A_{\alpha}\supset \bigcup_{i=1}^nA_{i}\supset Y$.</p>
-<p><strong>定理1</strong>：拓扑空间$(X,\tau)$的子集$Y$是紧集，当且仅当$Y$是其本身作为$X$的子空间的紧集。<br>这个命题翻译的挺模糊的，先结合一个例子再证明它。<br><strong>eg1</strong>：考虑$I=(0,1)\subset\Bbb R$。显然$I$在拓扑空间$(I,d)$中是有界闭集($d$是标准拓扑)，但不是紧集，因为$I$不是$\Bbb R$中的紧集。也就是说，紧性不依赖于所考虑的集合是哪个拓扑空间的子空间。下面证明命题1。</p>
-<p>proof:</p>
-<ul>
-<li>$Y$是紧集$\Leftrightarrow\forall\bigcup_{\alpha\in I}A_{\alpha}\supset Y$，总存在$\bigcup_{\alpha\in I}A_{\alpha}\supset \bigcup_{i=1}^nA_{i}\supset Y$，其中$A_i\in\tau$.而$Y$作为$X$的子空间时，只要把上式中的$A_i$换为$B_i\in\tau_Y$，$\tau_Y=\tau\cap Y$即可。</li>
-</ul>
-<hr>
-<p>下面考虑紧集的一些性质。</p>
-<p><strong>引理1(紧集的闭性)</strong>：若$K$是Hausdorff空间$X$中的紧集，那么$K$也是$X$中的闭集。</p>
-<p>proof：</p>
-<ul>
-<li>只要证$K’\subset K.$若存在$K$的极限点$x_0\in X$，$x\notin K$，对任意$x\in K$，做$U(x)\cap U(x_0,\delta_x)=\varnothing$，这里$\delta_x$足够小且取决于$x$。那么$\bigcup_{x\in K}U(x)$构成$K$的开覆盖，取$\bigcup_{i=1}^n U(x_i)\supset K$.令$O(x_0)=\bigcap_{i=1}^n U(x_0,\delta_{x_i})$，则$O(x_0)\cap U(x_i)=\varnothing$.所以$K\cap O(x_0)=\varnothing$，所以$x_0\notin K’$，矛盾。</li>
-</ul>
-<p><strong>引理2(紧集套引理)</strong>：若$K_1\supset K_2\supset\cdots\supset K_n\supset\cdots$是非空紧集套，那么$\bigcap_{i=1}^{\infty}K_i\neq\varnothing$.</p>
-<p>proof：</p>
-<ul>
-<li>考虑集合$A_i=K_1-K_i$，若$\bigcap_{i=1}^{\infty}K_i=\varnothing$，那么$\bigcup_{i=1}^{\infty}A_i$构成$K_1$的开覆盖，取其有限子覆盖$\bigcup_{i=1}^n A_{k_i}\supset K_1$，而$A_i\subset A_{i-1}$，所以取$A_{k_i}$中最大的那个集合$A_k$就能覆盖$K_1$，但是$A_k=K_1-K_k\supset K_1$，推出$K_k=\varnothing$，矛盾。</li>
-</ul>
-<p><strong>引理3(紧集的闭子集引理)</strong>：紧集的闭子集是紧集。</p>
-<p>proof：</p>
-<ul>
-<li>设开集族${G}^{\infty}$是紧集$X$的开覆盖，$F\subset X$闭，现考虑$G_0={G}\cup(X-F)$，则$G_0\supset X$,从中选出有限子覆盖$G’$,由于$(X-F)\cap F=\varnothing$,故$G’-(X-F)$也是$F$的开覆盖,故$F$紧。</li>
-</ul>
-<p>下面考虑度量空间中的紧集性质。</p>
-<p><strong>定义2($\varepsilon-$网)</strong>：称$E$是度量空间$(X,d)$中的$\varepsilon-$网，如果对于任一$x\in X$，$\exists y\in E$：$d(x,y)&lt;\varepsilon$.</p>
-<p><strong>引理4(有限$\varepsilon-$网引理)</strong>：若$(X,d)$是紧集，则对于任意$\varepsilon&gt;0$，都存在有限的$\varepsilon-$网。</p>
-<p>proof：</p>
-<ul>
-<li>对任一$\varepsilon&gt;0$，取开覆盖$\bigcup_{x\in X}O(x,\varepsilon)$，由紧性，存在$\bigcup_{i=1}^nO(x_i,\varepsilon)\supset X$，那么取$E={x_i}_{i=1}^n$即为所求。</li>
-</ul>
-<p><strong>引理5</strong>：若度量空间$(K,d)$的任一点列可以选出在$K$中的收敛子列，则对于任一$\varepsilon&gt;0$，$K$有有限$\varepsilon-$网。</p>
-<p>proof：</p>
-<ul>
-<li>若存在$\varepsilon_0&gt;0$,$K$中没有有限$\varepsilon_0-$网，则可构造点列${x_n}$，使得对任意的$n$，$d(x_k,x_n)\ge\varepsilon_0$($k\le n$)，那么${x_n}$在$K$中显然是不收敛的。</li>
-</ul>
-<p><strong>引理6</strong>：若从度量空间$(X,d)$的任一点列可以选出在$X$中的收敛子列，则这个空间的任一非空闭子集套有非空交集。</p>
-<p>proof：</p>
-<ul>
-<li>考虑$X$的任一闭集套$K_1\supset K_2\supset\cdots\supset K_n\supset\cdots$，从每个$K_j$中选出一个点$k_j$，则数列${k_n}$收敛且其极限$k$必然属于每一个$K_j$(若否，存在一个集合$K_r$，$k\notin K_r$，则$k$不属于$K_r$之后的所有闭集，又因为$d(k,K_r)&gt;0$，所以子列${k_m}_{m\ge r}$不收敛到$k$).</li>
-</ul>
-<p><strong>定理2(度量紧集的准则)</strong>：度量空间$(K,d)$紧，当且仅当从其任一点列中都可以选出$K$的收敛子列。</p>
-<p>proof：</p>
-<ul>
-<li><p>必要性，若$K$紧，用惯用手段，先由引理4，对$\varepsilon_n=\frac1n$，作有限$\varepsilon_n-$网，对每个有限$\varepsilon_n-$网，从中选取出包含点列无穷多项的闭球$\overline B_n$且满足$\overline B_k\supset\overline B_{k+1}$，这样就得到了闭球套${\overline B_n}$，由引理3和引理2，知道闭集套有公共点$a$，所以点列就收敛到$a$.</p>
-</li>
-<li><p>充分性，若从$K$的某个开覆盖${G_{\alpha}}$中无法选出有限子覆盖，用引理5，对$\varepsilon_n=\frac1n$，作有限$\varepsilon_n-$网，对每个有限$\varepsilon_n-$网，从中选取出不含${G_{\alpha}}$的有限覆盖的闭球$\overline B(a_n,\frac1n)$且满足$\overline B_k\supset\overline B_{k+1}$，这样就得到了闭球套${\overline B_n}$，由引理6，这个闭球套的公共交是闭球中心构成的点列${a_n}$的极限$a$。那对于一个足够大的$N$，闭球$\overline B_N$必然包含于能够覆盖$a$的${G_{\alpha}}$中的某开集$G_0$,矛盾。</p>
-</li>
-</ul>
-<hr>
-<p>这短短的一篇我足足拖了一个月，最近懒到爆炸。下次的内容是完备度量空间。</p>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/05/09/%E8%AE%A8%E8%AE%BA%E7%8F%AD%E8%AE%B2%E4%B9%89(11)/">讨论班第十一周讲义</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content"><p>这次讨论一阶微分和这一章的一些题目。</p>
-<p><strong>一阶微分</strong></p>
-<p>1.求$\sqrt[3]2$的近似值，要求误差小于0.01.</p>
-<p>2.假定用测量球的直径得到球的体积，为了所得球的体积的相对误差不超过$1$%，问：测量直径的相对误差应该如何控制。</p>
-<p><strong>一阶微分的不变性</strong></p>
-<p>易知若$f$在$I$可导，则有<br>$$<br>\Bbb dy=f’(x)\Bbb dx.<br>$$<br>但若$x$是中间变量，其表达式为$x=x(t)$,那么同理就有<br>$$<br>\Bbb dy=f’(x)x’(t)\Bbb dt.<br>$$<br>由于$\Bbb dx=x’(t)\Bbb dt$,带入上式就得到一开始的形式，所以说一阶微分具有形式上的不变性。</p>
-<hr>
-<p><strong>一些题目</strong></p>
-<p>1.利用导数定义计算极限<br>$$<br>\lim_{x\to0}\frac{(1+\tan x)^{10}-(1-\sin x)^{10}}{\sin x}.<br>$$</p>
-<p>2.证明组合恒等式<br>$$<br>\sum_{k=1}^nk\cdot C_n^k=n\cdot2^{n-1}.<br>$$</p>
-<p>3.设$f(x)=a_nx^n+\cdots+a_1x+a_0$,它满足：当$|x|\le1$时，$|f(x)|\le 1$.证明：当$|x|\le1$时，$|f’(x)|\le n^2$.</p>
-<p>4.已知$f$在$[0,+\infty)$上可导，$f(0)=0$，且存在正数$c$使得对任一$x$都满足关系$|f’(x)|\le cf(x)$.证明：$f\equiv0$.</p>
-<p>5.定义$f\in C^3(I;\Bbb R)$的Schwarz导数为<br>$$<br>S(f,x)=\frac{f’’’(x)}{f’(x)}-\frac32\left(\frac{f’’(x)}{f’(x)}\right)^2=\left(\frac{f’’(x)}{f’(x)}\right)’-\frac12\left(\frac{f’’(x)}{f’(x)}\right)^2.<br>$$<br>证明：$S(f,x)=0\Leftrightarrow f(x)$是分式线性函数。</p>
-<p>6.分析三项式$(x+y+z)^n$展开式中系数的规律，写出并证明$(xyz)^{(n)}$的计算公式。</p>
-<p>BY S.Z.R</p>
-<hr>
-<p>对于上次的考试题，我自己给它的定位是：基础，问了问山大的同学也是这么看，但是考得一塌糊涂。这就给我上了无形的一课：学生学不好和老师教不好有很大联系吗？答：或许有联系，但是一则联系不大；二则如果有联系，就说明老师的水平实在不高。</p>
-<p>这次有两个题采用的是清华刘思齐老师个人主页上挂出的习题课的题目，我觉得要提高难度，只要讲得多，自然学得多（当然是他们努力的情况下）。</p>
-<p>对了，子建的WA2 IC篇的约稿应该提上日程了，爽约了可不好。</p>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/05/01/5.5%E6%B5%8B%E8%AF%95/">5月5日 第一次测试</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-01</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content"><p><strong>第一次自我检查(范围：集合论初步—一致连续性)</strong></p>
-<p><strong>时间：100min，满分：100。</strong></p>
-<p><strong>要求：过程清晰严谨，结论明了；可以看教材。</strong></p>
-<hr>
-<p>1.设$A$是平面上以有理点(即横纵坐标都是有理数)为中心，以有理数为半径的圆的整体，证明：$A$是可数集。(10分)</p>
-<p>2.设${a_n}$为正数列，且<br>$$<br>\lim_{n\to\infty}\frac{a_{n+1}}{a_n}=\ell.<br>$$<br>证明：$\lim_{n\to\infty}\sqrt[n]{a_n}=\ell$。(10分)</p>
-<p>3.设$A&gt;0$,$x_1&gt;0$,<br>$$<br>x_{n+1}=\frac{x_n(x^2_n+3A)}{3x_n^2+A},<br>$$<br>证明：$x_n\to \sqrt A$。(10分)</p>
-<p>4.求极限<br>$$<br>\lim_{x\to 0}\frac{(3+2\sin x)^x-3^x}{\tan^2 x}.<br>$$<br>(10分)</p>
-<p>5.证明狄利克雷(Dirichlet)函数有以下解析的表达式：<br>$$<br>\mathcal D(x)=\lim_{m\to+\infty}\left(\lim_{n\to+\infty}[\cos(\pi m!x)]^{2n}\right).<br>$$<br>(即上式右端收敛到Dirichlet函数)(15分)</p>
-<p>6.设$f$在$[a,b]$上只有第一类间断点，证明：$f$在$[a,b]$上有界。(15分)</p>
-<p>7.讨论函数$f(x)=x\sin x$在区间$[0,+\infty)$上的一致连续性。(15分)</p>
-<p>8(附加).设$f$为$\Bbb R$上的单调函数，且对一切$x,y\in\Bbb R$有<br>$$<br>f(x)+f(y)=f(x+y).<br>$$<br>证明：$f(x)=f(1)\cdot x$。(15分)</p>
-<hr>
-<p>各位加油吧~</p>
-<p>对于这次的测试其实我是很绝望的，实际上这份题是比较简单的，没有一道难题，可是没办法，水平、努力程度和天赋就摆在那里，而且似乎他们没有从心里认识到问题的重要性——我无法叫醒装睡的人。</p>
-</div><hr></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-chevron-right&quot;&gt;&lt;&#x2F;i&gt;</a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">一白</div><div class="author-info__description text-center">不能喻之于怀</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">35</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><nav class="no-bg" id="nav"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="site-info"><div id="site-title">雪夜闻钟</div><div id="site-sub-title"></div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2020/01/07/%E5%A4%9A%E5%80%BC%E5%87%BD%E6%95%B0/">多值函数</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-07</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Analysis/">Analysis</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></span><div class="content">首先，一个复函数的反函数不一定是双射了，复函数$w:U\to V$的逆$w^{-1}$存在只要求$w$是满映射，即
+
+任一$v\in V,\exists u\in U,w(u)=v$；
+$w(U)\subset V$.
+
+也就是说只要$w$是满的，就可以有反函数，但是反函数不一定单值。多值这种问题，多出于辐角上，如$n$次幂函数的反函数：$$w=\sqrt[n] z,w=\rho e^{i\eta},z=re^{i\theta}.$$那么有$$\rho=\sqrt[n]r,\eta=\frac{\theta+2k\pi}n$$模的对应是一一的，但辐角却有$n$个值满足要求，所以这是多值函数。对于这种情况，我们自然地考虑能不能找出$w$的一个限制使得它是一一且解析的，这种限制称为$w$的单值解析分支。这个概念涉及到两个方面：各种限制按什么区分？在什么区域上进行限制？
+
+区分：自然的想法是按照$k$区分，令$w_k=\sqrt[n]r\exp{i\frac{\theta+2k\pi}n},k=0,1,\cdots,n-1$。这样就画出$n$个分支。
+区域：考虑$0$和$\infty$两点和 ...</div><a class="more" href="/2020/01/07/%E5%A4%9A%E5%80%BC%E5%87%BD%E6%95%B0/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/11/08/EPT2/">EPT Chapter2 Solution</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-11-08</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Stats/">Stats.</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E6%A6%82%E7%BB%9F/">概统</a></span><div class="content">这里我们必须说明“测度”在概率论中的必要性，Chung在第二章中稍微提到了measure但是并不严格精确。先给一个例子：$\Omega=\Bbb N$，扔无数次硬币，设扔的硬币正反面朝上是等可能的，按照Chapter2中一开始概率的定义，必须定义每个特定情况下硬币正反情况的概率，且只能是$\frac1{\infty}=0$。如此看来，前10次都是正面的概率必然是0，矛盾（应该是$1/1024$）。
+第二点就是有限集的一个关系$|A\cup B|=|A|+|B|(A\cap B=\varnothing)$，这个关系不是什么定理，而是根据测度的定义直接推出的。（没学实变说这些事真是浑身难受）
+第三点是Pascal分赌本问题，这个问题有两种解法（四局拉满或者赢了就停），但是答案是相同的。容易证明这一点，可是背后的问题是什么？
+Solution[1.2.3]. 这三道题用一个引理就解决了：$$\sum^n|A_i\cap A|=|(A_1\cup A_2\cup\cdots\cup A_n)\cap A|(A_i\cap A_j=\varnothing).$$这个证明显然。
+7.只要$P(A) ...</div><a class="more" href="/2017/11/08/EPT2/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/11/06/EPT1/">EPT Chapter1 Solution</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-11-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Stats/">Stats.</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E6%A6%82%E7%BB%9F/">概统</a></span><div class="content">EPT全称是Elementary Probability Theory，Kai Lai Chung著。是为概率论的入门书籍，试选好习题将答案录于此。
+Problem问题：将集合$A_1,\cdots,A_n$经运算（交并补差和对称差$\Delta$）得到的新集合记为$\mathcal A_n$，则$\mathcal A_n$必可以表示为若干不相交元素的并。
+pf.对于$\mathcal A_n$中的任一元素$x$，我们将它所有的关于集合$A_1,A_2,\cdots,A_n$从属关系的可能性写出来（必然是有限种且不超过$2^n$）。如其中一种可能为$x\in A_{i_1},A_{i_2},\cdots,A_{i_k};x\notin A_{i_{(k+1)}},\cdots,A_{i_n}$，那么必有$$x\in A_{i_1}A_{i_2}\cdots A_{i_k}A^c_{i_{k+1}}\cdots A^c_{i_n}.$$将所有可能写出来就得出$\mathcal A_n\subset E_1+\cdots+E_m$（其中$E_i$是元素且他们两两不交）。
+反过来，若$x\i ...</div><a class="more" href="/2017/11/06/EPT1/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/10/17/stats1/">关于期望的小结论</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-10-17</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Stats/">Stats.</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E6%A6%82%E7%BB%9F/">概统</a></span><div class="content">Lemma1.设连续随机变量$X$的分布函数为$F(x)$，$EX$存在，则有:$$EX=\int_0^\infty1-F(x)\Bbb dx-\int_{-\infty}^0F(x)\Bbb dx.$$Lemma2.设$X$为非负连续变量，$E(X^n)$存在，则
+
+$$EX=\int_0^\infty P(X&gt;x)\Bbb dx,$$
+$$E(X^n)=\int_0^\infty nx^{n-1}P(X&gt;x)\Bbb dx.$$
+
+pf.首先，$$EX=\int_0^{\infty}xp(x)\Bbb dx+\int_{-\infty}^0xp(x)\Bbb dx,①$$其次，$$\int_0^{\infty}xp(x)\Bbb dx=\int_0^{\infty}\left(\int_0^x\Bbb dy\right)p(x)\Bbb dx=\int_0^{\infty}\left(\int_y^{\infty}p(x)\Bbb dx\right),$$由$F’=p$知道它等于$\int_0^{\infty}1-F$，对①中后半个积分也做同样的顺序交换再相加即得结论。 ...</div><a class="more" href="/2017/10/17/stats1/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/10/15/About%20Pi/">About Pi</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-10-15</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E9%9A%8F%E8%AE%B0/">随记</a></span><div class="content">今天心情还行，写点东西（水货），谈谈$\pi$。
+根据集合论、Peano公理系统(归纳法是公理！)构造了$\Bbb N$(然后可以定义阶乘)，继而按照$\Bbb Z\to\Bbb Z^2\sim\Bbb Q\to\Bbb R\to\Bbb R^2\sim\Bbb C$的顺序给出复数域。复数域中的虚单位$i$涉及到“指数”运算。Def0.集合上下确界的定义。
+Def1.$x\in\Bbb R$,定义$x^n=x^{n-1}\cdot x$,$x^0=1$($n\in\Bbb N_+$).
+Def2.$x^{-n}=\frac1{x^n}$($n\in\Bbb N_+$).
+Def3.设$x&gt; 0,n\in\Bbb N_+$，定义$x^{\frac1n}=\sup{y|y\ge0,y^n\le x}$.这样的定义依赖于一个引理：$E={y|y\ge0,y^n\le x}$不空。
+Def5.设$x\in\Bbb R_+,r\in\Bbb R$,${p_n}$是任一趋近$x$的有理数列，定义$x^r=\lim_{n\to\infty} x^{p_n}$.
+下面定义复数$z$：Def6.一 ...</div><a class="more" href="/2017/10/15/About%20Pi/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/10/09/CA1/">Complex Analysis Solution Chapter 1</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-10-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Complex-Ana/">Complex Ana.</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></span><div class="content">Ahlfors的《Complex Analysis,3ed》，第一章Riemann球面之前的内容。看这本书的编排和风格，我决定切换到Stein。Chapter 1 Complex Numbers
+
+1.1 The Algebra of Complex Numbers
+
+1.1.1 Exercises
+
+1.$6i-19$;$-\frac{3+4i}{5}$;$\frac{46i-9}{169}$;$(1+i)^n+(1-i)^n=(\sqrt2)^n(\cos\frac{n\pi}{4}+i\sin\frac{n\pi}{4}+\cos\frac{n\pi}{4}-\sin\frac{n\pi}{4})=2^{\frac n2+1}\cdot\cos\frac{n\pi}{4}$.
+2.$z=x^4+y^4-6x^2y^2+4(x^3y-xy^3)i$;$\frac{x-yi}{x^2+y^2}$;$\frac{(x^2+y^2-1)-2yi}{(x-1)^2+y^2}$;$\frac{(x^2-y^2)-2xyi}{(x^2+y^2)^2}$.
+3.若$(\frac{-1\pm\sq ...</div><a class="more" href="/2017/10/09/CA1/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/06/08/6%E6%9C%88%E6%89%8B%E6%9C%AD/">2017.6数学系の手札</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-06-08</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">
+$\Bbb R^3$中的正则曲面，即所谓$\pi:F(x,y,z)=0$，且满足$F_x,F_y,F_z\neq0$，各个偏导数都连续的曲面。这样的正则曲面在局部一定有参数表达：由隐函数存在定理，能够解出$z=f(x,y)$，这样$\pi$的参数表达即为$(x,y,z)=(u,v,f(u,v))$。但是并不好确定是否在整体能够解出$z=f(x,y)$，但是如果加上$\exists M&gt;0,F_z\ge  M$，就能在整体解出。
+
+在解决与积分路径无关的问题时，如果$f(\pmb{x})$在某个$\pmb {x_0}$处没有定义或者偏导数不连续，就找一个足够小的$D_{\varepsilon}$把这个点包起来，则$I=I-I_D+I_D$，对$I-I_D$用Green公式，则$I=I_D$，这时的$D$要选得容易计算，不能一味地用极坐标(最好根据被积函数的性质选择)。
+
+正交变换。首先注意Possion公式：若$\sigma:x^2+y^2+z^2=R^2$，则$$\int_{\sigma}f(ax+by+cz)\Bbb dS=2\pi\cdot\int_{-1}^1f(u\cd ...</div><a class="more" href="/2017/06/08/6%E6%9C%88%E6%89%8B%E6%9C%AD/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/06/06/%E7%B4%A7%E6%80%A7%E4%B8%8E%E7%B4%A7%E9%9B%86/">一般理论(3).紧性与紧集</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-06-06</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">紧致性(紧性)是非常重要的拓扑性质，在后面整理的连续映射部分中有很重要的应用。它主要代表了一种自不变性，在某种作用下仍能保持原有性质，所以说紧性是很好的性质。
+定义1(紧集，紧致集)：称拓扑空间$(X,\tau)$中的集合$Y$是紧集，如果从任一$Y$的开覆盖中都能选出有限子覆盖。即对于任意的$\bigcup_{\alpha\in I}A_{\alpha}\supset Y$，总存在$\bigcup_{\alpha\in I}A_{\alpha}\supset \bigcup_{i=1}^nA_{i}\supset Y$.
+定理1：拓扑空间$(X,\tau)$的子集$Y$是紧集，当且仅当$Y$是其本身作为$X$的子空间的紧集。这个命题翻译的挺模糊的，先结合一个例子再证明它。eg1：考虑$I=(0,1)\subset\Bbb R$。显然$I$在拓扑空间$(I,d)$中是有界闭集($d$是标准拓扑)，但不是紧集，因为$I$不是$\Bbb R$中的紧集。也就是说，紧性不依赖于所考虑的集合是哪个拓扑空间的子空间。下面证明命题1。
+proof:
+
+$Y$是紧集$\Leftrightarrow\f ...</div><a class="more" href="/2017/06/06/%E7%B4%A7%E6%80%A7%E4%B8%8E%E7%B4%A7%E9%9B%86/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/05/09/%E8%AE%A8%E8%AE%BA%E7%8F%AD%E8%AE%B2%E4%B9%89(11)/">讨论班第十一周讲义</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">这次讨论一阶微分和这一章的一些题目。
+一阶微分
+1.求$\sqrt[3]2$的近似值，要求误差小于0.01.
+2.假定用测量球的直径得到球的体积，为了所得球的体积的相对误差不超过$1$%，问：测量直径的相对误差应该如何控制。
+一阶微分的不变性
+易知若$f$在$I$可导，则有$$\Bbb dy=f’(x)\Bbb dx.$$但若$x$是中间变量，其表达式为$x=x(t)$,那么同理就有$$\Bbb dy=f’(x)x’(t)\Bbb dt.$$由于$\Bbb dx=x’(t)\Bbb dt$,带入上式就得到一开始的形式，所以说一阶微分具有形式上的不变性。
+
+一些题目
+1.利用导数定义计算极限$$\lim_{x\to0}\frac{(1+\tan x)^{10}-(1-\sin x)^{10}}{\sin x}.$$
+2.证明组合恒等式$$\sum_{k=1}^nk\cdot C_n^k=n\cdot2^{n-1}.$$
+3.设$f(x)=a_nx^n+\cdots+a_1x+a_0$,它满足：当$|x|\le1$时，$|f(x)|\le 1$.证明：当$|x|\le1$时，$|f’(x) ...</div><a class="more" href="/2017/05/09/%E8%AE%A8%E8%AE%BA%E7%8F%AD%E8%AE%B2%E4%B9%89(11)/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2017/05/01/5.5%E6%B5%8B%E8%AF%95/">5月5日 第一次测试</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-01</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/Math/">Math</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%88%86%E6%9E%90/">分析</a></span><div class="content">第一次自我检查(范围：集合论初步—一致连续性)
+时间：100min，满分：100。
+要求：过程清晰严谨，结论明了；可以看教材。
+
+1.设$A$是平面上以有理点(即横纵坐标都是有理数)为中心，以有理数为半径的圆的整体，证明：$A$是可数集。(10分)
+2.设${a_n}$为正数列，且$$\lim_{n\to\infty}\frac{a_{n+1}}{a_n}=\ell.$$证明：$\lim_{n\to\infty}\sqrt[n]{a_n}=\ell$。(10分)
+3.设$A&gt;0$,$x_1&gt;0$,$$x_{n+1}=\frac{x_n(x^2_n+3A)}{3x_n^2+A},$$证明：$x_n\to \sqrt A$。(10分)
+4.求极限$$\lim_{x\to 0}\frac{(3+2\sin x)^x-3^x}{\tan^2 x}.$$(10分)
+5.证明狄利克雷(Dirichlet)函数有以下解析的表达式：$$\mathcal D(x)=\lim_{m\to+\infty}\left(\lim_{n\to+\infty}[\cos(\pi m!x)]^{2n}\r ...</div><a class="more" href="/2017/05/01/5.5%E6%B5%8B%E8%AF%95/#more" style="margin-top: 14px">阅读更多</a><hr></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-chevron-right&quot;&gt;&lt;&#x2F;i&gt;</a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
     processEscapes: true,
