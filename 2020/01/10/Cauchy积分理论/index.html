@@ -35,20 +35,28 @@
 <p>归纳：$n=1$时，由导数定义和定理2知，<br>$$<br>\bigg|2\pi if’(z)-\int_{\partial U}\frac{f(\zeta)}{(\zeta-z)^{2}}d\zeta\bigg|=\lim_{z’\to z}\bigg|\int_{\partial U}f(\zeta)\left(\frac1{(\zeta-z’)(\zeta-z)}-\frac1{(\zeta-z)^2}\right)d\zeta\bigg|,<br>$$<br>继而有<br>$$<br>\bigg|\int_{\partial U}f(\zeta)\left(\frac1{(\zeta-z’)(\zeta-z)}-\frac1{(\zeta-z)^2}\right)d\zeta\bigg|\le\int_{\partial U}\bigg|\frac{|f(\zeta)||z’-z|}{(\zeta-z’)(\zeta-z)^2}\bigg||d\zeta|.<br>$$<br>设$M=\sup_D|f|$，$\partial D$的周长为$L$。一方面我们控制$|z-z’|&lt;\epsilon$，另一方面，设$\inf_{\zeta\in\partial D}|z-\zeta|=d&gt;0$，此时总有$|\zeta-z’|\ge d-\epsilon$，只要保持$\epsilon&lt;\frac d2$，就有<br>$$<br>\int_{\partial U}\bigg|\frac{|f(\zeta)||z’-z|}{(\zeta-z’)(\zeta-z)^2}\bigg||d\zeta|&lt;\frac{2ML\epsilon}{d^3}.<br>$$<br>设小于等于$n$时命题成立，考虑$n+1$时的情形，此时需要做一个变型：<br>$$<br>\frac1{\zeta-z’}=\frac1{\zeta-z}\frac1{1-\frac{z’-z}{\zeta-z}}<br>$$<br>取合适的$z’$使得$\bigg|\frac{z’-z}{\zeta-z}\bigg| &lt; 1$，就有<br>$$<br>f^{(n)}(z’)=\frac{n!}{2\pi i}\int_{\partial U}\frac{f(\zeta)}{(\zeta-z)^{n+1}}\left(1+\frac{z’-z}{\zeta-z}+\cdots\right)^{n+1}d\zeta=f^{n}(z)+\frac{(n+1)!}{2\pi i}\int_{\partial U}\frac{f(\zeta)d\zeta}{(\zeta-z)^{n+2}}+O(|z’-z|^2),<br>$$<br>再根据导数定义即得。</p>
 <p>由Taylor定理可以得出几个有用的命题：</p>
 <blockquote>
-<p>命题1. 若$f\in\mathcal H(U)$，$\overline D(z_0,R)\subset U$，则<br>$$<br>|f^{(n)}(z)|\le\frac{n!M}{R^n}.(n=1,2,…)<br>$$<br>这里$M=\sup_{z\in D(z_0,R)}|f(z)|$。（Cauchy不等式）</p>
+<p>命题1（Cauchy不等式）. 若$f\in\mathcal H(U)$，$\overline D(z_0,R)\subset U$，则<br>$$<br>|f^{(n)}(z)|\le\frac{n!M}{R^n}.(n=1,2,…)<br>$$<br>这里$M=\sup_{z\in D(z_0,R)}|f(z)|$。</p>
 </blockquote>
 <p>由定理3，<br>$$<br>|f^{(n)}(z_0)|\le\frac {n!}{2\pi}\int_{\partial D(z_0,R)}\bigg|\frac M{(\zeta-z_0)^{n+1}}\bigg||d\zeta|=\frac{n!M}{R^n}.<br>$$</p>
 <blockquote>
 <p>命题2. 若$K\subset U$为紧集，$V\subset U$是$K$的邻域且在$U$中相对紧，则对任一$f\in\mathcal H(U)$，存在不依赖于$z$的常数$c_n\in\Bbb R_+$使得<br>$$<br>\sup_{z\in K}|f^{(n)}(z)|\le c_n\sup_{z\in V}|f(z)|.<br>$$</p>
 </blockquote>
 <h2 id="其他结论"><a href="#其他结论" class="headerlink" title="其他结论"></a>其他结论</h2><blockquote>
-<p>定理4（Liouville）. 若$f$有界并在$\Bbb C$上解析，则$f\equiv z_0$。</p>
+<p>定理4（Liouville）. 若$f$在$\Bbb C$上全纯有界，则$f\equiv z_0$。</p>
 </blockquote>
-<p>由命题1，对于任意$z\in\Bbb C$，<br>$$<br>|f’(z)|\le \frac M R,(D(z,R)\subset\Bbb C)<br>$$<br>令$R\to+\infty$即得$f’\equiv 0$，即证。</p>
+<p>由命题1，对于任意$z\in\Bbb C$，<br>$$<br>|f’(z)|\le \frac M R,(\overline D(z,R)\subset\Bbb C)<br>$$<br>令$R\to+\infty$即得$f’\equiv 0$，即证。</p>
 <blockquote>
 <p>定理5（Morera）. 若$f\in\mathcal C(U)$且对$U$内任一周线$C$，有<br>$$<br>\int_C f=0,<br>$$<br>则$f$在$U$上解析。</p>
 </blockquote>
-<p>固定一点$z_0\in U$，定义<br>$$<br>F(z)=\int_{z_0}^z f(\zeta)d\zeta,<br>$$<br>由于$z_0$到$z$的积分不依赖路径，所以这是良定的（关键），又当$z’\to z$时，<br>$$<br>\frac{F(z’)-F(z)}{z’-z}-f(z)=\frac1{z’-z}\int_{z}^{z’}f(\zeta)-f(z)d\zeta=o(1),<br>$$<br>所以$F\in\mathcal H(U)$且$F’=f$，由定理3，$F’’$存在，即$f’$存在，即证。</p>
+<p>固定一点$z_0\in U$，定义<br>$$<br>F(z)=\int_{z_0}^z f(\zeta)d\zeta,<br>$$<br>由于$z_0$到$z$的积分不依赖路径，所以这是良定的（关键），又当$z’\to z$时，<br>$$<br>\bigg|\frac{F(z’)-F(z)}{z’-z}-f(z)\bigg|=\bigg|\frac1{z’-z}\int_{z}^{z’}f(\zeta)-f(z)d\zeta\bigg|=o(1),<br>$$<br>所以$F\in\mathcal H(U)$且$F’=f$，由定理3，$F’’$存在，即$f’$存在，即证。</p>
+<blockquote>
+<p>定理6（代数学基本定理）.任一次数为正的复系数多项式在复数域上必有根。</p>
+</blockquote>
+<p>这定理可谓赫赫有名了，但是它用纯代数方法很难做，用复分析的方法却可以一句话讲清楚：如果$P\neq0$，那么$\frac1P$在$\Bbb C$上全纯有界，由定理4，$P$是常数，矛盾。</p>
+<blockquote>
+<p>命题3（Cauchy型积分）. 设$f$在Jordan曲线$\gamma\subset U$上连续，则函数<br>$$<br>F(z)=\frac1{2\pi i}\int_{\gamma}\frac{f(\zeta)}{\zeta-z}d\zeta<br>$$<br>在不包含$\gamma$上任意点的区域$D\subset U$中全纯。</p>
+</blockquote>
+<p>$$<br>\bigg|\frac{\Delta F}{\Delta z}-\frac1{2\pi i}\int_{\gamma}\frac{f(\zeta)}{(\zeta-z)^2}d\zeta\bigg|<br>$$</p>
 </div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/01/07/%E5%A4%9A%E5%80%BC%E5%87%BD%E6%95%B0/"><span>多值函数</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
