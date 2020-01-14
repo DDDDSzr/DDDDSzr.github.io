@@ -15,7 +15,9 @@
 <p>定理1. 如果$f(z)=u(x,y)+iv(x,y)$在$U$中全纯的充要条件是：$v$是$u$的共轭调和函数。</p>
 </blockquote>
 <p>这条定理的证明是显然的。然后提出下一个问题：知道了某个调和函数$u$，我们能不能找出另一个调和函数$v$使得$f=u+iv$在$U$中全纯？这个问题在一般的区域中是不行的（因为如果是复连通就有可能出来一个多值函数），但如果$U$是单连通的就可以。</p>
-<p>对于$v$我们这么确定：一方面，$v_y=u_x$，所以<br>$$<br>v(x,y)=\int_{y_0}^yu_x(x,y)dy+V(x),<br>$$<br>另一方面，<br>$$<br>v_x(x,y)=\int_{y_0}^yu_{xx}(x,y)dy+V’(x)=-\int_{y_0}^yu_{yy}(x,y)dy+V’(x)=-u_{y}(x,y)+V’(x)=u_y(x,y),<br>$$<br>所以取<br>$$<br>V’(x)=-\int_{x_0}^xu_y(x,y)dx-\int_{x_0}^x\int_{y_0}^yu_x(x,y)dxdy+C<br>$$<br>即得。</p>
+<p>实践上，对于$v$我们这么确定：首先，$v_y=u_x$，所以<br>$$<br>v(x,y)=\int_{y_0}^yu_x(x,y)dy+V(x),<br>$$</p>
+<p>然后用$v_x=-u_y$确定$V(x)$。</p>
+<p>理论上可以和这么确定：由C.R.方程，<br>$$<br>dv(x,y)=v_x(x,y)dx+v_y(x,y)dy=-u_y(x,y)dx+u_x(x,y)dy,<br>$$<br>所以两边积分得到<br>$$<br>v(x,y)=\int_{\gamma\subset U:(x_0,y_0)\to (x,y)}-u_y(x,y)dx+u_x(x,y)dy.<br>$$</p>
 <h2 id="均值定理和极值原理"><a href="#均值定理和极值原理" class="headerlink" title="均值定理和极值原理"></a>均值定理和极值原理</h2><p>这是研究调和函数的基本工具。规定记号$u(z)=u(x,y)$。</p>
 <blockquote>
 <p>定理3. 函数$u(x,y)$在$D_{\rho}:|z-z_0|&lt;\rho$中调和，则<br>$$<br>u(z_0)=u(x_0,y_0)=\frac1{2\pi}\int_0^{2\pi}u(z_0+\rho e^{ia})da.<br>$$</p>
@@ -25,18 +27,32 @@
 <blockquote>
 <p>定理4. $U$中非常数调和函数的极值只能在$\partial U$上取得。</p>
 </blockquote>
-<p>只证明极大值。由定理3，如果存在$z_0\in U$使得$u(z_0)=u_{\max}$，那么任意$O(z_0)\subset U$中都有$u(z)=u(z_0)$，再由唯一性定理知$u$在$U$中为常函数，矛盾。</p>
+<p>只证明极大值。如果存在$z_0\in U$使得$u(z_0)=u_{\max}$，找一个包含在$U$中的$O(z_0)$，由于$\partial O(z_0)$上的值都不大于$u(z_0)$且$u(z_0)$是其边界值的平均值，所以在$\partial O(z_0)$上必有$u(z)=u(z_0)$（为什么？答：$u$的连续性），再由唯一性定理知$u$在$U$中为常函数，矛盾。</p>
 <p>下面要研究的就是如何在一个相对简单的区域比如$D(0,R)$上用边界值来描述调和函数。</p>
-<h2 id="Poisson核与Schwarz核"><a href="#Poisson核与Schwarz核" class="headerlink" title="Poisson核与Schwarz核"></a>Poisson核与Schwarz核</h2><p>本节用$D$表示单位圆（一个开圆盘），用$D_R$表示半径为$R$以原点为圆心的开圆盘。设$u$是在合适的区域调和的函数。一个思路就是找到$\partial D\to \partial D$的双射$w$，且$w(0)=a$，这样由定理3，令$U=u\circ w$，就有<br>$$<br>u(a)=u(w(0))=U(0)=\frac1{2\pi}\int_0^{2\pi}U(e^{i\phi})d\phi.<br>$$<br>继而只要算出<br>$$<br>d\phi=f(\theta)d\theta,<br>$$<br>就有<br>$$<br>u(a)=\frac{1}{2\pi}\int_0^{2\pi}u(e^{i\theta})f(\theta)d\theta<br>$$<br>如果这个$a$可以是$D$内任意一点，那就解决了问题。这个思路就是下面的定理：</p>
+<h2 id="Poisson积分定理与Poisson核"><a href="#Poisson积分定理与Poisson核" class="headerlink" title="Poisson积分定理与Poisson核"></a>Poisson积分定理与Poisson核</h2><p>本节用$D$表示单位圆盘，用$D_R$表示半径为$R$以原点为圆心的开圆盘。设$u$是在合适的区域调和的函数。</p>
+<p>首先由定理3，<br>$$<br>u(0)=\frac1{2\pi}\int_0^{2\pi}u(e^{it})dt.<br>$$</p>
+<p>对于任意的$a\in D_R$如果能找到一个全纯双射$S_a$，它可以把$0$映到$a$上，且$u\circ S_a$是$D$内的调和函数，那么就有</p>
+<p>$$<br>u(a)=u(S_a(0))=\frac1{2\pi}\int_0^{2\pi}u(S_a(e^{it}))dt<br>$$<br>如果设<br>$$<br>Re^{i\theta}=S_a(e^{it}),<br>$$<br>就有<br>$$<br>u(a)=\frac1{2\pi}\int_0^{2\pi}u(\zeta)dt.(\zeta=Re^{i\theta})<br>$$<br>所以我们的任务是计算<br>$$<br>dt=J(\theta)d\theta<br>$$<br>再代入上式就得到<br>$$<br>u(a)=\frac{1}{2\pi}\int_0^{2\pi}u(\zeta)J(\theta)d\theta.①<br>$$<br>这个思路就是下面的定理：</p>
 <blockquote>
-<p>定理5（Poisson）. 若函数$u$在$D_R$上调和，在$\overline D_R$上连续，那么<br>$$<br>u(z)=\frac1{2\pi}\int_0^{2\pi}u(\zeta)\frac{R^2-|z|^2}{|\zeta-z|^2}d\zeta.<br>$$</p>
+<p>定理5（Poisson）. 若函数$u$在$D_R$上调和，在$\overline D_R$上连续，那么<br>$$<br>u(z)=\frac1{2\pi}\int_0^{2\pi}u(\zeta)\frac{R^2-|z|^2}{|\zeta-z|^2}d\theta.<br>$$</p>
 </blockquote>
 <p>其中$\zeta=Re^{i\theta},z\in D_R$，并称</p>
 <p>$$<br>\mathcal P(\zeta,z)=\frac1{2\pi}\frac{R^2-|z|^2}{|\zeta-z|^2}<br>$$</p>
 <p>为Poisson核，于是$u$在$D_R$内的值可以用$u$和Poisson核来表示。</p>
-<p>为了证明定理5，我们需要找到上述思路里面的那个$w$：定义<br>$$<br>w_a(z)=\frac{z-a}{1-\overline az}<br>$$</p>
-<p>在后面会写到，它是$\rm{Aut}(D)$内的元素，即它是$D$上的全纯自同构，且把$\partial D$映为$\partial D$，也就是说这就是满足要求的双射</p>
-</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/01/10/Cauchy%E7%A7%AF%E5%88%86%E7%90%86%E8%AE%BA/"><span>Cauchy积分理论</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+<p>为了证明定理5，我们需要找到上述思路里面的那个$S_a$：定义<br>$$<br>S_a(z)=\frac{R(Rz+a)}{R+\overline az}<br>$$</p>
+<p>它是把$\partial D$映为$\partial D_R$的双射（为什么这么想会在后面写Schwarz-Pick定理的时候说）。则<br>$$<br>e^{it}=S^{-1}_a(\zeta)=\frac{R(\zeta-a)}{R^2-\overline a\zeta}<br>$$<br>所以<br>$$<br>dt=-i\left(\frac1{\zeta-a}+\frac{\overline a}{R^2-\overline a\zeta}\right)d\zeta=\left(\frac{\zeta}{\zeta-a}+\frac{\overline a\zeta}{R^2-\overline a\zeta}\right)d\theta<br>$$</p>
+<p>代入$R^2=\zeta\overline\zeta$就得到</p>
+<p>$$<br>J(\theta)=\frac{\zeta}{\zeta-a}+\frac{\overline a}{\overline\zeta-\overline  a}=\frac{R^2-|a|^2}{|\zeta-a|^2}.<br>$$</p>
+<p>从上面很容易看出来$u$的另一个表达式：<br>$$<br>u(a)=\frac1{2\pi}\int_0^{2\pi}u(\zeta)\Re\left(\frac{\zeta+a}{\zeta-a}\right)d\theta.<br>$$</p>
+<h2 id="Schwarz核"><a href="#Schwarz核" class="headerlink" title="Schwarz核"></a>Schwarz核</h2><p>仍记$\zeta=Re^{i\theta}$，如果把上面的到的结果稍作变形：<br>$$<br>u(a)=\Re\left[\frac1{2\pi}\int_0^{2\pi}u(\zeta)\left(\frac{\zeta+a}{\zeta-a}\right)d\theta\right]<br>$$</p>
+<p>就容易看出$u$其实是全纯函数<br>$$<br>f(a)=\frac1{2\pi}\int_0^{2\pi}u(\zeta)\left(\frac{\zeta+a}{\zeta-a}\right)d\theta+ic,<br>$$</p>
+<p>的实部，设$f=u+iv$，两边取虚部得到</p>
+<p>$$<br>v(a)=\frac1{2\pi}\int_0^{2\pi}u(\zeta)\frac{\Im(a\overline\zeta)}{|\zeta-a|^2}d\theta+c<br>$$</p>
+<p>这样就有$c=v(0)$，这就是下面的定理：</p>
+<blockquote>
+<p>定理6（Schwarz）. 全纯函数$f$在$D_R$上可以用Schwarz核<br>$$<br>\mathcal S(\zeta,z)=\frac1{2\pi i}\frac{\zeta+z}{\zeta-z}\frac1{\zeta}<br>$$<br>与$f$的实部$u$在$\partial D_R$上的值积分表示为<br>$$<br>f(z)=\int_{|\zeta|=R}u(\zeta)\mathcal(\zeta,z)d\zeta+iv(0).<br>$$</p>
+</blockquote>
+<h2 id="Drichlet问题"><a href="#Drichlet问题" class="headerlink" title="Drichlet问题"></a>Drichlet问题</h2></div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/01/10/Cauchy%E7%A7%AF%E5%88%86%E7%90%86%E8%AE%BA/"><span>Cauchy积分理论</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
     processEscapes: true,
