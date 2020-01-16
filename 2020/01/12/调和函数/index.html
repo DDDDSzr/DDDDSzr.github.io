@@ -46,20 +46,28 @@
 <p>从上面很容易看出来$u$的另一个表达式：<br>$$<br>u(a)=\frac1{2\pi}\int_0^{2\pi}u(\zeta)\Re\left(\frac{\zeta+a}{\zeta-a}\right)d\theta.<br>$$</p>
 <h2 id="Schwarz核"><a href="#Schwarz核" class="headerlink" title="Schwarz核"></a>Schwarz核</h2><p>仍记$\zeta=Re^{i\theta}$，如果把上面的到的结果稍作变形：<br>$$<br>u(a)=\Re\left[\frac1{2\pi}\int_0^{2\pi}u(\zeta)\left(\frac{\zeta+a}{\zeta-a}\right)d\theta\right]<br>$$</p>
 <p>就容易看出$u$其实是全纯函数<br>$$<br>f(a)=\frac1{2\pi}\int_0^{2\pi}u(\zeta)\left(\frac{\zeta+a}{\zeta-a}\right)d\theta+ic,<br>$$</p>
-<p>的实部，设$f=u+iv$，两边取虚部得到</p>
+<p>的实部（注意这是一个Cauchy型积分），设$f=u+iv$，两边取虚部得到</p>
 <p>$$<br>v(a)=\frac1{2\pi}\int_0^{2\pi}u(\zeta)\frac{\Im(a\overline\zeta)}{|\zeta-a|^2}d\theta+c<br>$$</p>
 <p>这样就有$c=v(0)$，这就是下面的定理：</p>
 <blockquote>
 <p>定理6（Schwarz）. 全纯函数$f$在$D_R$上可以用Schwarz核<br>$$<br>\mathcal S(\zeta,z)=\frac1{2\pi i}\frac{\zeta+z}{\zeta-z}\frac1{\zeta}<br>$$<br>与$f$的实部$u$在$\partial D_R$上的值积分表示为<br>$$<br>f(z)=\int_{|\zeta|=R}u(\zeta)\mathcal S(\zeta,z)d\zeta+iv(0).<br>$$</p>
 </blockquote>
-<h2 id="Dirichlet问题"><a href="#Dirichlet问题" class="headerlink" title="Dirichlet问题"></a>Dirichlet问题</h2><p>所谓的Dirichlet问题指的是：给定一个连续函数$w(Re^{i\theta})$，求一个在$\overline D_R$上连续，在$D_R$上调和的函数$u$使得<br>$$<br>u|_{\partial D_R    }=w.<br>$$</p>
+<h2 id="Dirichlet问题"><a href="#Dirichlet问题" class="headerlink" title="Dirichlet问题"></a>Dirichlet问题</h2><p>Dirichlet问题指的是：给定一个连续函数$w(Re^{i\theta})$，求一个在$\overline D_R$上连续，在$D_R$上调和的函数$u$使得<br>$$<br>u|_{\partial D_R    }=w.<br>$$</p>
 <p>首先指出：Dirichlet问题的解是惟一的。这是因为如果有两个解$u_1,u_2$，则他们在边界上取值相同，由定理4，$u_1-u_2$在$\overline D$中的最大值和最小值都是$0$，所以$u_1=u_2$。</p>
 <p>下面要证明的是用Poisson核和$w$表示的$u$就是我们要的解。</p>
 <blockquote>
-<p>定理7（Dirichlet问题）.<br>$$<br>u(z)=\int_0^{2\pi}w(\zeta)\mathcal P(\zeta,z)d\theta<br>$$<br>就是关于$w$的Dirichlet问题的解。</p>
+<p>定理7（Dirichlet问题）.<br>$$<br>u(z)=\int_0^{2\pi}w(\zeta)\mathcal P(\zeta,z)d\theta<br>$$<br>就是关于$w$的Dirichlet问题的解。（$\theta=\arg z$）</p>
 </blockquote>
-<p>首先验证<br>$$</p>
-<p>$$</p>
+<p>首先验证$u$在$D$中的调和性：<br>$$<br>2\pi\mathcal P(\zeta,z)=\frac{\zeta }{\zeta-z}+\frac{\overline z}{\overline\zeta-\overline z}<br>$$<br>所以<br>$$<br>\Delta(2\pi\mathcal P)=8\pi\frac{\partial}{\partial z}\frac{\partial\mathcal P}{\partial\overline z}=0.<br>$$<br>故$u$在$D$内调和。下面验证<br>$$<br>\lim_{z\to\zeta}u(z)=w(\zeta).<br>$$<br>这里$\zeta\in\partial D_R$，$z\in D_R$。当$u\equiv1$时，由Poisson定理，Poisson核在$\partial D_R$上的积分为1，所以<br>$$<br>u(z)-w(\zeta_0)=\int_0^{2\pi}\mathcal P(\zeta,z)(w(\zeta)-w(\zeta_0)),<br>$$<br>这里$\zeta_0=Re^{i\theta_0}$.由$w$在$\zeta_0$处连续，故存在$\delta&gt;0$，当$|\theta-\theta_0|&lt;\delta$时，$|w(\zeta)-w(\zeta_0)|&lt;\epsilon$。所以把积分分成两部分<br>$$<br>u(z)-w(\zeta_0)=\int_{|\theta-\theta_0|&lt;\delta}+\int_{|\theta-\theta_0|\ge\delta}=I+J.<br>$$</p>
+<p>对于$I$我们有</p>
+<p>$$<br>|I|&lt;\epsilon\int_{|\theta-\theta_0|&lt;\delta}\mathcal P(\zeta,z)d\theta<br>$$</p>
+<p>由于$\mathcal P(\zeta,z)&gt; 0$且它在任意圆周（圆心在原点）上的积分为1，所以<br>$$<br>\epsilon\int_{|\theta-\theta_0|&lt;\delta}\mathcal P(\zeta,z)d\theta&lt;\epsilon\int_{|z|=r}\mathcal P(\zeta,z)d\theta=\epsilon.<br>$$</p>
+<p>这里$r\in(0,R)$.对于$J$，设$|z|=r$，让$|\arg z-\theta_0|&lt;\frac{\delta}2$，这样对于那些$|\arg \zeta-\theta_0|\ge\delta$的$\zeta$来说，就有$|\theta-\arg\zeta|&gt;\frac{\delta}2$。于是<br>$$<br>\mathcal P(\zeta,z)=\frac{R^2-r^2}{R^2+r^2-2rR\cos{(\arg z-\arg\zeta)}}&lt;\frac{2R|R-r|}{2r^2(1-\cos(\frac{\delta}2))},<br>$$<br>由于$\delta=\delta(\epsilon)$，所以当<br>$$<br>\frac R2&lt;|R-r|&lt; \left[1-\cos\left(\frac{\delta}2\right)\right]\epsilon<br>$$<br>时，就有<br>$$<br>|J|&lt; \frac{16\pi M\epsilon}R.<br>$$</p>
+<p>其中$M=\max_{|\zeta|=R} w(\zeta)$.</p>
+<h2 id="均值性质和调和函数的的联系"><a href="#均值性质和调和函数的的联系" class="headerlink" title="均值性质和调和函数的的联系"></a>均值性质和调和函数的的联系</h2><blockquote>
+<p>定理8. 设$f\in\mathcal C(U;\Bbb R)$，且对每一点$z_0\in U$，有充分小的$r_0&gt;0$，当$r\in(0,r_0]$时，有<br>$$<br>\frac1{2\pi}\int_0^{2\pi}f(z_0+re^{it})dt<br>$$<br>成立，则$f$在$U$上调和。</p>
+</blockquote>
+<p>通过解$D(z_0,r_0)$上的Dirichlet问题得到一个在$D(z_0,r_0)$中调和的函数$g$，由于$f$和$g$都满足均值性质，所以$f-g$也有均值性质，故可以对$|f-g|$用最大模原理。因为<br>$$<br>|f-g|<em>{\max}=|(f-g)|</em>{\partial D(z_0,r_0)}|_{\max}=0<br>$$<br>所以当$z\in D(z_0,r_0)$时，$f=g$，即$f$在$z_0$调和，由于$z_0$是任意取得，所以$f$在$U$上调和。</p>
 </div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/01/10/Cauchy%E7%A7%AF%E5%88%86%E7%90%86%E8%AE%BA/"><span>Cauchy积分理论</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
