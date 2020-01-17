@@ -20,10 +20,10 @@
 </blockquote>
 <p>这个定理说明了两点：1. ${f_n’}$的极限函数是$f’$不再需要${f’_n}$一致收敛； 2. 只要${f_n}$内闭一致收敛，就有各阶导数列收敛到$f^{(k)}$，这在实函数列中是不敢想的好性质。</p>
 <p>由一致收敛数列的性质，$f\in\mathcal C(U)$，所以<br>$$<br>F(z)=\frac1{2\pi i}\int_C\frac{f(\zeta)d\zeta}{\zeta-z}<br>$$<br>是Cauchy型积分，在$U$中全纯，所以只要证明$F(z)=f(z)$就可以了。<br>$$<br>\bigg|\frac1{2\pi}\bigg|\int_C\frac{(f_n(\zeta)-f(\zeta))d\zeta}{\zeta-z}\bigg|-|F(z)-f(z)|\bigg|\le|f_n(z)-f(z)|&lt;\epsilon<br>$$<br>所以<br>$$<br>0\le|F(z)-f(z)|&lt;\frac1{2\pi}\bigg|\int_C\frac{(f_n(\zeta)-f(\zeta))d\zeta}{\zeta-z}\bigg|+\epsilon&lt; 2\epsilon.<br>$$</p>
-<p>这里取$C(\subset U):|\zeta-z|=R$。下面证各阶导数列内闭一致收敛，思路是对每个点$z\in U$找一个闭圆盘$\overline D_z$使得$f^{(k)}$在$\overline D_z$上一致收敛到$f^{(k)}$然后用Borel引理即可。</p>
+<p>这里取$C(\subset U):|\zeta-z|=R$。下面证各阶导数列内闭一致收敛，思路是对每个点$z\in U$找一个闭圆盘$\overline D_z$使得$f_n^{(k)}$在$\overline D_z$上一致收敛到$f^{(k)}$然后用Borel引理即可。</p>
 <p>根据Cauchy积分理论里面的命题2<br>$$<br>\sup_{z\in\overline D_{r/2}}|f_n^{(k)}(z)-f^{(k)}(z)|\le c_n\sup_{z\in D_{r}}|f_n(z)-f(z)|&lt;\epsilon<br>$$</p>
-<p>也就是说$f^{(k)}$在$\overline D_{r/2}$上一致收敛到$f^{(k)}$，再用Borel引理即得。</p>
-<h2 id="核心2：Abel定理"><a href="#核心2：Abel定理" class="headerlink" title="核心2：Abel定理"></a>核心2：Abel定理</h2><p>设幂级数<br>$$<br>\sum_{k=1}^nc_n(z-a)^k<br>$$<br>我们有</p>
+<p>也就是说$f_n^{(k)}$在$\overline D_{r/2}$上一致收敛到$f^{(k)}$，再用Borel引理即得。</p>
+<h2 id="核心2：Abel定理"><a href="#核心2：Abel定理" class="headerlink" title="核心2：Abel定理"></a>核心2：Abel定理</h2><p>设幂级数<br>$$<br>\sigma(z):\sum_{n=1}^{\infty}c_n(z-a)^n<br>$$<br>我们有</p>
 <blockquote>
 <p>定理2（Abel）. </p>
 </blockquote>
@@ -32,6 +32,11 @@
 <li>幂函数的和函数$f(z)$在其收敛圆内全纯；</li>
 <li>幂级数在其收敛圆内无穷阶可微，且其任意阶导数的收敛半径和原幂级数相同。</li>
 </ul>
+<p>在$|z-a|&lt; R(R&lt;|z_0-a|)$中，若$\sigma(z_0)$收敛，则存在正数$M$使得<br>$$<br>|c_n(z-z_0)^n|\le M,\forall n<br>$$<br>则<br>$$<br>\sum_{n=1}^{\infty}|c_n(z-z_0)^n|\bigg|\frac{z-a}{z-z_0}\bigg|^n\le M\sum_{n=1}^{\infty}R^n=\frac{MR}{1-R}.<br>$$<br>这表示$\sigma(z)$在$|z-a|&lt;|z_0-a|$中绝对内闭一致收敛；</p>
+<p>因为部分和函数列<br>$$<br>\sigma_n(z)=\sum_{k=1}^nc_k(z-a)^k<br>$$<br>在$|z-a|&lt; R$中全纯且内闭一致收敛到$f$，所以由定理1，$f\in\mathcal H(|z-a|&lt; R)$，且各阶导数内闭一致收敛到$f^{(k)}$，因为可以逐项求导，所以<br>$$<br>\sigma^{(k)}(z)=k!c_k+\frac{(k+1)!}{1!}c_{k+1}(z-a)+\cdots+\frac{(k+n)!}{n!}c_{k+n}(z-a)^{n}+\cdots<br>$$<br>由d’Alembert公式<br>$$<br>R=\lim_{n\to\infty}\frac{n+1}{n+k+1}\bigg|\frac{c_{k+n}}{c_{k+n+1}}\bigg|=\lim_{n\to\infty}\bigg|\frac{c_n}{c_{n+1}}\bigg|.<br>$$</p>
+<h2 id="全纯函数的幂级数展开：Taylor级数"><a href="#全纯函数的幂级数展开：Taylor级数" class="headerlink" title="全纯函数的幂级数展开：Taylor级数"></a>全纯函数的幂级数展开：Taylor级数</h2><blockquote>
+<p>定理3. 设$f\in\mathcal H(U)$，$D(a,R)\subset U$，则$f$在$D(a,R)$中可以展为Taylor级数<br>$$<br>\sum_{n=0}^{\infty}\frac1{2\pi i}\int_{\partial D(a,r)}\frac{f(\zeta)d\zeta}{(\zeta-a)^{n+1}}(z-a)^n.<br>$$<br>这里$r\in(0,R)$。</p>
+</blockquote>
 </div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/01/12/%E8%B0%83%E5%92%8C%E5%87%BD%E6%95%B0/"><span>调和函数</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
