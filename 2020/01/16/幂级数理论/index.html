@@ -18,7 +18,7 @@
 <blockquote>
 <p>定理1（Weierstrass）. 如果$U$上的全纯函数列${f_n(z)}$内闭一致收敛到函数$f(z)$，那$f$也是$U$上的全纯函数，且${f^{(k)}_n(z)}$内闭一致收敛到$f^{(k)}(z)$.</p>
 </blockquote>
-<p>这个定理说明了两点：1. ${f_n’}$的极限函数是$f’$不再需要${f’_n}$一致收敛； 2. 只要${f_n}$内闭一致收敛，就有各阶导数列收敛到$f^{(k)}$，这在实函数列中是不敢想的好性质。</p>
+<p>这个定理说明了两点：1. ${f_n’}$的极限函数是$f’$不再需要${f’_n}$一致收敛； 2. 只要${f_n}$内闭一致收敛，就有$k$阶导数列收敛到$f^{(k)}$，这在实函数列中是不敢想的好性质。</p>
 <p>由一致收敛数列的性质，$f\in\mathcal C(U)$，所以<br>$$<br>F(z)=\frac1{2\pi i}\int_C\frac{f(\zeta)d\zeta}{\zeta-z}<br>$$<br>是Cauchy型积分，在$U$中全纯，所以只要证明$F(z)=f(z)$就可以了。<br>$$<br>\bigg|\frac1{2\pi}\bigg|\int_C\frac{(f_n(\zeta)-f(\zeta))d\zeta}{\zeta-z}\bigg|-|F(z)-f(z)|\bigg|\le|f_n(z)-f(z)|&lt;\epsilon<br>$$<br>所以<br>$$<br>0\le|F(z)-f(z)|&lt;\frac1{2\pi}\bigg|\int_C\frac{(f_n(\zeta)-f(\zeta))d\zeta}{\zeta-z}\bigg|+\epsilon&lt; 2\epsilon.<br>$$</p>
 <p>这里取$C(\subset U):|\zeta-z|=R$。下面证各阶导数列内闭一致收敛，思路是对每个点$z\in U$找一个闭圆盘$\overline D_z$使得$f_n^{(k)}$在$\overline D_z$上一致收敛到$f^{(k)}$然后用Borel引理即可。</p>
 <p>根据Cauchy积分理论里面的命题2<br>$$<br>\sup_{z\in\overline D_{r/2}}|f_n^{(k)}(z)-f^{(k)}(z)|\le c_n\sup_{z\in D_{r}}|f_n(z)-f(z)|&lt;\epsilon<br>$$</p>
@@ -48,7 +48,7 @@
 <li>$R\le|z_0-a|$。因为如果$R&gt;|z_0-a|$，那$z_0$就包含在$D(a,R)$中，又，$f$无法在$z_0$附近展成Taylor级数，矛盾。</li>
 <li>$R\ge|z_0-a|$。如果$R&lt;|z_0-a|$，令$R’=R+\frac{|z_0-a|-R}2&gt; R$，则$f$在$D(a,R’)$中收敛，这与$R$的最大性矛盾。</li>
 </ul>
-<h2 id="唯一性定理和最大模原理"><a href="#唯一性定理和最大模原理" class="headerlink" title="唯一性定理和最大模原理"></a>唯一性定理和最大模原理</h2><p>这两个定理是对全纯函数的特殊性质做的表述：唯一性定理说明了我们可以通过全纯函数的一部分值来找到它全体的值，最大模原理说明了全纯函数模的最大值只能向边界寻找。</p>
+<h2 id="唯一性定理和最大模原理"><a href="#唯一性定理和最大模原理" class="headerlink" title="唯一性定理和最大模原理"></a>唯一性定理和最大模原理</h2><p>这两个定理是对全纯函数的特殊性质做的表述：唯一性定理说明了两个不同的全纯蛤属不能在某个小区域中相等，最大模原理说明了全纯函数模的最大值只能向边界寻找。</p>
 <p>先给出一个全纯函数的好性质：</p>
 <blockquote>
 <p>定理4. 非零的全纯函数$f$以$a$为$m$阶零点的充要条件是存在$D(a,R)$中的全纯函数$g(z),g(a)\neq0$使得<br>$$<br>f(z)=(z-a)^mg(z).<br>$$</p>
@@ -67,7 +67,7 @@
 <p>定理6（最大模原理）. 有界区域$U$中非常数的全纯函数模的最大值只能在$\partial U$上取得。</p>
 </blockquote>
 <p>如不然，设$|f(a)|=|u(a)+iv(a)|=\max|f(z)|,a\in U$，取一个小圆周$C(\subset U):|z-a|=r$，由均值性质，$f$在$C$上的模只能恒为$|f(a)|$，这说明<br>$$<br>u^2+v^2=|f(a)|^2<br>$$<br>两边同求偏导，得<br>$$<br>uu_x+vv_x=0,uu_y+vv_y=0<br>$$<br>也就是说齐次方程组<br>$$<br>u_xX+v_xY=0,u_yX+v_yY=0<br>$$</p>
-<p>由非零解$(u,v)$，所以其系数行列式为$0$，再由C.R.方程得$u_x=u_y=v_x=v_y=0$，所以$u,v$在$C$上均为常函数。再由定理5，$f=u+iv$在整个$U$上也是常函数，矛盾。</p>
+<p>有非零解$(u,v)$，所以其系数行列式为$0$，再由C.R.方程得$u_x=u_y=v_x=v_y=0$，所以$u,v$在$C$上均为常函数。再由定理5，$f=u+iv$在整个$U$上也是常函数，矛盾。</p>
 <p>我们顺手就能得出所谓的最小模原理：</p>
 <blockquote>
 <p>推论1. 若$f$在$U$上无零点，那么其模的最小值只能在$\partial U$上取得。</p>
