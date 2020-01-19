@@ -33,10 +33,51 @@
 <li>幂级数在其收敛圆内无穷阶可微，且其任意阶导数的收敛半径和原幂级数相同。</li>
 </ul>
 <p>在$|z-a|&lt; R(R&lt;|z_0-a|)$中，若$\sigma(z_0)$收敛，则存在正数$M$使得<br>$$<br>|c_n(z-z_0)^n|\le M,\forall n<br>$$<br>则<br>$$<br>\sum_{n=1}^{\infty}|c_n(z-z_0)^n|\bigg|\frac{z-a}{z-z_0}\bigg|^n\le M\sum_{n=1}^{\infty}R^n=\frac{MR}{1-R}.<br>$$<br>这表示$\sigma(z)$在$|z-a|&lt;|z_0-a|$中绝对内闭一致收敛；</p>
-<p>因为部分和函数列<br>$$<br>\sigma_n(z)=\sum_{k=1}^nc_k(z-a)^k<br>$$<br>在$|z-a|&lt; R$中全纯且内闭一致收敛到$f$，所以由定理1，$f\in\mathcal H(|z-a|&lt; R)$，且各阶导数内闭一致收敛到$f^{(k)}$，因为可以逐项求导，所以<br>$$<br>\sigma^{(k)}(z)=k!c_k+\frac{(k+1)!}{1!}c_{k+1}(z-a)+\cdots+\frac{(k+n)!}{n!}c_{k+n}(z-a)^{n}+\cdots<br>$$<br>由d’Alembert公式<br>$$<br>R=\lim_{n\to\infty}\frac{n+1}{n+k+1}\bigg|\frac{c_{k+n}}{c_{k+n+1}}\bigg|=\lim_{n\to\infty}\bigg|\frac{c_n}{c_{n+1}}\bigg|.<br>$$</p>
+<p>因为部分和函数列<br>$$<br>\sigma_n(z)=\sum_{k=1}^nc_k(z-a)^k<br>$$<br>在$|z-a|&lt; R$中全纯且内闭一致收敛到$f$，所以由定理1，$f\in\mathcal H(|z-a|&lt; R)$，且$k$阶导函数列内闭一致收敛到$f^{(k)}$，因为可以逐项求导，所以<br>$$<br>f^{(k)}(z)=k!c_k+\frac{(k+1)!}{1!}c_{k+1}(z-a)+\cdots+\frac{(k+n)!}{n!}c_{k+n}(z-a)^{n}+\cdots①<br>$$<br>由d’Alembert公式<br>$$<br>R=\lim_{n\to\infty}\frac{n+1}{n+k+1}\bigg|\frac{c_{k+n}}{c_{k+n+1}}\bigg|=\lim_{n\to\infty}\bigg|\frac{c_n}{c_{n+1}}\bigg|.<br>$$</p>
+<p>我们还能得到结论：<br>$$<br>c_k=\frac{f^{(k)}(a)}{k!}<br>$$</p>
+<p>其证明只要在①中令$z=a$即可。</p>
 <h2 id="全纯函数的幂级数展开：Taylor级数"><a href="#全纯函数的幂级数展开：Taylor级数" class="headerlink" title="全纯函数的幂级数展开：Taylor级数"></a>全纯函数的幂级数展开：Taylor级数</h2><blockquote>
 <p>定理3. 设$f\in\mathcal H(U)$，$D(a,R)\subset U$，则$f$在$D(a,R)$中可以展为Taylor级数<br>$$<br>\sum_{n=0}^{\infty}\frac1{2\pi i}\int_{\partial D(a,r)}\frac{f(\zeta)d\zeta}{(\zeta-a)^{n+1}}(z-a)^n.<br>$$<br>这里$r\in(0,R)$。</p>
 </blockquote>
+<p>由Cauchy积分公式，<br>$$<br>f(z)=\frac1{2\pi i}\int_{\partial D(a,r)}\frac{f(\zeta)d\zeta}{\zeta-z}<br>$$</p>
+<p>为了凑出想要的形式，我们要仿照Taylor定理的证明做变形：<br>$$<br>\frac1{\zeta-z}=\frac1{\zeta-a}\frac1{1-\frac{z-a}{\zeta-a}}=\frac1{\zeta-a}\sum_{n=0}^{\infty}\left(\frac{z-a}{\zeta-a}\right)^n<br>$$</p>
+<p>因为$\bigg|\frac{z-a}{\zeta-a}\bigg|&lt; 1$，所以等号右边的级数在$D(a,R)$中内闭一致收敛，可以逐项积分，所以</p>
+<p>$$<br>f(z)=\frac1{2\pi i}\sum_{n=0}^{\infty}\int_{|\zeta-a|=r}\frac{f(\zeta)d\zeta}{(\zeta-a)^{n+1}}(z-a)^n.<br>$$</p>
+<p>下面用奇点来描述收敛半径。按定义，收敛半径$R$是最大的、使得幂级数收敛的收敛圆半径，设$z_0$是离$a$最近的奇点（如果奇点在$z_0$附近稠密，那就没必要研究$z_0$了），我们有：</p>
+<ul>
+<li>$R\le|z_0-a|$。因为如果$R&gt;|z_0-a|$，那$z_0$就包含在$D(a,R)$中，又，$f$无法在$z_0$附近展成Taylor级数，矛盾。</li>
+<li>$R\ge|z_0-a|$。如果$R&lt;|z_0-a|$，令$R’=R+\frac{|z_0-a|-R}2&gt; R$，则$f$在$D(a,R’)$中收敛，这与$R$的最大性矛盾。</li>
+</ul>
+<h2 id="唯一性定理和最大模原理"><a href="#唯一性定理和最大模原理" class="headerlink" title="唯一性定理和最大模原理"></a>唯一性定理和最大模原理</h2><p>这两个定理是对全纯函数的特殊性质做的表述：唯一性定理说明了我们可以通过全纯函数的一部分值来找到它全体的值，最大模原理说明了全纯函数模的最大值只能向边界寻找。</p>
+<p>先给出一个全纯函数的好性质：</p>
+<blockquote>
+<p>定理4. 非零的全纯函数$f$以$a$为$m$阶零点的充要条件是存在$D(a,R)$中的全纯函数$g(z),g(a)\neq0$使得<br>$$<br>f(z)=(z-a)^mg(z).<br>$$</p>
+</blockquote>
+<p>必要性：由题意，<br>$$<br>f(a)=f’(a)=\cdots=f^{(m-1)}(a)=0<br>$$<br>又因为<br>$$<br>f(z)=f(a)+f’(a)(z-a)+\cdots+\frac{f^{(m-1)}(a)}{(m-1)!}(z-a)^{m-1}+\cdots<br>$$<br>所以<br>$$<br>f(z)=(z-a)^m\left(\frac{f^{(m)}(a)}{m!}+\frac{f^{(m+1)}(a)}{(m+1)!}(z-a)+\cdots\right)<br>$$</p>
+<p>括号中的级数显然是内闭一致收敛的，所以其和函数在$D(a,R)$中全纯，令其为$g$即得。这个性质在实函数中是没有的，因为内闭一致收敛无法推出和函数可微。</p>
+<blockquote>
+<p>定理5（唯一性定理）. 设$f\in\mathcal H(U)$，$U$中有一数列$z_n\to a\in U$，$f(z_n)=0$，则$f\equiv0(z\in U)$.</p>
+</blockquote>
+<p>等价表述：设$f,g\in\mathcal H(U)$，$U$中有一数列$z_n\to a\in U$，$f(z_n)=g(z_n)$，则$f\equiv g(z\in U)$。证明思路和证明道路连通集中若导数为$0$则函数为常数的方法一致。</p>
+<p>由$g$的连续性，存在一个充分小的邻域$O(a,r)$，在去掉$a$的$O(a,r)$中，$z-a\neq0,g(z)\neq0$，所以$f(z)\neq0$，这说明非零全纯函数的零点都是孤立的，而现在$f$的零点不孤立，所以$f$在$O(a,r)$中恒为零。</p>
+<p>由$a$出发，对于$\forall z\in U$，用连续曲线$C$把两点相连，在$C$上取一系列的$z_1,\cdots,z_n$使得<br>$$<br>|z_i-z_{i+1}|\le \frac r2<br>$$</p>
+<p>在每个$O(z_n,r)$中用上面的方法得到$f\equiv0$，这样就把恒为零的性质从$a$传送到$z$。</p>
+<p>有了唯一性定理，可以证明最大模原理了：</p>
+<blockquote>
+<p>定理6（最大模原理）. 有界区域$U$中非常数的全纯函数模的最大值只能在$\partial U$上取得。</p>
+</blockquote>
+<p>如不然，设$|f(a)|=|u(a)+iv(a)|=\max|f(z)|,a\in U$，取一个小圆周$C(\subset U):|z-a|=r$，由均值性质，$f$在$C$上的模只能恒为$|f(a)|$，这说明<br>$$<br>u^2+v^2=|f(a)|^2<br>$$<br>两边同求偏导，得<br>$$<br>uu_x+vv_x=0,uu_y+vv_y=0<br>$$<br>也就是说齐次方程组<br>$$<br>u_xX+v_xY=0,u_yX+v_yY=0<br>$$</p>
+<p>由非零解$(u,v)$，所以其系数行列式为$0$，再由C.R.方程得$u_x=u_y=v_x=v_y=0$，所以$u,v$在$C$上均为常函数。再由定理5，$f=u+iv$在整个$U$上也是常函数，矛盾。</p>
+<p>我们顺手就能得出所谓的最小模原理：</p>
+<blockquote>
+<p>推论1. 若$f$在$U$上无零点，那么其模的最小值只能在$\partial U$上取得。</p>
+</blockquote>
+<p>对$1/f$用定理6即可。</p>
+<p>最大模原理+最小模原理可以解决下面的问题（小试牛刀）：</p>
+<blockquote>
+<p>例. $U$是周线$C$的内部，如果非常函数$f$在$U$中全纯，在$\overline U$中连续，其模在$C$上为常数，则$f$在$U$中必有零点。</p>
+</blockquote>
+<p>如不然，定理6+推论1可以得出结论：$|f|$的最大值和最小值都在$\partial U$上取得，又$|f|$在$C$上是常数，所以$|f|$在$\overline U$中是常数，由上面的讨论，$f$为常数，矛盾。</p>
 </div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/01/12/%E8%B0%83%E5%92%8C%E5%87%BD%E6%95%B0/"><span>调和函数</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
