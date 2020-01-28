@@ -21,10 +21,36 @@
 <p>因为$\bigg|\frac{\zeta-a}{z-a}\bigg|&lt; 1$，故等号右边级数在$V$中绝对内闭一致收敛。因为$c_n$的值和积分圆周的半径无关（只要在圆环里就行），所以直接将上面两式代入①即得。下证唯一性。</p>
 <p>如果有另一种表法<br>$$<br>f(z)=\sum_{n=-\infty}^{\infty}c’_n(z-a)^n,<br>$$</p>
 <p>上式两端同乘$(z-a)^{-k}$并在$|z-a|=\rho$上积分得</p>
-<p>$$<br>c’<em>k=\frac1{2\pi i}\int</em>{|\zeta-a|=\rho}\frac{f(\zeta)d\zeta}{(\zeta-z)^{n+1}}.<br>$$</p>
+<p>$$<br>c’<em>k=\frac1{2\pi i}\int</em>{|\zeta-a|=\rho}\frac{f(\zeta)d\zeta}{(\zeta-z)^{k+1}}=c_k.<br>$$</p>
 <h2 id="孤立奇点的讨论"><a href="#孤立奇点的讨论" class="headerlink" title="孤立奇点的讨论"></a>孤立奇点的讨论</h2><blockquote>
-<p>定理2（Riemann）. 如果$f$在</p>
+<p>定理2（Riemann）. 如果$f$在去心圆盘$\tilde D(a,r)$中有界全纯，那么$f$可以解析延拓到$D(a,r)$上去。</p>
 </blockquote>
+<p>不妨设$a=0$，先定义</p>
+<p>$$<br>G(z)=<br>\begin{cases}z^2f(z), &amp;z\neq0 \cr 0, &amp;z=0.\end{cases}<br>$$</p>
+<p>那么$G$在$D(0,r)$中全纯（按定义，易），所以$G$能在$0$附近展成Taylor级数</p>
+<p>$$<br>G(0)+G’(0)z+G’’(0)z^2+\cdots=G’’(0)z^2+\cdots<br>$$</p>
+<p>再定义</p>
+<p>$$<br>F(z)=\frac{G(z)}{z^2}=G’’(0)+G’’’(0)z+\cdots<br>$$</p>
+<p>等号右边的级数也在$D(0,r)$中收敛且与$G$的Taylor级数有相同的收敛半径，根据Taylor定理的充分性，$F$在$D(0,r)$中全纯。</p>
+<p>有了定理2，就可以讨论奇点的性质了：</p>
+<ul>
+<li>可去奇点：如果$f$在$a$的极限$b$是有限复数，称$a$为$f$的可去奇点，根据定理2，补充定义$f(a)=b$就可以使它变为全纯的。容易知道此时Laurent级数的主部全为零（可去奇点的等价定义）。</li>
+<li>$m$级极点：用定理3描述<blockquote>
+<p>定理3. $f$在$a$处的极限存在且无限的充要条件是：其Laurent级数的主部只有有限（$m$）项不为0.</p>
+</blockquote>
+</li>
+</ul>
+<p>充分性，可以设<br>$$<br>f(z)=\frac{c_{-m}+\cdots+c_{-1}(z-a)^{m-1}+c_0(z-a)^m+c_1(z-a)^{m+1}+\cdots}{(z-a)^m}<br>$$</p>
+<p>当$z\to a$时，极限容易看出。</p>
+<p>必要性，令<br>$$<br>g(z)=<br>\begin{cases}\frac1{f(z)}, &amp;z\neq a \cr 0, &amp;z=a.\end{cases}<br>$$</p>
+<p>则$\lim_{z\to a}g(z)=0$，所以$a$是$g$的可去奇点和零点，其Laurent级数主部全为零。所以$g$可以表为</p>
+<p>$$<br>g(z)=(z-a)^mh(z),<br>$$</p>
+<p>从而<br>$$<br>f(z)=\frac1{(z-a)^m}\frac1{h(z)}.<br>$$</p>
+<p>因为$1/h$在$D(a,r)$中全纯，所以可以Taylor展开。综上，$f$可以表为</p>
+<p>$$<br>f(z)=\frac{c_{-m}+\cdots+c_{-1}(z-a)^{m-1}+c_0(z-a)^m+c_1(z-a)^{m+1}+\cdots}{(z-a)^m}.<br>$$</p>
+<ul>
+<li>本性奇点：</li>
+</ul>
 </div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/01/16/%E5%B9%82%E7%BA%A7%E6%95%B0%E7%90%86%E8%AE%BA/"><span>幂级数理论</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
