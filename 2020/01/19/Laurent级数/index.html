@@ -80,6 +80,40 @@
 <h2 id="整函数与亚纯函数"><a href="#整函数与亚纯函数" class="headerlink" title="整函数与亚纯函数"></a>整函数与亚纯函数</h2><blockquote>
 <p>定义1. 如果$f$仅以$\infty$为孤立奇点，则称$f$为$\Bbb C$上的整函数。</p>
 </blockquote>
+<p>整函数按照孤立奇点$\infty$的性状也分为三类</p>
+<ul>
+<li>$\infty$是可去奇点，令$f(\infty)=\lim_{z\to\infty}f(z)$就使得$f\in \mathcal H(\overline{\Bbb C})$，再由Liouville定理知$f$为常数；</li>
+<li>$\infty$是$m$级极点，把$f$展成Taylor级数</li>
+</ul>
+<p>$$<br>f(z)=\sum_{n=0}^{\infty}c_nz^n(z\in\Bbb C)<br>$$</p>
+<p>这同时也是$f$在$\infty$处的Laurent级数的主部，由上面的讨论知$n=0,n&gt; m$。所以$f$是一个$m$次多项式。</p>
+<ul>
+<li>$\infty$是本性奇点，此时称$f$为超越整函数。</li>
+</ul>
+<blockquote>
+<p>定义2. 若$f$除无穷远点外，在$\Bbb C$上只有极点，则称$f$为亚纯函数。（整函数是亚纯函数，有理函数也是亚纯函数）</p>
+</blockquote>
+<p>亚纯函数也可以分为两类。</p>
+<blockquote>
+<p>定理4. 亚纯函数$f$为有理函数的充要条件是$\infty$是$f$的极点。</p>
+</blockquote>
+<p>必要性，设<br>$$<br>f(z)=\frac{a_nz^n+\cdots+a_1z+a_0}{b_mz^m+\cdots+b_1z+b_0}<br>$$<br>所以<br>$$<br>\lim_{z\to\infty}f(z)=\begin{cases}\frac{a_n}{b_m}, &amp;n=m \cr 0, &amp;n&lt; m \cr \infty , &amp;n&gt;m.\end{cases}<br>$$</p>
+<p>充分性，如果$\infty$是可去奇点，则$f$为常数，得证；设$\infty$是$f$的$m$级极点。首先有一个事实：$f$在$\overline{\Bbb C}$内只能有有限个极点，否则$f$在Riemann球面（注意它是紧集）上有非孤立奇点。设这些奇点为$z_1,…,z_n$，它们的阶数为$l_1,…,l_n$，则</p>
+<p>$$<br>g(z)=(z-z_1)^{l_1}\cdots(z-z_n)^{l_n}f(z)<br>$$</p>
+<p>是第二类整函数（对每个$z_i$，将$f$在$z_i$附近充分小邻域内的Laurent级数写出来，其分母是$(z-z_i)^{l_i}$，约掉，分子是收敛的Taylor级数，所以$g\in\mathcal H(O(z_i))$），所以$g(z)$是一个多项式，整理即得。</p>
+<p>我们把除了有理函数之外的亚纯函数称为超越亚纯函数。</p>
+<h2 id="Bbb-C-和-overline-Bbb-C-的自同构群"><a href="#Bbb-C-和-overline-Bbb-C-的自同构群" class="headerlink" title="$\Bbb C$和$\overline{\Bbb C}$的自同构群"></a>$\Bbb C$和$\overline{\Bbb C}$的自同构群</h2><p>如果$w\in Aut(\Bbb C)$，则$w(\infty)=\infty$，所以$w$是多项式，又$w^{-1}\in Aut(\Bbb C)$，所以$\deg(w)=1$，所以$Aut(\Bbb C)$是全体非退化线性变换。</p>
+<p>下面考虑$\overline{\Bbb C}$的亚纯自同构群（仍记为$Aut(\overline{\Bbb C})$）。</p>
+<p>如果$w\in Aut(\overline{\Bbb C})$且$w(\infty)=\infty$，则<br>$$<br>w(z)\Big|_{\Bbb C}=az+b(a\neq0),<br>$$</p>
+<p>若$w(\infty)\neq\infty$，令</p>
+<p>$$<br>v(z)=\frac1{w(z)-w(\infty)}<br>$$</p>
+<p>则$v(\infty)=\infty$，$v$是Riemann球面上的亚纯自同构，所以</p>
+<p>$$<br>v(z)=cz+d(c\neq0).<br>$$</p>
+<p>反解$w$得</p>
+<p>$$<br>w(z)=\frac{az+b}{cz+d},<br>$$</p>
+<p>其中$a=w(\infty),b=dw(\infty)+1$。容易验证任何分式线性变换都在$Aut(\overline{\Bbb C})$中，所以</p>
+<p>$$<br>Aut(\overline{\Bbb C})=\bigg{\frac{az+b}{cz+d}\bigg|ad-bc=1\bigg}\cong\bigg{\begin{pmatrix} a &amp; b \ c &amp; d \end{pmatrix}\bigg|ad-bc=1\bigg}<br>$$</p>
+<p>也就是说，$Aut(\overline{\Bbb C})$与Mobius变换群$\mathcal M(\overline{\Bbb C})$同构。</p>
 </div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/01/16/%E5%B9%82%E7%BA%A7%E6%95%B0%E7%90%86%E8%AE%BA/"><span>幂级数理论</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
