@@ -7,10 +7,9 @@
     error: '复制错误',
     noSupport: '浏览器不支持'
   }
-} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">一白</div><div class="author-info__description text-center">不能喻之于怀</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">40</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">留数定理</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-29</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Analysis/">Analysis</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>本篇的理论不难，但是实际应用起来方法却是五花八门。<br>有限孤立奇点处的留数</p>
-<hr>
-<blockquote>
-<p>定义1. 如果$f$在$\tilde D(a,r)$中全纯，则称<br>$$<br>\frac1{2\pi i}\int_{|z-a|=\rho}f(z)dz(\rho\in(0,r))<br>$$<br>为$f$在$a$处的留数，记为$\mathrm{Res}(f,a)$.</p>
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">一白</div><div class="author-info__description text-center">不能喻之于怀</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">41</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">留数定理</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-29</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Analysis/">Analysis</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>本篇的理论不难，但是实际应用起来方法却是五花八门。</p>
+<h2 id="有限孤立奇点处的留数"><a href="#有限孤立奇点处的留数" class="headerlink" title="有限孤立奇点处的留数"></a>有限孤立奇点处的留数</h2><blockquote>
+<p><strong>定义1.</strong> 如果$f$在$\tilde D(a,r)$中全纯，则称<br>$$<br>\frac1{2\pi i}\int_{|z-a|=\rho}f(z)dz(\rho\in(0,r))<br>$$<br>为$f$在$a$处的留数，记为$\mathrm{Res}(f,a)$.</p>
 </blockquote>
 <p>如果写出$f$在$a$处的Laurent级数<br>$$<br>f(z)=\sum_{n=-\infty}^{\infty}c_n(z-a)^n=\sum_{n=-\infty}^{\infty}\frac1{2\pi i}\int_{|\zeta-a|=\rho}\frac{f(\zeta)d\zeta}{(\zeta-a)^{n+1}}(z-a)^n<br>$$</p>
 <p>就容易看出$\mathrm{Res}(f,a)=c_{-1}$。（为什么叫留数——对上式两边在$|z-a|=\rho$上积分，只剩下$2\pi ic_{-1}$，也就是这个数被“留下”了）</p>
@@ -19,23 +18,23 @@
 </blockquote>
 <p>下面是计算留数的几个定理。（如果$a$是可去奇点，补充定义变全纯，留数为$0$）</p>
 <blockquote>
-<p>定理2. 如果$a$是$f$的$m$级极点，<br>$$<br>f(z)=\frac{g(z)}{(z-a)^m}<br>$$<br>其中$g$在$D(a,r)$中全纯，则<br>$$<br>\mathrm{Res}(f,a)=\frac{g^{m-1}(a)}{(n-1)!}.<br>$$</p>
+<p><strong>定理2.</strong> 如果$a$是$f$的$m$级极点，<br>$$<br>f(z)=\frac{g(z)}{(z-a)^m}<br>$$<br>其中$g$在$D(a,r)$中全纯，则<br>$$<br>\mathrm{Res}(f,a)=\frac{g^{m-1}(a)}{(n-1)!}.<br>$$</p>
 </blockquote>
 <p>证明只需要Taylor定理，值得注意的是，$g$一般是级数形式，实际应用时可用<br>$$<br>g^{m-1}(a)=\lim_{z\to a}f(z)(z-a)^{m}<br>$$<br>来计算。</p>
 <blockquote>
-<p>推论1. 如果$a$是单极点，那么<br>$$<br>\mathrm{Res}(f,a)=g(a),<br>$$<br>如果$a$是二级极点，那么<br>$$<br>\mathrm{Res}(f,a)=g’(a).<br>$$</p>
+<p><strong>推论1.</strong> 如果$a$是单极点，那么<br>$$<br>\mathrm{Res}(f,a)=g(a),<br>$$<br>如果$a$是二级极点，那么<br>$$<br>\mathrm{Res}(f,a)=g’(a).<br>$$</p>
 </blockquote>
 <p>下面是一个实用的结论</p>
 <blockquote>
-<p>定理3. 如果$g,h$在$a$附近全纯，$f=g/h$，$h(c)=0,g(c)\neq0$，$a$是$f$的单极点，则<br>$$<br>\mathrm{Res}(f,a)=\frac{g(a)}{h’(a)}.<br>$$</p>
+<p><strong>定理3.</strong> 如果$g,h$在$a$附近全纯，$f=g/h$，$h(c)=0,g(c)\neq0$，$a$是$f$的单极点，则<br>$$<br>\mathrm{Res}(f,a)=\frac{g(a)}{h’(a)}.<br>$$</p>
 </blockquote>
 <p>由定理2，<br>$$<br>\mathrm{Res}(f,a)=\lim_{z\to a}\frac{g(z)}{h(z)}(z-a)=\lim_{z\to a}\frac{g(z)}{\frac{h(z)-h(a)}{z-a}}=\frac{g(a)}{h’(a)}.<br>$$</p>
 <h2 id="infty-处的留数"><a href="#infty-处的留数" class="headerlink" title="$\infty$处的留数"></a>$\infty$处的留数</h2><blockquote>
-<p>定义1’. 设$f$在$r&lt;|z|&lt;\infty$中全纯。孤立奇点$\infty$处的留数定义为<br>$$<br>\mathrm{Res}(f,\infty)=-\frac1{2\pi i}\int_{|z|&lt; \rho}f(z)dz.(r&lt;\rho&lt;\infty)<br>$$</p>
+<p><strong>定义1’.</strong> 设$f$在$r&lt;|z|&lt;\infty$中全纯。孤立奇点$\infty$处的留数定义为<br>$$<br>\mathrm{Res}(f,\infty)=-\frac1{2\pi i}\int_{|z|&lt; \rho}f(z)dz.(r&lt;\rho&lt;\infty)<br>$$</p>
 </blockquote>
 <p>容易看出$\mathrm{Res}(f,\infty)=-c_{-1}$。综合起来的留数定理如下</p>
 <blockquote>
-<p>定理1’. 设$f$在点$a_1,…,a_n,\infty$外全纯，则<br>$$<br>\mathrm{Res}(f,\infty)+\sum_{k=1}^n\mathrm{Res}(f,a_k)=0.<br>$$</p>
+<p><strong>定理1’.</strong> 设$f$在点$a_1,…,a_n,\infty$外全纯，则<br>$$<br>\mathrm{Res}(f,\infty)+\sum_{k=1}^n\mathrm{Res}(f,a_k)=0.<br>$$</p>
 </blockquote>
 <p>画一个充分大的圆$\gamma:|z|=R$把$a_1,…,a_n$包起来，在这个圆上（正方向）用定理1得<br>$$<br>\int_{\gamma}f=\sum_{k=1}^n\mathrm{Res}(f,a_k),<br>$$</p>
 <p>又<br>$$<br>\mathrm{Res}(f,\infty)=\int_{-\gamma}f,<br>$$<br>即证。</p>
@@ -51,9 +50,47 @@
 <p>那么$0$是$g$的二级极点，由定理3，<br>$$<br>\mathrm{Res}(g,0)=\lim_{t\to 0}\left[f\left(\frac1t\right)\right]’=\lim_{t\to 0}-\frac1{t^2}f’\left(\frac1t\right)=\lim_{z\to\infty}-z^2f’(z).<br>$$</p>
 <h2 id="辐角原理和Rouche定理"><a href="#辐角原理和Rouche定理" class="headerlink" title="辐角原理和Rouche定理"></a>辐角原理和Rouche定理</h2><p>设周线$C$的内部为$U$，$N(f)$和$P(f)$分别为$f$在$U$中的零点与极点个数（$n$重零点算$n$个零点，$m$重极点算$m$个极点）。</p>
 <blockquote>
-<p><strong>引理1.</strong></p>
+<p><strong>引理1.</strong> 设$a$为$f$的$n$阶零点，则$a$为$f’/f$的单极点，且<br>$$<br>\mathrm{Res}\left(\frac{f’}{f},a\right)=n;<br>$$<br>设$b$为$f$的$m$级极点，则$b$为$f’/f$的单极点，且<br>$$<br>\mathrm{Res}\left(\frac{f’}{f},b\right)=-m.<br>$$</p>
 </blockquote>
-</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/01/19/Laurent%E7%BA%A7%E6%95%B0/"><span>Laurent级数</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+<p>第一种情况，设$f(z)=(z-a)^ng(z)$，$g$全纯且$g(a)\neq0$，代入即得；第二种情况设$f(z)=\frac{h(z)}{(z-a)^m}$，$h$全纯且$h(z)\neq0$，代入即得。</p>
+<blockquote>
+<p><strong>定理5.</strong> 设$f$在$U$中亚纯，在$C$上连续且不为零，则有<br>$$<br>\frac1{2\pi i}\int_C\frac{f’(z)}{f(z)}dz=N(f)-P(f).<br>$$</p>
+</blockquote>
+<p>设$U$中去掉所有$f$的极点所得区域为$U’$，在$U’$上用零点孤立性定理知$f$在$U$中的零点个数有限，同理对$1/f$讨论得到$f$的极点个数也有限。</p>
+<p>设$a_1,..,a_n$为$f$的零点，$c_1,…,c_m$为$f$的极点（二者都记重数），由定理1和引理1，</p>
+<p>$$<br>N(f)-P(f)=n-m=\sum_{i=1}^n\mathrm{Res}\left(\frac{f’}{f},a_i\right)+\sum_{j=1}^m\mathrm{Res}\left(\frac{f’}{f},b_j\right)=\frac1{2\pi i}\int_C\frac{f’}f.<br>$$</p>
+<p>从另一角度来看<br>$$<br>\int_C\frac{f’}f=\int_Cd(\ln f)=\int_Cd(\ln|f|)+i\int_Cd(\arg f)<br>$$</p>
+<p>$\ln|f|$是单值的，所以等号右边第一项为零。$\arg f$的改变量有可能不是$0$，但一定是$2\pi$的整数倍，所以对数积分体现了绕闭曲线一周后$f$的像的辐角该变量。</p>
+<blockquote>
+<p><strong>定理5’（辐角原理）.</strong> 在定理5的条件下，有<br>$$<br>N(f)-P(f)=\frac{\Delta_C\arg f}{2\pi}.<br>$$</p>
+</blockquote>
+<p>Rouche定理是辐角原理的推论，用来判定零点的个数.</p>
+<blockquote>
+<p><strong>定理6（Rouche）.</strong> 设$f,g$在周线$C$的内部$U$中全纯且连续到$C$，如果<br>$$<br>|f(z)|&gt;|f(z)-g(z)|(z\in C),<br>$$<br>那么$f$和$g$在$U$中的零点个数相同。</p>
+</blockquote>
+<p>对于任意$z\in C$，$g(z)\neq0$，否则$|f(z)|&gt;|f(z)|$，而且$f(z)\neq0$，否则$|g(z)|&lt; 0$。接下来只要证<br>$$<br>N(g)-N(f)=\frac1{2\pi i}\int_C\frac{g’}g-\frac{f’}f=0<br>$$<br>即可。整理得<br>$$<br>\int_C\frac{g’}g-\frac{f’}f=\int_C\frac{g’f-f’g}{fg}=\int_C\frac fg\left(\frac gf\right)’.<br>$$</p>
+<p>令$F=g/f$，则$F\in\mathcal H(U)$，故</p>
+<p>$$<br>N(g)-N(f)=\frac1{2\pi i}\int_C\frac{F’}F=N(F).<br>$$</p>
+<p>由题意，在$C$上有$|F-1|&lt; 1$，也就是说$F(C)\subset D(1,1)$，这条积分曲线不包含原点，所以绕其一周辐角不改变，亦即$N(F)=0$。</p>
+<p>对于映射来说，“开”是比较强的性质，函数可微也不能保证它是开的——比如$f(x)=x^2$是$\mathcal C^{\infty}$的，但$f((-1,1))=[0,1)$——但是全纯就可以。</p>
+<blockquote>
+<p><strong>定理7（开映射定理）.</strong> 如果函数$f$在区域$U$中全纯且非常数，那么$f$是开映射。</p>
+</blockquote>
+<p>设$G\subset U$，开，要证$f(G)$开。任取$w_0\in f(G)$，设$f(z_0)=w_0$。取充分小的邻域$O(w_0,\epsilon)$，我们要证明任一$w\in O(w_0,\epsilon)$，存在$z\in G$使得$f(z)=w$。</p>
+<p>设<br>$$<br>g(z)=(f(z)-w_0)+(w_0-w)=F(z)+G(z),<br>$$</p>
+<p>取以$z_0$为中心的小圆周$C_r:|z-z_0|=r$，使得在此圆周上$|f(z)-w_0|\ge\epsilon$，而在此圆周上有$|w_0-w|&lt;\epsilon$，所以</p>
+<p>$$<br>|F(z)|&gt;|G(z)|,z\in C_r.<br>$$<br>由Rouche定理，在$C_r$内部，有$N(F)=N(F+G)=N(g)=1$，即证。</p>
+<p>利用Rouche定理，还可以证明如下定理，在后面的Riemann共形映射理论中有用。</p>
+<blockquote>
+<p><strong>定理8.</strong> 若$f$在区域$U$内单叶解析，则$f’(z)\neq0,z\in U$。</p>
+</blockquote>
+<p>反设存在$z_0\in U$使得$f’(z_0)=0$，那么$z_0$是$g(z)=f(z)-f(z_0)$的$m$阶零点（$m\ge2$），由零点的孤立性，在充分小的邻域$O(z_0,r)$内没有其他$g$和$g’$的零点。</p>
+<p>设</p>
+<p>$$<br>m=\inf_{z\in\partial O(z_0,r)}|g(z)|<br>$$</p>
+<p>对于任意$0&lt;|a|&lt; m$，由定理6，$g(z)$和$g(z)-a$在$O(z_0,r)$内零点个数相同，都是$m$个，而且都是一阶零点（$f’(z)\neq0,z\in\tilde O(z_0,r)$）。</p>
+<p>设这些不同的零点为$z_1,…,z_m$，则<br>$$<br>f(z_k)=f(z_0)+a,k=1,…,m<br>$$</p>
+<p>与$f$的单叶性矛盾。</p>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/01/31/%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84%E5%88%9D%E6%AD%A5/"><i class="fa fa-chevron-left">  </i><span>共形映射初步</span></a></div><div class="next-post pull-right"><a href="/2020/01/19/Laurent%E7%BA%A7%E6%95%B0/"><span>Laurent级数</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
     processEscapes: true,
