@@ -60,7 +60,7 @@
 <p>设$a_1,..,a_n$为$f$的零点，$c_1,…,c_m$为$f$的极点（二者都记重数），由定理1和引理1，</p>
 <p>$$<br>N(f)-P(f)=n-m=\sum_{i=1}^n\mathrm{Res}\left(\frac{f’}{f},a_i\right)+\sum_{j=1}^m\mathrm{Res}\left(\frac{f’}{f},b_j\right)=\frac1{2\pi i}\int_C\frac{f’}f.<br>$$</p>
 <p>从另一角度来看<br>$$<br>\int_C\frac{f’}f=\int_Cd(\ln f)=\int_Cd(\ln|f|)+i\int_Cd(\arg f)<br>$$</p>
-<p>$\ln|f|$是单值的，所以等号右边第一项为零。$\arg f$的改变量有可能不是$0$，但一定是$2\pi$的整数倍，所以对数积分体现了绕闭曲线一周后$f$的像的辐角该变量。</p>
+<p>$\ln|f|$是单值的，所以等号右边第一项为零。$\arg f$的改变量有可能不是$0$，但一定是$2\pi$的整数倍，所以对数积分体现了绕闭曲线一周后$f$的像的辐角改变量。</p>
 <blockquote>
 <p><strong>定理5’（辐角原理）.</strong> 在定理5的条件下，有<br>$$<br>N(f)-P(f)=\frac{\Delta_C\arg f}{2\pi}.<br>$$</p>
 </blockquote>
@@ -79,7 +79,7 @@
 <p>设$G\subset U$，开，要证$f(G)$开。任取$w_0\in f(G)$，设$f(z_0)=w_0$。取充分小的邻域$O(w_0,\epsilon)$，我们要证明任一$w\in O(w_0,\epsilon)$，存在$z\in G$使得$f(z)=w$。</p>
 <p>设<br>$$<br>g(z)=(f(z)-w_0)+(w_0-w)=F(z)+G(z),<br>$$</p>
 <p>取以$z_0$为中心的小圆周$C_r:|z-z_0|=r$，使得在此圆周上$|f(z)-w_0|\ge\epsilon$，而在此圆周上有$|w_0-w|&lt;\epsilon$，所以</p>
-<p>$$<br>|F(z)|&gt;|G(z)|,z\in C_r.<br>$$<br>由Rouche定理，在$C_r$内部，有$N(F)=N(F+G)=N(g)=1$，即证。</p>
+<p>$$<br>|F(z)|&gt;|G(z)|,z\in C_r.<br>$$<br>由Rouche定理，在$C_r$内部，有$N(F)=N(F+G)=N(g)\ge 1$，即证。</p>
 <p>利用Rouche定理，还可以证明如下定理，在后面的Riemann共形映射理论中有用。</p>
 <blockquote>
 <p><strong>定理8.</strong> 若$f$在区域$U$内单叶解析，则$f’(z)\neq0,z\in U$。</p>
