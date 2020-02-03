@@ -8,7 +8,7 @@
     noSupport: '浏览器不支持'
   }
 } </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">一白</div><div class="author-info__description text-center">不能喻之于怀</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">41</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">5</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">共形映射初步</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-31</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Analysis/">Analysis</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>本节中提到的$U$都是单连通区域。</p>
-<p>全纯映射$f:U(\subset\Bbb C)\to\Bbb C$称为共形映射当且仅当$f’(z)\neq0$。由上一节的定理8，$f$是双射。所谓共形包括两个性质：保角和保形。</p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>全纯映射$f:U(\subset\Bbb C)\to\Bbb C$称为共形映射当且仅当$f’(z)\neq0$。由上一节的定理8，$f$是双射。所谓共形包括两个性质：保角和保形。</p>
 <ul>
 <li>保角：设$\gamma,\eta:[0,1]\to V(\subset\Bbb C)$，也就是说这是两条光滑曲线。设$z_0=\gamma(t_0)$是它们的一个交点，在$z_0$处作$\gamma$和$\eta$的切线，它们与$x$轴正向的夹角分别为$\arg\gamma’(t_0)$和$\arg\eta’(t_0)$，所以在$z_0$处两曲线所成的夹角（微分意义下，而且是有向的）为</li>
 </ul>
@@ -27,8 +27,39 @@
 <ul>
 <li>为什么要求边界多于一点？如果$U=\Bbb C$，没有边界，那么$f$是有界整函数，由Liouville定理，它为常数，不满足要求。如果$U=\overline{\Bbb C}-{a}$，边界为$a$，祸水东引，用$\zeta=\frac1{z-a}$把$a$变到$\infty$去，由Liouville定理它还是常数。要除去以上两种情况，就必须要求边界多于一点。</li>
 </ul>
-<p>先证唯一性，存在性需要Montel定理。</p>
+<p>先证唯一性，存在性需要Montel定理，放在后面。</p>
 <p>如果$f\neq g$满足定理条件，那么</p>
+<h2 id="分式线性变换"><a href="#分式线性变换" class="headerlink" title="分式线性变换"></a>分式线性变换</h2><p>称形如<br>$$<br>L(z)=\frac{az+b}{cz+d},ad-bc\neq0<br>$$<br>的变换为分式线性变换，是最重要的一类共形映射。下面研究它的一些性质。</p>
+<ul>
+<li><strong>$L(z)$的构成</strong> **</li>
+</ul>
+<p>当$c=0$时，<br>$$<br>L(z)=\frac adz+\frac bd,<br>$$</p>
+<p>当$c\neq0$时，<br>$$<br>L(z)=\frac ac-\frac{ad-bc}{c(cz+d)}.<br>$$</p>
+<p>所以$L(z)$是由平移$z+a$、位似$cz$和反演$\frac1z$复合而成的。关于$L$的性质可以转化到这三者身上。</p>
+<ul>
+<li><strong>$L(z)$的保圆（直线）性</strong></li>
+</ul>
+<p>复平面上任意圆周（直线）可以表示为<br>$$<br>Az\overline z+Bz+\overline B\overline z+C=0,<br>$$<br>代入三个变换，知道$L$把圆（直线）映成圆（直线）。</p>
+<ul>
+<li><strong>$L(z)$的保交比性</strong></li>
+</ul>
+<p>称$z_1,z_2,z_3,z_4$所成的交比为<br>$$<br>(z_1,z_2,z_3,z_4)=\frac{(z_1-z_4)(z_2-z_3)}{(z_1-z_3)(z_2-z_4)}<br>$$</p>
+<p>把三个变换代入知$L$不改变交比。又，设$a\neq0$，分式上下同除$a$，则$L$只依赖三个参数。如果有</p>
+<p>$$<br>L:z_i\to w_i(i=1,2,3),<br>$$</p>
+<p>则可以直接写出<br>$$<br>(z,z_1,z_2,z_3)=(L(z),w_1,w_2,w_3)<br>$$</p>
+<p>这样就求出了$L(z)$。</p>
+<ul>
+<li><strong>$L(z)$的保对称点性</strong></li>
+</ul>
+<p>称$a,b$关于圆周$C_r:|z-z_0|=r$对称（并非轴对称）当且仅当</p>
+<p>$$<br>z_0-a=\frac{r^2}{\overline{z_0-b}}.<br>$$<br>为了证明分式线性变换具有保对称点性，先证引理1</p>
+<p><strong>引理1. $a$和$b$关于$C_r$对称的充要条件是，任一过$a,b$的圆$\gamma$都和$C_r$正交。</strong></p>
+<p>必要性，过$z_0$作$\gamma$的切线$\vec{z_0w}$，切点为$w$，由圆幂定理，<br>$$<br>|z_0-w|^2=|z_0-a||z_0-b|=r^2,<br>$$</p>
+<p>所以$|z_0-w|=r$，即证。</p>
+<p>充分性，设$\gamma$与$C_r$的某一交点为$w$，则$\vec{z_0w}$是$\gamma$的切线，连结$a,b$并延长所得的直线（是一个半径无限大的圆，也和$C_r$正交）定经过$z_0$，所以由圆幂定理知$a,b$关于$C_r$对称。下面就可以证分式线性变换具有保对称点性了。</p>
+<p>** 定理2. $L(a)$和$L(b)$关于$L(C_r)$仍对称。**</p>
+<p>由保圆性，$L(C_r)$是过$L(a)$和$L(b)$的圆。过$L(a)$和$L(b)$作任意圆周$\delta$，由保角性，$\delta$与$L(C_r)$正交，再由引理1知$L(a)$和$L(b)$关于$L(C_r)$对称。</p>
+<h2 id="几个典型的共形映射和-mathrm-Aut-H-的结构"><a href="#几个典型的共形映射和-mathrm-Aut-H-的结构" class="headerlink" title="几个典型的共形映射和$\mathrm{Aut}(H)$的结构"></a>几个典型的共形映射和$\mathrm{Aut}(H)$的结构</h2><p>把上半平面$\{z|\Im z&gt; 0\}$记为$H$。</p>
 </div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/01/29/%E7%95%99%E6%95%B0%E5%AE%9A%E7%90%86/"><span>留数定理</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
