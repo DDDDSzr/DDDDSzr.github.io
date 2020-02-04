@@ -59,13 +59,26 @@
 <p>充分性，设$\gamma$与$C_r$的某一交点为$w$，则$\vec{z_0w}$是$\gamma$的切线，连结$a,b$并延长所得的直线（是一个半径无限大的圆，也和$C_r$正交）定经过$z_0$，所以由圆幂定理知$a,b$关于$C_r$对称。下面就可以证分式线性变换具有保对称点性了。</p>
 <p><strong>定理2. $L(a)$和$L(b)$关于$L(C_r)$仍对称。</strong></p>
 <p>由保圆性，$L(C_r)$是过$L(a)$和$L(b)$的圆。过$L(a)$和$L(b)$作任意圆周$\delta$，由保角性，$\delta$与$L(C_r)$正交，再由引理1知$L(a)$和$L(b)$关于$L(C_r)$对称。</p>
+<h2 id="边界对应定理"><a href="#边界对应定理" class="headerlink" title="边界对应定理"></a>边界对应定理</h2><p>给定两个边界是周线的单连通区域$U,V\subset\Bbb C$，能不能通过边界的性质来判断其内部的情况？答案是下面的定理</p>
+<p><strong>定理3（边界对应定理）. 设周线$\gamma,\delta$的内部为$U,V$，全纯映射$f$把$\gamma$双方单值地映为$\delta$，则$f(U)=V$且单叶。</strong></p>
+<p>对任意$w\in V$，我们希望$g(z)=f(z)-w$在$U$中有零点，为此用辐角原理</p>
+<p>$$<br>N(g,\gamma)=\frac1{2\pi i}\int_{\gamma}\frac{f’(z)dz}{f(z)-w}=\int_{\delta}\frac{d\zeta}{\zeta-w}=1.<br>$$<br>如果$w$在$\delta$外部，由上式知$N(g,\gamma)=0$；</p>
+<p>如果$w\in \delta$，且存在$z_0\in U,f(z_0)=w$，因为$f(U)$是区域，$w$是内点，所以存在充分小的$O(w)$，使得<br>$$<br>f^{-1}(O(w))\subset U<br>$$</p>
+<p>再取$w’$位于$\delta$外部，不存在$z\in U,f(z)=w$，矛盾。</p>
+<p>这样我们就可以通过边界来判定一个映射是否能把一个区域单叶地映为另一个区域了。</p>
 <h2 id="几个典型的共形映射和-mathrm-Aut-H-的结构"><a href="#几个典型的共形映射和-mathrm-Aut-H-的结构" class="headerlink" title="几个典型的共形映射和$\mathrm{Aut}(H)$的结构"></a>几个典型的共形映射和$\mathrm{Aut}(H)$的结构</h2><p>把单位圆$|z|&lt; 1$记为$D$，上半平面$\{z|\Im z&gt; 0\}$记为$H$。先给出$\mathrm{Aut}(D)$</p>
-<p><strong>定理3. 把单位圆映成单位圆的共形映射一定是Mobius变换和旋转的复合，即任意$f\in\mathrm{Aut}(D)$，一定能写成</strong></p>
+<p><strong>定理4. 把单位圆映成单位圆的共形映射一定是Mobius变换和旋转的复合，即任意$f\in\mathrm{Aut}(D)$，一定能写成</strong></p>
 <p>$$<br>f=M_a\circ R_b(b\in\Bbb R)<br>$$<br><strong>的形式。</strong></p>
-<p>称<br>$$<br>M_a(z)=\frac{z-a}{1-\overline az}<br>$$<br>为Mobius变换，它是有点名堂的，最核心的就是<br>$$<br>M_a:a\to0,\frac1{\overline a}\to\infty<br>$$</p>
+<p>称<br>$$<br>M_a(z)=\frac{a-z}{1-\overline az}<br>$$<br>为Mobius变换，它是有点名堂的，最核心的就是<br>$$<br>M_a:a\to0,\frac1{\overline a}\to\infty<br>$$</p>
 <p>因为$a$和$\frac1{\overline a}$关于$|z|=1$对称且$M_a(\partial D)=\partial D$，所以$1/\overline a$应该映成$\infty$。用分式线性变换构造就是$M_a$这样的形式。</p>
 <p>第一步，对任意的$a\in D$，$M_a\in\mathrm{Aut}(D)$，$R_b(z)=e^{ib}z\in\mathrm{Aut}(D)$。所以二者的复合也在$\mathrm{Aut}(D)$中。</p>
-<p>第二步，如果$f\in\mathrm{Aut}(D)$，</p>
+<p>第二步，如果$f\in\mathrm{Aut}(D)$，设$f(0)=b$，令<br>$$<br>F(z)=M_b^{-1}(f(z))=M_b(f(z))<br>$$</p>
+<p>我们需要证$F(z)=e^{it}z,t\in\Bbb R$。为此只要证明在Schwarz定理中某个等号成立，就能得到想要的结论。因为$F:D\to D$，$F(0)=0$，所以<br>$$<br>|F(z)|\le |z|,|F’(0)|\le 1.<br>$$</p>
+<p>因为<br>$$<br>F^{-1}(0)=f^{-1}(M_b^{-1}(0))=f^{-1}(b)=0<br>$$</p>
+<p>所以可以对$F^{-1}$应用Schwarz引理，得<br>$$<br>|F^{-1}(0)|=\Bigg|\frac1{F’(0)}\Bigg|\le 1<br>$$</p>
+<p>综上$|F’(0)|=1$，所以由Schwarz定理等号成立的条件，存在实数$t$使得$F(z)=e^{it}z$。</p>
+<p>下面给出$\mathrm{Aut}(H)$，稍麻烦些。<br><strong>定理5. 上半平面的全纯自同构群由$ac-bd&gt; 0$的分式线性变换构成，即</strong><br>$$<br>\mathrm{Aut}(H)=\{L(z)=\frac{az+b}{cz+d}\Bigg|ac-bd&gt; 0\}.<br>$$</p>
+<p>记<br>$$<br>\begin{pmatrix}<br>a    \quad b\\<br>c   \quad d<br>\end{pmatrix}=A<br>$$</p>
 </div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/01/29/%E7%95%99%E6%95%B0%E5%AE%9A%E7%90%86/"><span>留数定理</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
