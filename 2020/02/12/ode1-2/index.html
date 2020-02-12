@@ -34,7 +34,24 @@
 <p>满足其通解为$y=f(x,C_1,…,C_n)$，这里$\vec y=(y,…,y^{(n-1)})$。</p>
 <h2 id="恰当形式，分离变量的方程"><a href="#恰当形式，分离变量的方程" class="headerlink" title="恰当形式，分离变量的方程"></a>恰当形式，分离变量的方程</h2><p>根据熟知的Green公式</p>
 <p>$$<br>\oint_{\partial D}Pdx+Qdy=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy<br>$$</p>
-<p>容易得出积分与路线无关的充要条件：<br>$$<br>\frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}<br>$$</p>
+<p>容易得出积分与路线无关的充要条件：<br>$$<br>\frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}.<br>$$<br>这表示<br>$$<br>Pdx+Qdy=0,①<br>$$<br>任取$(x_0,y_0)\in D\times E$，按照路径积分给它积回去得</p>
+<p>$$<br>\int_{x_0}^x P(x,y)dx+\int_{y_0}^y Q(x_0,y)dy=C.<br>$$</p>
+<p>把等号左侧这个函数记为$w(x,y)$，则</p>
+<p>$$<br>w(x,y)=C<br>$$</p>
+<p>是方程①的一个通解。<strong>①在满足$\frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}$时称为恰当方程。</strong></p>
+<p>方程①也可以改写为<br>$$<br>\frac{dy}{dx}=\frac PQ(Q\neq 0).<br>$$</p>
+<p>如果$P(x,y)=P_1(x)P_2(y),Q(x,y)=Q_1(x)Q_2(y)$，那么上式变为</p>
+<p>$$<br>\frac{Q_2(y)}{P_2(y)}dy=\frac{P_1(x)}{Q_1(x)}dx<br>$$</p>
+<p>两边同时积分得方程通解为<br>$$<br>\int\frac{Q_2(y)}{P_2(y)}dy=\int\frac{P_1(x)}{Q_1(x)}dx<br>$$</p>
+<p><strong>这种情况称为方程可分离变量。</strong></p>
+<h2 id="一阶线性方程"><a href="#一阶线性方程" class="headerlink" title="一阶线性方程"></a>一阶线性方程</h2><p>一阶方程的一般形式为<br>$$<br>F(x,y,y’)=0.<br>$$</p>
+<p>此时分为两种情况，一种是上式可写成<br>$$<br>y’=f(x,y)<br>$$<br>的形式（局部），也就是显式方程；另一种是无法把$y’$写成$x,y$的函数，谓之隐式方程，放在后面说。本节只考虑显式方程。</p>
+<p>当$f(x,y)$是线性函数，即</p>
+<p>$$<br>\frac{dy}{dx}=f(x,y)=p(x)y+q(x)<br>$$<br>时，基本上是可解的，下面考虑其解法。</p>
+<p><strong>最简单的情况，$q\equiv0$，当$y\neq0$时，分离变量并积分得</strong></p>
+<p>$$<br>\int\frac{dy}y=\int p(x)dx,<br>$$</p>
+<p><strong>故方程的所有解为</strong><br>$$<br>y=Ce^{\int p(x)dx}.<br>$$<br>（包含了特解$y\equiv0$）</p>
+<p><strong>当$q$不恒为零时，基本思想是</strong></p>
 </div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/ODE/">ODE</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/02/05/%E8%A7%A3%E6%9E%90%E5%BB%B6%E6%8B%93/"><span>解析延拓</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
