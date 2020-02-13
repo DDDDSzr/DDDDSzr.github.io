@@ -52,6 +52,30 @@
 <p>$$<br>\int\frac{dy}y=\int p(x)dx,<br>$$</p>
 <p><strong>故方程的所有解为</strong><br>$$<br>y=Ce^{\int p(x)dx}.<br>$$<br>（包含了特解$y\equiv0$）</p>
 <p><strong>当$q$不恒为零时，基本思想是</strong></p>
+<h2 id="变量代换"><a href="#变量代换" class="headerlink" title="变量代换"></a>变量代换</h2><p><strong>如果$P,Q$是$m-$齐次的，那么一般做代换$y=ux$，方程化为</strong></p>
+<p>$$<br>Pdx+Qdy=x^mP(1,u)dx+x^mQ(1,u)(xdu+udx)=0,<br>$$<br>整理得<br>$$<br>(P(1,u)+uQ(1,u))dx+xQ(1,u)du=0,<br>$$<br>分离变量并积分可得<br>$$<br>\int\frac{Q}{P+uQ}du=-\ln |x|.<br>$$</p>
+<p>考虑特解：如果<br>$$<br>P+uQ=0<br>$$<br>那方程两边同时对$u$积分得</p>
+<p>$$<br>\int Q(1,u)du=f\left(\frac yx\right)=C.<br>$$</p>
+<p>从上面的讨论，我们可以看出齐次方程可以写为<br>$$<br>\frac{dy}{dx}=g\left(\frac yx\right)<br>$$<br><strong>由此拓展，如果给出方程</strong><br>$$<br>\frac{dy}{dx}=g\left(\frac {ax+by+c}{ux+vy+w}\right)<br>$$</p>
+<p>分类讨论，</p>
+<ul>
+<li><strong>$av=bu$，这说明要么$u=v=0$，要么$(a,b)=r(u,v)$。如果是前者，那么令$ax+by=z$，方程化为</strong></li>
+</ul>
+<p>$$<br>\frac{dz}{bdx}=g\left(\frac {z+c}{w}\right)+\frac ab=G(z),<br>$$<br>分离变量即可。如果是后者，设$ax+by=r(ux+vy)=rt$，则</p>
+<p>$$<br>\frac{dt}{bdx}=g\left(\frac {rt+c}{t+w}\right)+\frac ab=H(t),<br>$$<br>化为上一种情况。</p>
+<ul>
+<li><strong>如果$av\neq bu$，说明两直线$l_1:ax+by+c=0$和$l_2:ux+vy+w=0$有唯一交点$(x_0,y_0)$，把交点平移到原点，则两直线变为斜率不变得正比例函数，即令</strong></li>
+</ul>
+<p>$$<br>\zeta=x-x_0,\eta=y-y_0,<br>$$<br>则方程变为<br>$$<br>\frac{d\eta}{d\zeta}=g\left(\frac { a\zeta+b\eta}{u\zeta+v\eta}\right)=F\left(\frac {\eta}{\zeta}\right).<br>$$</p>
+<p>再令$\eta=\lambda\zeta$即可。</p>
+<hr>
+<p><strong>所谓Bernoulli方程指的是形如</strong><br>$$<br>y’+p(x)y=q(x)y^n<br>$$<br><strong>的方程。此时作变量代换$y^{1-n}=u$，则方程化为</strong></p>
+<p>$$<br>\frac{du}{1-n}+p(x)udx=q(x)dx.<br>$$</p>
+<p>分离变量即可。</p>
+<hr>
+<p><strong>形如</strong><br>$$<br>\frac{dy}{dx}=p(x)y^2+q(x)y+r(x)<br>$$</p>
+<p><strong>的方程称为Riccati方程。</strong>关于这种形式的方程有两个重要结果：</p>
+<p><strong>定理2. 如果已知Riccati方程的一个特解$y=f(x)$，则可通过该特解求其通解。</strong></p>
 </div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/ODE/">ODE</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/02/05/%E8%A7%A3%E6%9E%90%E5%BB%B6%E6%8B%93/"><span>解析延拓</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.bscstorage.net/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
