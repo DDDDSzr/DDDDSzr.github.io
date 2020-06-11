@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="曲线论总结"><meta name="keywords" content="古典几何"><meta name="author" content="一白"><meta name="copyright" content="一白"><title>曲线论总结 | 雪夜闻钟</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">一白</div><div class="author-info__description text-center">不能喻之于怀</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">43</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">7</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">7</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://media.st.dl.pinyuncloud.com/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">雪夜闻钟</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">曲线论总结</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-05-31</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Geometry/">Geometry</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>（三维）曲线论的核心想法是：在正则曲线$C$上定义（局部的）Frenet标架，并利用弧长、曲率和挠率来唯一确定曲线。</p>
+<p>在$\Bbb R^3$中，选定点$O$和从$O$出发的两个互相垂直的单位向量（内积为零）$i,j$，再利用外积，令$k=i\times j$，这样得到的$\mathcal O={O;i,j,k}$称为一个正交标架（注意它是右手系）。</p>
+<p>刚体变换下，$\mathcal O$会变成另一个正交标架。</p>
+<h2 id="弧长"><a href="#弧长" class="headerlink" title="弧长"></a>弧长</h2><p><strong>Def1（弧长）.</strong>设$C$是正则曲线，$C$的参数表示为$r(t),t\in[a,b]$，那么$C$的弧长$s(C)$定义为<br>$$<br>s(C):=\int_{[a,b]}|r’(t)|dt.<br>$$</p>
+<p>弧长最重要的性质有二：</p>
+<ol>
+<li><p>与正交标架的选择无关，这是因为在刚体变换$u=Tt=At+b$作用下，<br>$$|(Ar(t)+b)’|=|A||r’(t)|=|r’(t)|.$$</p>
+</li>
+<li><p>既然如此，我们定义这样一个函数<br>$$<br>s=s(t)=\int_a^t|r’(t)|dt<br>$$</p>
+</li>
+</ol>
+<p>则$s’(t)&gt;0$，所以有反函数$t=t(s)$，从而正则曲线$C$的参数表示可以写为<br>$$<br>r(t)=r(t(s))=f(s)<br>$$<br>因为<br>$$<br>ds=|r’(t)|dt<br>$$<br>所以$s$正好可以作为$r$的参数等价于<br>$$<br>|r’(t)|\equiv1.<br>$$</p>
+<h2 id="曲率"><a href="#曲率" class="headerlink" title="曲率"></a>曲率</h2><p>曲率的提出是为了衡量曲线的弯曲程度，直观上我们要求直线的曲率是$0$，圆的曲率是恒定的。当曲线的参数是弧长时，$s$处的单位切向量$\alpha$顺着曲线走了$\Delta s$个单位到了$\beta$，一厢情愿地要求曲率<br>$$<br>\kappa(s)=\lim_{\Delta s\to 0}\Bigg|\frac{\langle\alpha,\beta\rangle}{\Delta s}\Bigg|=\lim_{\Delta s\to 0}\Bigg|\frac{2\sin\frac{\langle\alpha,\beta\rangle}2}{\Delta s}\Bigg|=\lim_{\Delta s\to 0}\Bigg|\frac{\beta-\alpha}{\Delta s}\Bigg|=|r’’(s)|.<br>$$<br>（也就说一开始我们要求的转角变化量是符合直观但计算麻烦，没想到如果是单位切向量，就正好转化为r对s的二阶导数）</p>
+<p>验证：曲线是直线当且仅当$\kappa(s)\equiv0$，圆的曲率是定值。</p>
+<p>pf.直线参数化是$l(s)=a+vs$，$v$是方向单位向量，此时$|l’’(s)|\equiv0$，此推导过程可逆。圆的参数化是$r(s)=(x+r\cos s/r,y+\sin s/r)$，此时$|r’’(s)|\equiv1$。</p>
+<h2 id="Frenet标架"><a href="#Frenet标架" class="headerlink" title="Frenet标架"></a>Frenet标架</h2><p>由于$|r’(s)|=1$，所以$(r’(s),r’(s))’=0$，从而$(r’’(s),r’(s))=0$，也就是说$r’’(s)\perp r’(s)$。</p>
+<p>这告诉我们，设$r(s)$的切向量为$t(s)$，则$t(s)\perp t’(s)$，由曲率的定义，我们记$t’(s)=\kappa(s)n(s)$，则$t(s),n(s)$构成正交标架的两个分量，再令$b(s)=t(s)\times n(s)$，则${r(s);t(s),n(s),b(s)}$构成正交标架，这就是Frenet标架。</p>
+<p>Frenet标架是一个局部的标架，如果在某点$\kappa(s)=0$，那$n(s),b(s)$都无法唯一确定，此时出现问题，分类讨论：</p>
+<ol>
+<li>如果$\kappa(s)=0,s\in (a,b)$，那么曲线是直线，取它任意的两个互相垂直的法向量一直平移就好；</li>
+<li>如果$s$是$\kappa$的孤立零点，那就麻烦，只能通过$s^-$和$s^+$的Frenet标架的情况来延拓到$s$上。</li>
+</ol>
+<p>在曲率处处为正的曲线上，我们可以完美地定义Frenet标架。</p>
+<h2 id="挠率"><a href="#挠率" class="headerlink" title="挠率"></a>挠率</h2><p>如果说曲率是刻画曲线的弯曲程度，那么挠率就是刻画曲线离平面（哪个平面？直观上应该是$t(s)$和$n(s)$张成的平面）的偏离程度。</p>
+<p>那我们不禁要想，如果曲线是平面曲线，那么它的$b(s)$是定向的，也就是说$|b’(s)|\equiv0$，另一方面，我们有<br>$$<br>b’=t’\times  n+t\times n’=t\times n’<br>$$<br>从而$b’//n$（两个向量都垂直于第三个向量，则这两个向量要么垂直要么平行），设$b’=-\tau n$（这个负号据说是历史遗留问题），两边用$n$做内积，得到<br>$$<br>\tau=-b’\cdot n=-|b’|<br>$$<br>这里的$\tau$就是挠率，除了一个负号，与我们的直观认识是一样的。</p>
+<p>验证：曲线$C：r(s)$是平面曲线等价于其挠率为零。</p>
+<p>pf：必要性上面说过了。反过来，如果$\tau=0$，那么$|b’|=0$，说明$b$是常向量，则$C$在点$b(0)$和$b$（作为法向量）确定的平面上。</p>
+<h2 id="Frenet公式"><a href="#Frenet公式" class="headerlink" title="Frenet公式"></a>Frenet公式</h2><p>其实也没什么大不了的，无非就是用$t,n,b,\kappa,\tau$来表示$t’,n’,b’$罢了，但是确实具有优美的形式。</p>
+<p>通过计算，我们有：<br>$$<br>t’=\kappa n\n’=-\kappa t+\tau b\ b’=-\tau n<br>$$</p>
+<p>这就是Frenet公式（它可以推广到$\Bbb R^n$去，写成矩阵的形式）。</p>
+<h2 id="基本定理"><a href="#基本定理" class="headerlink" title="基本定理"></a>基本定理</h2><p>从这部分，进入核心。如果给定曲线$C：r(t)$，存在一个光滑的变换$t=t(v)$，使得$|t’(v)|&gt;0$恒（参数变换不改变定向），那么把$r(t)$和$r(t(v))$看作同一条曲线。曲线论的基本定理是：弧长、挠率、曲率是刚体变换的不变量；相差一个刚体变换的情况下，曲率、挠率唯一确定一条曲线。</p>
+<p><strong>定理1.</strong>曲线的弧长、挠率、曲率是刚体变换不变量。</p>
+<p>pf：设刚体变换为$u=Tt=Mt+b,\overline r=u(r),M\in SO(3)$.只要注意到$|M|=1$，则各阶导数的模就均与$M$无关。</p>
+<p><strong>定理2.</strong>设$r_1,r_2$都是定义在$(a,b)$上的以弧长为参数的正曲率曲线，满足$\kappa_1=\kappa_2$，$\tau_1=\tau_2$，则存在一个刚体变换$T$使得$r_1(s)=T(r_2(s))$。</p>
+<p>pf：不妨设$0\in(a,b)$，设$r_i$在$0$处的Frenet标架为$\mathcal O_i(0)$，则存在一个刚体变换$T$把$\mathcal O_2(0)$变为$\mathcal O_1(0)$。在这个刚体变换下，两条曲线的挠率和曲率都不变，所以此时$r_1,r_2$都满足ODE<br>$$<br>r’=t\t’=\kappa n\n’=-\kappa t+\tau b\ b’=-\tau n<br>$$<br>且他们在$0$处的取值是一样的（$T({r_2(0);t_2(0),n_2(0),b_2(0)})={r_1(0);t_1(0),n_1(0),b_1(0)})$，所以由解对初值的唯一性定理即知<br>$$<br>r_1(s)=r_2(s),\forall s\in(a,b).<br>$$</p>
+<p><strong>定理3.</strong> 【定理2的内容是，如果确定了曲率、挠率，那么就确定了曲线。这个定理说明，给出曲率和挠率，一定有一条曲线满足它的曲率、挠率是等于给定值的。】</p>
+<p>给出$(a,b)$上的两个$C^1$函数$\kappa&gt;0$和$\tau$，存在一条弧长参数曲线$r(s)$，以$\kappa$和$\tau$为曲率和挠率。</p>
+<p>pf：思路就是把定理2的证明反过来，现在设有四个向量函数$r,e_1,e_2,e_3$满足Frenet公式，只要给定一个初值（某点的右手正交标架），就有唯一解。设这个初值是${r^0;e_1^0,e_2^0,e_3^0}$，且满足<br>$$<br>e_i\cdot e_j=\delta_{ij}，(e_1^0,e_2^0,e_3^0)=1.<br>$$</p>
+<p>我们要证明：根据这个初值得出的曲线$r$以弧长$s$为参数，以$\kappa$和$\tau$为曲率和挠率。首先要证${r;e_1,e_2,e_3}$构成右手正交标架。为此我们求如下导数<br>$$<br>(e_i\cdot e_j)’=e_i’\cdot e_j+e_i\cdot e_j’<br>$$</p>
+<p>代入Frenet公式，我们得到$g_{ij}=e_i\cdot e_j$满足一个ODE，且$g_{ij}\equiv \delta_{ij}$是一个解，又初值满足$g_{ij}(0)=\delta_{ij}$，所以由解对初值的唯一性，我们知道${r;e_1,e_2,e_3}$是正交标架。再由解对初值的连续性知道<br>$$<br>(e_1,e_2,e_3)=(e_1^0,e_2^0,e_3^0)=1.<br>$$</p>
+<p>下面，由$|e_1(s)|=1$知道$r$以$s$为参数，由Frenet公式给出的ODE，$r(s)$以$\kappa$和$\tau$为曲率和挠率。</p>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8F%A4%E5%85%B8%E5%87%A0%E4%BD%95/">古典几何</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/02/12/ode1-2/"><span>ODE概论、初等积分法</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://media.st.dl.pinyuncloud.com/steam/apps/814380/ss_3f5de1c959ef0d723c84b7b641aaadec0791df33.jpg?t=1576898087)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2020 By 一白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>
