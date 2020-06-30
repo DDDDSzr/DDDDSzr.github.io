@@ -13,7 +13,17 @@
 <p><strong>Prop2.</strong>一个正则曲面是球面的一部分当且仅当它满足$Ⅰ=cⅡ(c&gt;0)$。</p>
 <h2 id="法曲率"><a href="#法曲率" class="headerlink" title="法曲率"></a>法曲率</h2><p>我们知道，对于三维曲线而言，曲率是曲率向量$r’’(s)$的模。本着曲面是曲线构成的这一想法，我们来定义“曲面的曲率”：</p>
 <p>考虑正则曲面$S$上过$P_0$的曲线$C:r(u(s),v(s))$，$s$是弧长参数。容易求得其在$P_0$的曲率向量<br>$$<br>k(P_0)=\frac d{ds}\left(r_u\frac{du}{ds}+r_v\frac{dv}{ds}\right)\Bigg|_{P_0}<br>$$</p>
-<p>我们知道$k(P_0)$一定在$C$的法平面上，$S$在$P_0$处的单位法向量$n$自然也在该平面上，我们称<br>$$<br>\kappa_n(t(P_0))=k(P_0)\cdot n<br>$$<br>为$P_0$处关于切向量$t(P_0)=dr(u(s),v(s))|<em>{P_0}$的法曲率。详细算一下：<br>$$<br>\kappa_n=r</em>{uu}\cdot n\left(\frac{du}{ds}\right)^2+2r_{uv}\cdot n\frac{du}{ds}\frac{dv}{ds}+r_{vv}\cdot n\left(\frac{dv}{ds}\right)^2,<br>$$<br>由第二基本形式的定义，它等于<br>$$<br>L\left(\frac{du}{ds}\right)^2+2M\frac{du}{ds}\frac{dv}{ds}+N\left(\frac{dv}{ds}\right)^2<br>$$<br>这只是关于$C$的切向量的法曲率，对于$P_0$处的任一单位切向量<br>$$<br>t=\lambda r_u+\mu r_v,<br>$$<br>曲线<br>$$<br>C’:r(u(s_0+\lambda s),v(s_0+\mu s))<br>$$<br>的$P_0$处的切向量就是它，所以<br>$$<br>du=\lambda ds,dv=\mu ds,<br>$$<br>从而<br>$$<br>\kappa_n(t)=L\lambda^2+2M\lambda\mu+N\mu^2.(\star)<br>$$<br>那么对$P_0$处的任一切向量（不一定单位化）<br>$$<br>w=\alpha r_u+\beta r_v<br>$$<br>人为单位化：<br>$$<br>\frac{w}{|w|}=\frac{\alpha}{|w|}r_u+\frac{\beta}{|w|}r_v,<br>$$<br>带入(*)，有<br>$$<br>\kappa_n\left(\frac{w}{|w|}\right)=\frac{L\alpha^2+2M\alpha\beta+N\beta^2}{|w|^2}=\frac{Ⅱ}{Ⅰ}.<br>$$<br>至此完成了沿$w$方向的法曲率的定义。下面计算几个实例。</p>
+<p>我们知道$k(P_0)$一定在$C$的法平面上，$S$在$P_0$处的单位法向量$n$自然也在该平面上，我们称</p>
+<p>$$<br>\kappa_n(t(P_0))=k(P_0)\cdot n<br>$$</p>
+<p>为$P_0$处关于切向量$t(P_0)=dr(u(s),v(s))|_{P_0}$的法曲率。详细算一下：</p>
+<p>$$<br>\kappa_n=r_{uu}\cdot n\left(\frac{du}{ds}\right)^2+2r_{uv}\cdot n\frac{du}{ds}\frac{dv}{ds}+r_{vv}\cdot n\left(\frac{dv}{ds}\right)^2,<br>$$<br>由第二基本形式的定义，它等于<br>$$<br>L\left(\frac{du}{ds}\right)^2+2M\frac{du}{ds}\frac{dv}{ds}+N\left(\frac{dv}{ds}\right)^2<br>$$</p>
+<p>这只是关于$C$的切向量的法曲率，对于$P_0$处的任一单位切向量</p>
+<p>$$<br>t=\lambda r_u+\mu r_v,<br>$$<br>曲线<br>$$<br>C’:r(u(s_0+\lambda s),v(s_0+\mu s))<br>$$</p>
+<p>的$P_0$处的切向量就是它，所以</p>
+<p>$$<br>du=\lambda ds,dv=\mu ds,<br>$$<br>从而<br>$$<br>\kappa_n(t)=L\lambda^2+2M\lambda\mu+N\mu^2.(\star)<br>$$</p>
+<p>那么对$P_0$处的任一切向量（不一定单位化）</p>
+<p>$$<br>w=\alpha r_u+\beta r_v<br>$$<br>人为单位化：<br>$$<br>\frac{w}{|w|}=\frac{\alpha}{|w|}r_u+\frac{\beta}{|w|}r_v,<br>$$<br>带入(*)，有<br>$$<br>\kappa_n\left(\frac{w}{|w|}\right)=\frac{L\alpha^2+2M\alpha\beta+N\beta^2}{|w|^2}=\frac{Ⅱ}{Ⅰ}.<br>$$</p>
+<p>至此完成了沿$w$方向的法曲率的定义。下面计算几个实例。</p>
 <p><strong>eg1(球面的法曲率).</strong>由前面的知识，我们知道<br>$$<br>Ⅰ=R^2((d\theta)^2+\cos^2\theta(d\psi)^2),Ⅱ=R((d\theta)^2+\cos^2\theta(d\psi)^2),<br>$$<br>所以沿任一切向量$t$，都有<br>$$<br>\kappa_n(t)=\frac1R.<br>$$</p>
 <p><strong>eg2(平面和柱面的法曲率).</strong>平面的第二基本形式是0，所以其任意方向的法曲率都是0。柱面的第一基本形式和平面一样，都是<br>$$<br>(du)^2+(dv)^2,<br>$$<br>其第二基本形式为<br>$$<br>-\kappa(u)(du)^2,<br>$$<br>所以<br>$$<br>\kappa_n(w)=-\kappa(u)\frac{(du)^2}{(du)^2+(dv)^2}=-\kappa(u)\cos^2\varphi.<br>$$<br>这里<br>$$<br>w=\left(\frac{du}{ds},\frac{dv}{ds}\right),\cos\varphi=\frac{du}{\sqrt{(du)^2+(dv)^2}}.<br>$$</p>
 <h2 id="Gauss映射-amp-Weingarten变换"><a href="#Gauss映射-amp-Weingarten变换" class="headerlink" title="Gauss映射&amp;Weingarten变换"></a>Gauss映射&amp;Weingarten变换</h2><p>通过研究曲面法向量来描述曲面是重要的方法，为此定义Gauss映射<br>$$<br>g:S\to S^2<br>$$<br>$$<br>r(u,v)\longmapsto n(u,v).<br>$$<br>也就是说，对于曲面上的一点，我们把这一点对应到其单位法向量的终点上（起点平移到原点），因为终点必落在$S^2$上，所以我们建立起曲面$S$到单位球面的对应。选定$S$上的某曲线$r(u(t),v(t))$，我们对该曲线的法向量（也得是$S$的法向量）$n(u(t),v(t))$求导:<br>$$<br>n’(t)=n_u(t)u’(t)+n_v(t)v’(t).<br>$$<br>所以在某定点$P_0$相切的曲线一定有相同的导法向量，又因为$n\cdot n=1$，所以<br>$$<br>(n\cdot n)’=2n\cdot n’.<br>$$<br>这说明$n’$在$T_PS$上，从而我们可以建立切平面上的线性变换<br>$$<br>W:T_PS\to T_PS<br>$$<br>$$<br>v=\lambda r_u+\mu r_v\longmapsto-(\lambda n_u+\mu n_v).<br>$$<br>称之为Weingarten变换。下面考虑$W(v)$的性质：</p>
